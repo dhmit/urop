@@ -1,0 +1,23 @@
+{
+  "name": "urop",
+  "version": "1.0.0",
+  "description": "The MIT Programs in Digital Humanities Guide for UROPs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhmit/urop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhmit/urop/issues"
+  },
+  "homepage": "https://github.com/dhmit/urop#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}
