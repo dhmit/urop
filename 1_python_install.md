@@ -2,8 +2,6 @@
 
 This document will walk you through the process of installing Python to start working on projects in the MIT DH Lab.
 
-**Please note**: We can only provide technical support for Mac and Windows computers.
-
 ## Install Python
 Though many operating systems ship with a version of Python, we need to ensure that we're using the most up-to-date version available. We'll walk you through installation for both Mac and Windows computers via package managers.
 
