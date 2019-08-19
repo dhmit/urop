@@ -4,170 +4,76 @@ We will use Git to work together on our shared codebase. Git is version-control 
 
 GitHub is a popular code repository web-based hosting service web-based hosting service that uses Git to help developers collaborate on code. It offers a desktop program to help make Git more intuitive.
 
-This guide will set you up with Git and GitHub on a Windows or Mac machine.
-
-**Please note**: We can only provide technical support for Mac and Windows computers.
-
 ## Install Git
+
+Open up a terminal window and type the following command to check whether Git is installed:
+
+```
+git --version
+```
+
+If you receive output that indicates that `git` is not a recognized command, it is most likely because Git is not installed. If you are working with the most current version of Git, feel free to move on to the **Create a GitHub Account** section.
 
 Please follow the relevant sections below for Windows or Mac installation. For more context on Git and open source, you can read [How To Contribute to Open Source: Getting Started with Git](https://www.digitalocean.com/community/tutorials/how-to-contribute-to-open-source-getting-started-with-git)
 
-### Windows
+If you have determined that Git is not installed on your computer, you can download the installer for the current version from [Git's Website](https://git-scm.com). Once it has finished downloading the file, launch the installer and accept the license information displayed at its start.
 
-Open up a PowerShell window and type the following command to check whether Git is installed:
+![](./images/git/git_site.png)
 
-```
-git --version
-```
 
-If you receive output that indicates that `git` is not a recognized command, Git is not installed, so let's install it with the package manager Chocolatey.
+### Windows Users
 
-You should have Chocolatey installed on your machine to manage packages. If you don't have Chocolatey installed, you can work through the Windows section of the [Python Installation guide](/setup_python_1.md).
+You will now see a screen showing several installation options. Make sure that you have all of these boxes checked:
 
-Running PowerShell as Administrator, type the following command:
+![](./images/git/git_install_options.png)
 
-```
-choco install -y git
-```
+Once you have checked all of the boxes displayed in the picture, hit "Next" to move on to the next step.
 
-Git should be installed into your system. When installation is complete, you can move on to the **Create a GitHub Account** section.
+![](./images/git/vim_default.png)
 
-### Mac
+Git allows you to designate a default text editor for handling merge conflicts and other changes that you will need to make to your code. We will be using Atom for this, but will change the settings at a later point. For now, leave the default editor as Vim.
 
-Open up a Terminal window and type the following:
+The next screen allows you to set your PATH environment, which is what allows you to use Git from the command line. Make sure that the middle option is checked.
 
-```
-git --version
-```
+![](./images/git/git_path.png)
 
-If Git is not already installed, you’ll be prompted to install it on your system. When you receive this prompt, you should agree to have Git installed and follow the instructions and respond to the prompts in your Terminal window.
+On the next screen, make sure that "Use the OpenSSL Library" option is checked, and move on to the next page.
 
-With this complete, you can move on to the **Create a GitHub Account** section.
+![](./images/git/git_line_ending.png)
+
+Make sure that check the top option ("Checkout Windows-style"), as these settings will help tell Git what type of computer you are using, and will allow it to convert files as necessary. This lets other people view your code no matter what operating system they are on.
+
+After this step, you should select the default terminal emulator that Git uses. Please ensure that you are using MinTTY.
+
+![](./images/git/git_terminal.png)
+
+The following step should be left as its defaults:
+
+![](./images/git/git_options.png)
+
+If you are given the option to install experimental options on the next page, please do not select any of them at the moment. Often times they are not yet fully tested, and can sometimes cause issues that are best to avoid.
+
+Finally, you should now be able to install Git onto your computer. Once it is finished, you can move on to the **Create a GitHub Account** section.
+
+### Mac Users
+
+After you have downloaded the installer file, run the file. If you get an error saying that the file is from an unidentified developer, you should hold "Control" while clicking on the file, and then select "Open".
+
+![](./images/git/mac_force_open.png)
+
+You should now get another screen with a ".pkg" file. Double click on it and follow the remaining steps. You will probably need to enter your password at some point in the process.
+
+Git should now be installed on your computer. Once you are finished, you can move on to the **Create a GitHub Account** section.
+
+![](./images/git/git_dmg.png)
 
 ## Create a GitHub Account
 
-Next, you should create a [GitHub account](https://github.com/join)if you don't already have one.
+Next, you should create a [GitHub account](https://github.com/join) if you don't already have one.
 
 It is worth noting that you can get added benefits through GitHub and other technology organizations — including unlimited private code repos — by signing up for the [Student Developer Pack.](https://education.github.com/pack)
 
-## Fork Repository
+## Install Atom
+Atom is a text editor created by GitHub that allows you to make quick edits to code as well as manage several Git commands directly from the editor.
 
-Forking a repository allows us to work on the project individually without interfering with someone else's work. Each individual team member should create their own fork of the main project.
-
-To do this, choose the relevant repository of [MIT DH](https://github.com/dhmit).
-
-From the repository you're working with, you can create your own fork of the main project. To do this, you have to log in to your Github account and go to the main project page. For example, for the `gender_novels` project, the main project page is
-[https://github.com/dhmit/gender_novels](https://github.com/dhmit/gender_novels). From this page, you
-should look for the **Fork** button on the right side near the top.
-
-![](../images/setup_fork_1.png)
-
-Once the main repository is forked, you should be on a page that looks almost like the original repository except that it doesn't belong to the **dhmit** account but rather to your own account (in this case: **dhmit-test**).
-
-![](../images/setup_fork_2.png)
-
-With your repository forked, you can move on to installing the GitHub desktop application.
-
-## Install GitHub Desktop
-[Github Desktop](https://desktop.github.com/) provides you with a graphical user interface (GUI) to work with git and GitHub. This provides you with a visual review of your changes before you push code.
-
-You can download Github Desktop from [https://desktop.github.com/](https://desktop.github.com/). Install the appropriate version for your machine and follow the installation steps.
-
-## Create a Local Copy of the Repository
-Once you have installed and opened Github Desktop, you will be greeted by a loading screen. To download a local copy of the repository that you just forked, click on **Clone a Repository**.
-
-![](../images/setup_gitdesktop_1.png)
-
-If you aren't already logged in to your GitHub account, you should sign in now.
-
-![](../images/setup_gitdesktop_2.png)
-
-Signing in will connect GitHub Desktop to your GitHub account.
-
-If you logged in at this point, you may be dropped back on the loading screen — click on **Clone a Repository** again.
-
-You should now see the forked repository pop up under **Your Repositories**. Once you click on it, you can select the local path where you want all the project files to be stored.
-
-You may have a path similar to the following:
-
-```
-/Users/your-name/GitHub/repo-name
-```
-
-Note the path, as you will need to know it later.
-
-Once the path is set, press **Clone**.
-
-![](../images/setup_gitdesktop_3.png)
-
-If you go to the specified path, you should now see all of the project files there.
-
-![](../images/setup_gitdesktop_4.png)
-
-With your local copy in place, we can now install dependencies so that we're ready to go.
-
-## Complete Programming Setup
-
-Return to your Terminal or PowerShell window. Activate your Python programming environment from the [Python tutorial](`/1_python_install.md`).
-
-You'll know your environment is active if you see the environment name in your prompt:
-
-```
-(my_env) $
-```
-
-Navigate to your local copy of the repository with the `cd` command. This may look something like this:
-
-```
-cd ~/<GitHub-repo-name-path>
-```
-
-Within that repository should be a Python script called `setup.py` that will install all of the dependencies you'll need to complete this project.
-
-You should run this script to install your dependencies by typing the following (from within your programming environment!):
-
-```
-python setup.py develop
-```
-
-After running the above command, deactivate your environment:
-
-```
-deactivate
-```
-
-This will reset the environment. Let's re-enter the environment now with the `source` or `.` command. Note that your path will likely be different.
-
-```
-[Mac]
-. ~/Environments/my_env/bin/activate
-```
-
-```
-[Windows PowerShell]
-~\Environments\my_env\Scripts\activate
-```
-
-Now run the following test:
-
-```
-python setup.py test
-```
-
-This will test, among other things, whether or not the installation of the
-gender_novels package and our testing suite was successful. If everything worked,
-it should return:
-
-```
-Ran <x> tests in <y>s
-
-OK
-```
-
-If you get this output, you have successfully installed and set up git,
-Github, and Github Desktop.
-
-If you are installing all of the DH Lab software, you can now move on to
-[install the PyCharm IDE.](https://github.com/dhmit/gender_novels/blob/master/gender_novels/tutorials/setup/3_pycharm_install_setup.md)
-
-*This tutorial was based on [How To Contribute to Open Source: Getting Started with Git](https://www.digitalocean.com/community/tutorials/how-to-contribute-to-open-source-getting-started-with-git#installing-git-on-macos).*
+When [Installing Atom](https://atom.io), make sure to install the appropriate version for your machine and follow the installation steps.
