@@ -1,0 +1,205 @@
+<h1>DH Lab Setup, v. 1.1</h1>
+<p>Setting up a development environment on a computer unfortunately remains a complicated task,
+even in 2018. After the first group meetings on Friday, September 14, we went back to our
+instructions and tried to overhaul them to make them easier. You're right now looking at the
+result of that effort.</p>
+<p>This guide includes a complete installation of Python, git, and PyCharm on your computer.
+Many of you have already complete some of these steps. Hence, if you are certain or almost certain
+that you have already completed one of the listed steps, you can move to the next one.</p>
+<p>Here's a brief list of the changes, compared to the guides from Friday:</p>
+<ul>
+<li>No use of the command line</li>
+<li>Use of the graphical Python installer from python.org</li>
+<li>Setup of the virtual environment is done by PyCharm</li>
+</ul>
+<p>We hope this will make it easier for your to setup your Python enviroment.</p>
+<h2>1. Install Python</h2>
+<p>Note: You can skip this step if: 1) You already have Python 3.6 or Python 3.7 installed and 2)
+you know where you have it installed. In all other cases, it will be easier to install Python 3.7
+even if it is a re-install.</p>
+<p>Go to the
+<a href="https://www.python.org/downloads/">python.org website</a> and download the Python 3.7 installer.</p>
+<p><img src="../images/python_org_1.png" alt="">
+Once you have downloaded the installer, double-click it to start the installation.</p>
+<p><strong>Note: All of the following screenshots are from the Mac installation. Windows may present you
+with different menus and we'll add screenshots for that install soon. In the meantime, just
+select the option that seems like the default--it shouldn't be too hard.</strong></p>
+<p><img src="../images/python_org_2.png" alt="">
+<img src="../images/python_org_3.png" alt="">
+<img src="../images/python_org_4.png" alt="">
+Agree to the pop-up.
+<img src="../images/python_org_5.png" alt=""></p>
+<p>We suggest that you install Python in the default location. If you select another location, please
+note that location down--we will probably need it for bug-fixing later.
+<img src="../images/python_org_6.png" alt="">
+Once you're done with the installation (at least on Macs), you will be left with this directory.
+This means that everything installed correctly and you're ready for the next step.
+<img src="../images/python_org_7.png" alt=""></p>
+<h1>2. Installing and Setting Up Git</h1>
+<p>We will use Git to work together on our shared codebase. Git is version-control open-source software
+that allows us to work on code individually while we test, document, and prepare new functions and
+features. Once we are ready to share the new additions to the larger project, we can open a pull
+request to receive feedback and modify our code until it is accepted and incorporated into the
+larger project's codebase.</p>
+<p>GitHub is a popular code repository web-based hosting service web-based hosting service that uses
+Git to help developers collaborate on code. It offers a desktop program to help make Git more
+intuitive.</p>
+<p>This guide will set you up with Git and GitHub on a Windows or Mac machine.</p>
+<h4>2.1 Create a GitHub Account</h4>
+<p>Next, you should create a <a href="https://github.com/join">GitHub account</a>if you don't already have one.</p>
+<p>It is worth noting that you can get added benefits through GitHub and other technology organizations
+— including unlimited private code repos — by signing up for
+the <a href="https://education.github.com/pack">Student Developer Pack.</a></p>
+<h4>2.2 Fork Repository</h4>
+<p>Forking a repository allows us to work on the project individually without interfering with
+someone else's work. Each individual team member should create their own fork of the main project.</p>
+<p>To do this, choose the relevant repository of <a href="https://github.com/dhmit">MIT DH</a>.</p>
+<p>From the repository you're working with, you can create your own fork of the main project. To do
+this, you have to log in to your Github account and go to the main project page. For example, for
+the <code>gender_novels</code> project, the main project page is
+<a href="https://github.com/dhmit/gender_novels">https://github.com/dhmit/gender_novels</a>. From this page,
+you should look for the <strong>Fork</strong> button on the right side near the top.</p>
+<p><img src="../images/setup_fork_1.png" alt=""></p>
+<p>Once the main repository is forked, you should be on a page that looks almost like the original
+repository except that it doesn't belong to the <strong>dhmit</strong> account but rather to your own account
+(in this case: <strong>dhlab-test</strong>).</p>
+<p><img src="../images/setup_fork_2.png" alt=""></p>
+<p>With your repository forked, you can move on to installing the GitHub desktop application.</p>
+<h4>2.3 Install GitHub Desktop</h4>
+<p><a href="https://desktop.github.com/">Github Desktop</a> provides you with a graphical user interface (GUI)
+to work with git and GitHub. This provides you with a visual review of your changes before you push
+code.</p>
+<p>You can download Github Desktop from <a href="https://desktop.github.com/">https://desktop.github.com/</a>.
+Install the appropriate version for your machine and follow the installation steps.</p>
+<h4>2.4 Create a Local Copy of the Repository</h4>
+<p>Once you have installed and opened Github Desktop, you will be greeted by a loading screen. To
+download a local copy of the repository that you just forked, click on <strong>Clone a Repository</strong>.</p>
+<p><img src="../images/setup_gitdesktop_1.png" alt=""></p>
+<p>If you aren't already logged in to your GitHub account, you should sign in now.</p>
+<p><img src="../images/setup_gitdesktop_2.png" alt=""></p>
+<p>Signing in will connect GitHub Desktop to your GitHub account.</p>
+<p>If you logged in at this point, you may be dropped back on the loading screen — click
+on <strong>Clone a Repository</strong> again.</p>
+<p>You should now see the forked repository pop up under <strong>Your Repositories</strong>. Once you click on it,
+you can select the local path where you want all the project files to be stored.</p>
+<p>You may have a path similar to the following:</p>
+<pre><code>/Users/your-name/GitHub/repo-name
+</code></pre>
+<p>Note the path, as you will need to know it later.</p>
+<p>Once the path is set, press <strong>Clone</strong>.</p>
+<p><img src="../images/setup_gitdesktop_3.png" alt=""></p>
+<p>If you go to the specified path, you should now see all of the project files there.</p>
+<p><img src="../images/setup_gitdesktop_4.png" alt=""></p>
+<p>Finally, install the git command line interface. This allows you to execute git commands from
+the command line if necessary.
+<strong>Note: The menu may look slightly different in Windows.</strong>
+<img src="../images/setup_gitdesktop_5.png" alt="">
+You should see a confirmation that the installation has succeeded.
+<img src="../images/setup_gitdesktop_6.png" alt=""></p>
+<p>With this step, you should have your git and Github environment configured.</p>
+<h2>3. Install and Setup PyCharm</h2>
+<p>In the Digital Humanities Lab, we'll be using the PyCharm IDE from JetBrains.</p>
+<p>An IDE or <strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment gives you the ability to write, run, test,
+and lint code all in one place. The PyCharm interface looks like this:</p>
+<p><img src="../images/pycharm_1.png" alt="PyCharm IDE interface"></p>
+<p>By standardizing the IDE across the lab, we hope to facilitate collaboration and standardize
+support.</p>
+<h4>PyCharm Installation</h4>
+<p>As students with a <code>.edu</code> email address, you can get PyCharm for free
+by <a href="https://www.jetbrains.com/student/">signing up for an educational account</a>.</p>
+<p>Once you have signed up for an account, you will receive an email activation to confirm your email.
+When you click on the link you will be able to download PyCharm among other JetBrains offerings.</p>
+<p><img src="../images/pycharm_2.png" alt="JetBrains Student Installation Page"></p>
+<p>Alternately you can download PyCharm through this
+<a href="https://www.jetbrains.com/pycharm/download/">direct link</a> — be sure to get the Professional Edition.</p>
+<p><img src="../images/pycharm_3.png" alt="PyCharm Installation"></p>
+<p>The installation process differs slightly between Mac and Windows but you can select the default
+settings in both cases.</p>
+<h2>Initialization</h2>
+<p>Once the installation process is finished, open up the PyCharm application. This
+will open up an activation screen. You can activate PyCharm by entering the email
+and password that you used before to sign up for a Jetbrains account.</p>
+<p><img src="../images/pycharm_activation_1.png" alt=""></p>
+<p>Next, you will get to a setup menu.</p>
+<p><strong>Note: If you already have PyCharm installed or you accidentally skipped this setup, don't worry.
+You can change the settings later--they are not very important.</strong></p>
+<p>In the first window, select &quot;Do not import settings&quot;. We'll import settings at a
+later stage.
+<img src="../images/pycharm_init_1.png" alt=""></p>
+<p>(Mac only)
+Select the Mac OS X 10.5+ keymap</p>
+<p><img src="../images/pycharm_init_2.png" alt=""></p>
+<p>Select either the dark (&quot;Darcula&quot;) or Light theme. (Note: you might have
+to set it again later after you import )
+<img src="../images/pycharm_init_3.png" alt=""></p>
+<p>Don't create a launcher script--leave the checkbox empty.
+<img src="../images/pycharm_init_4.png" alt=""></p>
+<p>Click on the buttons to install Markdown and BashSupport.
+<img src="../images/pycharm_init_5.png" alt=""></p>
+<p>Once the setup is finished, you will be greeted by the screen below. Select &quot;Open&quot;
+to select the existing gender_novels repo.
+<img src="../images/pycharm_init_6.png" alt=""></p>
+<p>Select the path to your gender_novels repo (in my case: ~/code/gender_novels)
+<img src="../images/pycharm_init_7.png" alt=""></p>
+<p>This will bring up the main PyCharm window with the loaded gender_novels directory
+on the left.
+<img src="../images/pycharm_config_1.png" alt=""></p>
+<h2>Configuration</h2>
+<p>Next, we're going to import the DH Lab PyCharm settings. First
+<a href="https://github.com/dhmit/gender_novels/raw/master/gender_novels/tutorials/setup/pycharm_settings.jar">download the settings file.</a>
+Then, go to file, &quot;Import Settings...&quot;
+<img src="../images/pycharm_config_2.png" alt=""></p>
+<p>Import all components.
+<img src="../images/pycharm_config_3.png" alt=""></p>
+<p>As a final step, we'll change some configuration settings.</p>
+<p>On Mac, select PyCharm -&gt; Preferences, On Windows File -&gt; Settings
+<img src="../images/pycharm_config_4.png" alt=""></p>
+<p>Under &quot;Appearance &amp; Behavior&quot; -&gt; Appearance, you can select either the dark
+&quot;Darcula&quot; theme or the &quot;Light&quot; theme.
+<img src="../images/pycharm_config_5.png" alt=""></p>
+<p>Then, you need to configure your Python interpreter under &quot;Project: gender_novels&quot;
+-&gt; Project Interpreter. Click on the wheel in the top right and select &quot;Add&quot;.
+<img src="../images/pycharm_config_6.png" alt=""></p>
+<p>Select &quot;New environment.&quot; Under &quot;Base Interpreter&quot; look for one that ends with
+Python 3.7 and click OK.</p>
+<p><strong>Note 1: If you cannot find a Python 3.6 or 3.7 interpreter in the &quot;Base Interpreter&quot; list,
+something probably went wrong with the Python installation. Try restarting your computer.
+If that doesn't fix the problem, come see us--we'll probably need to track down the
+path to your Python installation.</strong></p>
+<p><strong>Note2: If you get a warning saying that &quot;Environment location is not empty&quot; you most
+likely have already created a virtual environment for this project. You can either try
+to skip this step or initialize a new environment by replacing (in &quot;Location&quot;) <code>venv</code>
+with <code>gender_env</code></strong>
+<img src="../images/pycharm_config_6a.png" alt=""></p>
+<p>Back in the main menu, click &quot;Apply&quot; to activate the updated settings.
+<img src="../images/pycharm_config_9.png" alt=""></p>
+<p>Now, we only need to locally install the gender_novels package and its dependencies to
+finish the installation.</p>
+<p>First, open setup.py by double-clicking on it.
+<img src="../images/pycharm_env_1.png" alt=""></p>
+<p>Next, go to &quot;Tools&quot; -&gt; &quot;Run setup.py Task...&quot;
+<strong>Note: If you cannot see &quot;Run setup.py Task&quot; in the menu, you might have the wrong
+or no file open. In particular, you might have a file from the venv folder (in orange)
+open. Try opening setup.py or common.py or other python files in the directory until
+you see the option &quot;Run setup.py Task&quot;.</strong>
+<img src="../images/pycharm_env_2.png" alt=""></p>
+<p>Either double-click on &quot;develop&quot; or type &quot;develop&quot; into the task name window and hit
+Enter.
+<img src="../images/pycharm_env_1a.png" alt=""></p>
+<p>Leave the following window empty and just click &quot;OK.&quot;
+<img src="../images/pycharm_env_3.png" alt=""></p>
+<p>Finally, we will run a test to see if the installation succeeded. To do this, go to
+&quot;Tools&quot; -&gt; &quot;Run setup.py Task&quot; again.
+<img src="../images/pycharm_env_2.png" alt=""></p>
+<p>This time around, select &quot;test&quot;.
+<img src="../images/pycharm_env_4.png" alt=""></p>
+<p>Leave the following window empty and just click &quot;OK.&quot;
+<img src="../images/pycharm_env_3.png" alt=""></p>
+<p>When the command has finished, you should see a prompt similar to the one below, which
+says:</p>
+<pre><code>Ran &lt;x&gt; tests in &lt;y&gt;s 
+
+OK
+</code></pre>
+<p><img src="../images/pycharm_env_5.png" alt=""></p>
+<p>If you see this, you're all set to start working on this DH Lab project!</p>

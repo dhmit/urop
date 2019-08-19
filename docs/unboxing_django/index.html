@@ -1,0 +1,23 @@
+<h1>Unboxing Django</h1>
+<p>Getting Django up and running requires a few unboxing steps.</p>
+<p>Open a terminal in the computation_hist main directory. In PyCharm, click on
+&quot;Terminal&quot; on the bottom left side. Once, there, apply all database migrations.</p>
+<pre><code>python manage.py migrate
+</code></pre>
+<p>Next, we populate the database with our metadata:</p>
+<pre><code>python manage.py populate_from_metadata
+</code></pre>
+<p>You are now ready to run the development server:</p>
+<pre><code>python manage.py runserver
+</code></pre>
+<p>You can now access either the website itself at <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>.</p>
+<h4>Documentation</h4>
+<p>Django has excellent <a href="https://docs.djangoproject.com/en/2.1/">documentation</a>. Please
+read the <a href="https://docs.djangoproject.com/en/2.1/intro/overview/">overview</a> before
+getting started.</p>
+<h4>(Optional) Create a super user to access the admin interface</h4>
+<pre><code>python manage.py createsuperuser
+</code></pre>
+<p>Creating a super user gives you access to Django's extensive admin interface at
+<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>.
+This is not required but useful.</p>

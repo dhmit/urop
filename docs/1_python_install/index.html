@@ -1,0 +1,115 @@
+<h1>Python Installation</h1>
+<p>This document will walk you through the process of installing Python to start working on projects in the MIT DH Lab.</p>
+<h2>Install Python</h2>
+<p>Though many operating systems ship with a version of Python, we need to ensure that we're using the most up-to-date version available. We'll walk you through installation for both Mac and Windows computers via package managers.</p>
+<p>You can check whether you have Python 3 already installed by opening a terminal window and typing:
+(Note: if you don't know how to open a terminal, see below--the process is different for Macs and
+Windows)</p>
+<pre><code>python3 --version
+</code></pre>
+<p>If that doesn't work, try:</p>
+<pre><code>python --version
+</code></pre>
+<p><img src="../images/setup_python_1.png" alt=""></p>
+<p>If you receive an error or a version of Python lower than 3.6, you should continue to install for your operating system, by following the relevant section below.</p>
+<h3>Windows Installation</h3>
+<p>Open Windows PowerShell, which you can do by right-clicking on the Start menu icon on the lower left-hand corner of your screen.</p>
+<p>When the menu pops up, you should click on “Search,” then type “PowerShell” into the search bar.
+<strong>Do not use Command Prompt.</strong>
+<img src="../images/powershell_command_prompt.png" alt=""></p>
+<p>Right-click on “Windows PowerShell,” the Desktop app.</p>
+<p>Select <code>Run as Administrator.</code></p>
+<p>This is important: You need to use PowerShell, not the Command prompt.
+When you are prompted with a dialogue box that asks <em>Do you want to allow this app to make changes to your PC?</em> click on <strong>Yes</strong>.</p>
+<p>We can switch out of the system folder by typing the following command:</p>
+<pre><code>cd ~
+</code></pre>
+<p>Then we’ll be in a directory like <code>PS C:\Users\your-name</code>.</p>
+<p>To continue with our installation process, we are going to set up some permissions. We're going to use the RemoteSigned execution policy to set the permission for the current user that allows the PowerShell to accept downloaded scripts that we trust without making the permissions as broad as they would be with an Unrestricted permission. In the PowerShell, let’s type:</p>
+<pre><code>Set-ExecutionPolicy -Scope CurrentUser
+</code></pre>
+<p>PowerShell will then prompt us to provide an execution policy, and since we want to use RemoteSigned, we’ll type:</p>
+<pre><code>RemoteSigned
+</code></pre>
+<p>It will give you a warning that you are changing your execution policy.  Click &quot;Y&quot; to save.</p>
+<p>Next, we're going to install a package manager which will help us automate installation processes for Python and other tools. Chocolatey is a command-line package manager built for Windows that works like <code>apt-get</code> does on Linux. We can install it by typing the following:</p>
+<pre><code>iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+</code></pre>
+<p>With Chocolatey installed, we can download Python 3:</p>
+<pre><code>choco install -y python3
+</code></pre>
+<p>You’ll want to confirm that Python is installed and ready to go. Use the command <code>refreshenv</code> or <strong>close and re-open PowerShell as an Administrator</strong>, then check the version of Python available to you on your local machine:</p>
+<pre><code>python --version
+</code></pre>
+<p>With Python fully installed, we can move onto setting up a programming environment.</p>
+<h3>Mac Installation</h3>
+<p>You can find the Mac Terminal by going into Finder, navigating to the Applications folder, and then into the Utilities folder. From here, double-click the Terminal like any other application to open it up. Alternatively, you can use Spotlight by holding down the command and spacebar keys to find Terminal by typing it out in the box that appears.</p>
+<p>We need to first ensure that Xcode is installed in order to make use of macOS software development tools.</p>
+<pre><code>xcode-select -p
+</code></pre>
+<p>If you receive the following output, then Xcode is installed:</p>
+<pre><code>Output
+/Library/Developer/CommandLineTools
+If you received an error, then in your web browser install [Xcode from the App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&amp;ign-mpt=uo%3D2) and accept the default options.
+</code></pre>
+<p>Once Xcode is installed, return to your Terminal window. Next, you’ll need to install Xcode’s separate Command Line Tools app, which you can do by typing:</p>
+<pre><code>xcode-select --install
+</code></pre>
+<p>At this point, Xcode and its Command Line Tools app are fully installed, and we are ready to install the package manager Homebrew.</p>
+<p>A package manager is a collection of software tools that work to automate installation processes that include initial software installation, upgrading and configuring of software, and removing software as needed.</p>
+<p>To install Homebrew, type this into your Terminal window:</p>
+<pre><code class="language-command">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+<pre><code>nano ~/.bash_profile
+</code></pre>
+<p>Once the file opens up in the Terminal window, write the following:</p>
+<pre><code>export PATH=/usr/local/bin:$PATH
+</code></pre>
+<p>To save your changes, hold down the control key and the letter o, and when prompted press the return key. Now you can exit nano by holding the control key and the letter x.</p>
+<p>For these changes to activate, in the Terminal window, type:</p>
+<pre><code>source ~/.bash_profile
+</code></pre>
+<p>Once you have done this, the changes you have made to the <code>PATH</code> environment variable will be effective.</p>
+<p>We can make sure that Homebrew was successfully installed by typing:</p>
+<pre><code>brew doctor
+</code></pre>
+<p>If no updates are required at this time, the Terminal output will read:</p>
+<pre><code>Your system is ready to brew.
+</code></pre>
+<p>Otherwise, you may get a warning to run another command such as <code>brew update</code> to ensure that your installation of Homebrew is up to date.</p>
+<p>Once Homebrew is ready, you can install Python 3:</p>
+<pre><code>brew install python3
+</code></pre>
+<p>You can ensure that Python 3 is successfully installed by typing:</p>
+<pre><code>python3 --version
+</code></pre>
+<p>With Python 3 installed, you're ready to set up a virtual environment.</p>
+<h2>Setting Up a Python Virtual Environment</h2>
+<p>A virtual environment isolates the libraries and tools that we use for our project from those we might use in other projects. Setting up a programming environment provides us with greater control over our Python projects and over how different versions of packages are handled. This is especially important when working with third-party packages.</p>
+<p>You can set up as many Python programming environments as you would like. Each environment is basically a directory or folder in your computer that has a few scripts in it to make it act as an environment.</p>
+<p>Choose which directory you would like to put your Python programming environments in, or create a new directory with mkdir, as in:</p>
+<pre><code>cd ~
+mkdir Environments
+cd Environments
+</code></pre>
+<p>From within this directory, you can create a virtual environment with venv. We'll use the name <code>my_env</code> in this tutorial, but you should use a virtual environment name that is meaningful for your project.</p>
+<pre><code>[Mac]
+python3 -m venv my_env
+</code></pre>
+<pre><code>[Windows]
+python -m venv my_env
+</code></pre>
+<p>The final step is to activate the virtual environment. The commands for Mac and Windows machines are slightly different.</p>
+<p>If you're using macOS, type the following into Terminal:</p>
+<pre><code>[Mac]
+source my_env/bin/activate
+</code></pre>
+<p>If you're using Windows, type the following into PowerShell:</p>
+<pre><code>[Windows]
+my_env\Scripts\activate
+</code></pre>
+<p>Whichever operating system you use, your shell window should now be prefixed with the name of your enviornment, like so:</p>
+<pre><code>(my_env) $
+</code></pre>
+<p>With Python fully set up, we can move onto installing and setting up Git.</p>
+<p><em>This tutorial was based on <a href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10#step-5-%E2%80%94-setting-up-a-virtual-environment">How To Install Python 3 and Set Up a Local Programming Environment on Windows 10</a> and <a href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-macos">How To Install Python 3 and Set Up a Local Programming Environment on macOS</a>.</em></p>

@@ -1,0 +1,160 @@
+<h1>Introduction to the Command Line</h1>
+<p>The command line or terminal environment is widely used by SysAdmins, software developers, and other engineers as this interface provides them with greater access and control over their machines. As William Shotts notes in <em><a href="http://linuxcommand.org/tlcl.php">The Linux Command Line</a></em>, &quot;graphical user interfaces make easy tasks easy, while command line interfaces make difficult tasks possible.&quot; In addition to making it possible to perform complex tasks, a command line interface provides users with the ability to automate tasks and is commonly used to access remote servers.</p>
+<p>In this guide, we'll go through some common commands to familiarize yourself with the terminal environment. We'll assume a UNIX-like system; Windows users should run PowerShell as an administrator to be able to use similar commands.</p>
+<h2>Moving Around Directories</h2>
+<h3>pwd</h3>
+<p>The <code>pwd</code> command is used to show the current working directory. It stands for <strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory.</p>
+<pre><code>pwd
+</code></pre>
+<p>When you press enter following this command, you will receive output that prints out where you currently are in your system:</p>
+<pre><code>/Users/your-user-name
+</code></pre>
+<p>With this feedback, you should now know what directory you're currently accessing from the terminal.</p>
+<h3>ls</h3>
+<p>The <code>ls</code> command is used to <em>list</em> the contents of the current directory:</p>
+<pre><code>ls
+</code></pre>
+<p>When you run this command, you may see output like the following:</p>
+<pre><code>Applications
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+</code></pre>
+<p>This shows all the directories you have within your working directory (the directory you're currently in).</p>
+<p>You can use some flags with <code>ls</code> to receive more information about the files available.</p>
+<p>For example, <code>ls -l</code> will show ownership and read/write permissions of files:</p>
+<pre><code>ls -l
+</code></pre>
+<pre><code>drwx------    4 user-name  staff      136 Jul 18  2016 Applications
+drwx------+ 414 user-name  staff    14076 Sep 28 12:59 Desktop
+drwx------+  26 user-name  staff      884 Sep 18 13:40 Documents
+drwx------+ 789 user-name  staff    26826 Oct  4 00:36 Downloads
+</code></pre>
+<p>You can read more about access rights and what the letters mean in <a href="http://www.ee.surrey.ac.uk/Teaching/Unix/unix5.html">this tutorial</a>.</p>
+<p>The <code>-a</code> flag with <code>ls</code> will show you invisible files that typically contain settings or data for programs to run as expected. Hidden files begin with a <code>.</code>.</p>
+<pre><code>ls -a
+</code></pre>
+<p>In addition to seeing hidden files below, you'll also see <code>.</code> and <code>..</code> that show relative paths — <code>.</code> is the current working directory and <code>..</code> refers to the directory that is a level up from the current one.</p>
+<pre><code>.
+..
+.ansible
+.bash_history
+.bash_profile
+...
+Applications
+Desktop
+Documents
+...
+</code></pre>
+<p>(Above, the <code>...</code> is being used as an ellipses and will not appear on your terminal.)</p>
+<p>You generally will not need to access hidden files, but there are occasions when you may need to manually edit settings (with great power comes great responsibility).</p>
+<h3>cd</h3>
+<p>The <code>cd</code> command stands for <strong>c</strong>hange <strong>d</strong>irectory. To execute the command you will need to pass the path or relative path to a directory to the command, as in:</p>
+<pre><code>cd directory-name
+</code></pre>
+<p>From the user directory that we have shown above, we can <code>cd</code> into the <code>Documents</code> directory like so:</p>
+<pre><code>cd Documents
+</code></pre>
+<p>Note that for Windows and Mac terminal interfaces, file naming conventions are not case sensitive.</p>
+<p>Now, when you type <code>pwd</code>, you should see the following output:</p>
+<pre><code>/Users/your-user-name/Documents
+</code></pre>
+<p>To move up a directory (in this case to the previous one), you can use <code>..</code>:</p>
+<pre><code>cd ..
+</code></pre>
+<p>Now you will be back in your user's main directory.</p>
+<p>You can always return to your user's main directory with the following command:</p>
+<pre><code>cd ~
+</code></pre>
+<p>You can also always move into the primary root directory by using <code>/</code> with <code>cd</code>:</p>
+<pre><code>cd /
+</code></pre>
+<p>If you run the <code>ls</code> command in this directory, you should see files like this:</p>
+<pre><code>Applications			bin				private
+Library				dev				sbin
+Network				etc				tmp
+System				home				usr
+var 				Users				net
+Volumes				opt
+</code></pre>
+<h3>Relative and Absolute Paths</h3>
+<p>Paths can be entered in a relative or absolute way. Relative means that we are changing directory
+relative to our current working directory. So if your working directory is
+<code>Users/&lt;your-user-name&gt;</code>, and you want to enter the sub-folder <code>dhlab</code>, you have two options.</p>
+<p>Using a relative path <code>cd dhlab</code></p>
+<p>Using an absolute path <code>cd /Users/cuthbert/dhlab</code></p>
+<p>Note the <code>/</code> at the beginning of the absolute path. You indicate that you're using an absolute
+path by starting your path with a forward (Windows backward) slash. If your path doesn't start
+with a slash, your terminal will assume that you're using a relative path.</p>
+<p>Practice navigating around your file system with the commands you have learned so far.</p>
+<h2>Autocompletion and History</h2>
+<p>Versions of the command line allow you to autocomplete and to reuse commands easily.</p>
+<p>Try typing the first few letters of a directory you would like to <code>cd</code> into, and then press the <code>TAB</code> key to autocomplete the directory name.</p>
+<p>Press the <code>UP</code> arrow to cycle through the previous commands you have already run.</p>
+<p>You can also summon the entire history of this session:</p>
+<pre><code>history
+</code></pre>
+<p>Here you should see all the commands you have run since opening the terminal window.</p>
+<h2>man: The Manual Page</h2>
+<p>The shell comes with its own user guide, the manual page (<code>man</code>), which can tell you what a command
+does and what parameters it accepts.</p>
+<p>You can access this guide by entering</p>
+<pre><code>man &lt;command&gt;
+</code></pre>
+<p>For example, gives you the manual page for the list command.</p>
+<pre><code>man ls
+</code></pre>
+<p>You'll receive the following output:</p>
+<pre><code>NAME
+     ls -- list directory contents
+
+SYNOPSIS
+     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1] [file ...]
+
+DESCRIPTION
+     For each operand that names a file of a type other than directory, ls
+     displays its name as well as any requested, associated information.  For
+     each operand that names a file of type directory, ls displays the names
+     of files contained within that directory, as well as any requested, asso-
+     ciated information.
+
+     [...]
+
+     The following options are available:
+
+     -@      Display extended attribute keys and sizes in long (-l) output.
+
+     -1      (The numeric digit ``one''.)  Force output to be one entry per
+             line.  This is the default when output is not to a terminal.
+
+     -A      List all entries except for . and ...  Always set for the super-
+             user.
+
+     -a      Include directory entries whose names begin with a dot (.).
+    [...]
+
+</code></pre>
+<p>To exit the manual, you usually have to press <code>q</code>.</p>
+<h2>Editing Text-based Files</h2>
+<p>You can edit a file by opening it with a command-line text editor such as nano.</p>
+<pre><code>nano &lt;filename&gt;
+</code></pre>
+<p>If a <code>&lt;filename&gt;</code> file already exists, nano will open it. Otherwise, it will create a new empty
+file called <code>&lt;filename&gt;</code> that you can then edit.</p>
+<p>To quit nano, enter <code>Ctrl-X</code>. This opens a dialogue box where you can then select to save your changes by pressing <code>y</code>.</p>
+<h2>SSH: Connecting to a Server</h2>
+<p>You can connect to a remote server or computer through the terminal. To do so, you'll be using the <code>ssh</code> command, which stands for <strong>S</strong>ecure <strong>S</strong>ocket <strong>S</strong>hell. You'll need to have a user on the server and to know the user's password or have an SSH key to connect.</p>
+<p>To initialize the connection, you will use the following format:</p>
+<pre><code>ssh user-name@ip-address
+</code></pre>
+<p>The IP address will be a series of numbers that will direct you to the correct server.</p>
+<p>If you do not have an SSH key, you'll be prompted for a password. When you type the password in, you won't have any visual feedback of your keystrokes. When you are done typing your password, press the <code>ENTER</code> key.</p>
+<p>To disconnect from the remote server, type <code>exit</code> into the command line.</p>
+<h2>Further Reading</h2>
+<p>To become more competent at using the command line, you can play the game <a href="http://overthewire.org/wargames/bandit/">Bandit</a> from <a href="http://overthewire.org/wargames/">OverTheWire</a>, which are games to help you learn and practice security concepts.</p>
+<p>For fun, you can look into <a href="https://en.wikipedia.org/wiki/Cowsay">cowsay</a> and <a href="https://github.com/erkin/ponysay">ponysay</a>.</p>
