@@ -17,11 +17,12 @@ For many of you, this might be your first experience writing software on a large
 
 1. Join Slack, and join the mitdhlab workspace.
 
-## Install a plain text editor
-
-We will be doing most of our work within an IDE (PyCharm), but it will occasionally be useful to have a plaintext editor available. Please install Sublime Text https://www.sublimetext.com/
-
 ## Install Git
+
+## Install Atom
+https://atom.io/
+
+## Install Python
 
 ## macOS
 
@@ -29,7 +30,6 @@ We will be doing most of our work within an IDE (PyCharm), but it will occasiona
 ## Install GitHub Desktop
 
 
-## Install Python
 
 ## Install PyCharm 
 
