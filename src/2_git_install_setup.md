@@ -4,8 +4,8 @@ We will use Git to work together on our shared codebase. Git is version-control 
 
 GitHub is a popular code repository web-based hosting service web-based hosting service that uses Git to help developers collaborate on code. It offers a desktop program to help make Git more intuitive.
 
-## Install Git
 
+## Install Git
 Open up a terminal window and type the following command to check whether Git is installed:
 
 ```
@@ -14,14 +14,12 @@ git --version
 
 If you receive output that indicates that `git` is not a recognized command, it is most likely because Git is not installed. If you are working with the most current version of Git, feel free to move on to the **Create a GitHub Account** section.
 
-Please follow the relevant sections below for Windows or Mac installation. For more context on Git and open source, you can read [How To Contribute to Open Source: Getting Started with Git](https://www.digitalocean.com/community/tutorials/how-to-contribute-to-open-source-getting-started-with-git)
-
-If you have determined that Git is not installed on your computer, you can download the installer for the current version from [Git's Website](https://git-scm.com). Once it has finished downloading the file, launch the installer and accept the license information displayed at its start.
+If you have determined that Git is not installed on your computer, you can download the installer for the current version from [Git's Website](https://git-scm.com).
 
 ![](./images/git/git_site.png)
 
-
 ### Windows Users
+Once your computer has finished downloading the file, launch the installer and accept the license information displayed at its start.
 
 You will now see a screen showing several installation options. Make sure that you have all of these boxes checked:
 
@@ -56,7 +54,6 @@ If you are given the option to install experimental options on the next page, pl
 Finally, you should now be able to install Git onto your computer. Once it is finished, you can move on to the **Create a GitHub Account** section.
 
 ### Mac Users
-
 After you have downloaded the installer file, run the file. If you get an error saying that the file is from an unidentified developer, you should hold "Control" while clicking on the file, and then select "Open".
 
 ![](./images/git/mac_force_open.png)
@@ -67,13 +64,60 @@ Git should now be installed on your computer. Once you are finished, you can mov
 
 ![](./images/git/git_dmg.png)
 
-## Create a GitHub Account
 
+## Create a GitHub Account
 Next, you should create a [GitHub account](https://github.com/join) if you don't already have one.
 
 It is worth noting that you can get added benefits through GitHub and other technology organizations — including unlimited private code repos — by signing up for the [Student Developer Pack.](https://education.github.com/pack)
+
+If you are unfamiliar with how GitHub works, feel free to take a look at [GitHub's Workflow](https://guides.github.com/introduction/flow/).
+
 
 ## Install Atom
 Atom is a text editor created by GitHub that allows you to make quick edits to code as well as manage several Git commands directly from the editor.
 
 When [Installing Atom](https://atom.io), make sure to install the appropriate version for your machine and follow the installation steps.
+
+
+## Cloning the Repository
+Now that you are set up with Atom and GitHub, you can now clone the repository and download it onto your computer.
+
+First you need to visit the GitHub page for [Prompted Readings](https://github.com/dhmit/prompted_readings), the DH Lab's current project.
+
+![](./images/prompted_readings.png)
+
+Click on the green "Clone or Download" button, and then copy the url to your clipboard.
+
+![](./images/clipboard_copy.png)
+
+Now, go to your Atom editor and go to `View > Toggle Command Palette`
+
+![](./images/toggle_palette.png)
+
+In the search-box that appears, look for `GitHub: Clone`
+
+![](./images/command_palette.png)
+
+Now, paste the url from GitHub into the `Clone from` field.
+
+![](./images/clone_prompted.png)
+
+You can choose any directory that you would like for the project, but it is recommended to use the default so that all of your future projects can be in the same `github` directory.
+
+After the project finishes downloading, you should now have a "Project" pane with a file tree. These are the files that we will be working with during the duration of the project.
+
+
+## Sync with GitHub
+Atom is incredibly powerful because it is heavily integrated with GitHub, but first it is necessary to sign in to GitHub to allow it to perform some of the necessary commands.
+
+After the project is successfully loaded onto your computer, click on the GitHub logo in the bottom-right of Atom
+
+![](./images/github_button.png)
+
+You should see a screen that prompts you to login to GitHub.
+
+![](./images/login.png)
+
+The process will require you to login from a browser in order to retrieve a token specific to your account. Once you have the token, paste it into the prompt and hit `Login`.
+
+After completing this step, Git, Atom, and GitHub should all be properly configured on your device, and you can move on to the next step of the tutorial.
