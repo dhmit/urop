@@ -66,15 +66,6 @@ on the left.
 ![](../images/pycharm_config_1.png)
 
 ## Configuration
-
-Next, we're going to import the DH Lab PyCharm settings. First
-[download the settings file.](https://github.com/dhmit/gender_novels/raw/master/gender_novels/tutorials/setup/pycharm_settings.jar)
-Then, go to file, "Import Settings..."
-![](../images/pycharm_config_2.png)
-
-Import all components.
-![](./images/pycharm_config_3.png)
-
 As a final step, we'll change some configuration settings.
 
 On Mac, select PyCharm -> Preferences, On Windows File -> Settings
