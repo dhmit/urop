@@ -31,14 +31,13 @@ PyCharm
 - installing PyCharm
 - renewing PyCharm subscription
 - getting a project integrated with venv etc.
-- Getting ESLint and Pylint integrated
-- basic editor config (see Gender Novels for an example)
+
 
 Git clients and installation
 - Install Atom
 - Here's where the plug in
 - Here's how Git works (this is a link)
-- Atom GitHub to replace GitHub desktop 
+- Atom GitHub to replace GitHub desktop
 
 GitHub protocol
 - explain feature branches
@@ -57,6 +56,8 @@ Configs / code quality
 - Pylint config
 - standard (?) Travis config
 - standard .gitignore
+- Getting ESLint and Pylint integrated
+- basic editor config (see Gender Novels for an example)
 
 ???
 qwertasdfg
