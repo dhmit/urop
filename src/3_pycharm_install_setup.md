@@ -25,13 +25,6 @@ Alternately you can download PyCharm through this [direct link](https://www.jetb
 The installation process differs slightly between Mac and Windows but you can select the default settings in both cases.
 
 ## Initialization
-Once the installation process is finished, open up the PyCharm application. This
-will open up an activation screen. You can activate PyCharm by entering the email
-and password that you used before to sign up for a Jetbrains account.
-![](./images/pycharm_activation_1.png)
-
-Next, you will get to a setup menu.
-
 In the first window, select "Do not import settings". We'll import settings at a
 later stage.
 ![](./images/pycharm_init_1.png)
@@ -51,19 +44,21 @@ Don't create a launcher script--leave the checkbox empty.
 ![](./images/pycharm_init_4.png)
 
 
-Click on the buttons to install Markdown and BashSupport.
+Click on the buttons to install Markdown and BashSupport, if you see them.
 ![](./images/pycharm_init_5.png)
 
+Once the installation process is finished, PyCharm
+will open an activation screen. You can activate PyCharm by entering the email
+and password that you used before to sign up for a Jetbrains account.
+
+![](./images/pycharm_activation_1.png)
+
 Once the setup is finished, you will be greeted by the screen below. Select "Open"
-to select the existing gender_novels repo.
+to select the existing prompted_readings repo.
 ![](./images/pycharm_init_6.png)
 
-Select the path to your gender_novels repo.
-![](./images/pycharm_init_7.png)
-
-This will bring up the main PyCharm window with the loaded gender_novels directory
+Select the path to your prompted_readings repo. This will bring up the main PyCharm window with the loaded prompted_readings directory
 on the left.
-![](../images/pycharm_config_1.png)
 
 ## Configuration
 As a final step, we'll change some configuration settings.
