@@ -14,7 +14,7 @@ git --version
 
 If you receive output that indicates that `git` is not a recognized command, it is most likely because Git is not installed. If you are working with the most current version of Git, feel free to move on to the **Create a GitHub Account** section.
 
-If you have determined that Git is not installed on your computer, you can download the installer for the current version from [Git's Website](https://git-scm.com).
+If you have determined that Git is not installed on your computer, you can download the installer for the current version from [Git's website](https://git-scm.com).
 
 ![](./images/git/git_site.png)
 
@@ -56,7 +56,7 @@ If you are given the option to install experimental options on the next page, pl
 Click `Install` to finish installing Git onto your computer. Once it is finished, you can move on to the **Create a GitHub Account** section.
 
 ### Mac Users
-After you have downloaded the installer file, run the file. If you get an error saying that the file is from an unidentified developer, you should hold "Control" while clicking on the file, and then select "Open".
+After you have downloaded the installer file from [Git's website](https://git-scm.com), run the file. If you get an error saying that the file is from an unidentified developer, you should hold "Control" while clicking on the file, and then select "Open".
 
 ![](./images/git/mac_force_open.png)
 
