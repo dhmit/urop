@@ -39,7 +39,13 @@ Pip is a package manager for Python that will download and install all of the Py
 
 After Python is installed onto your computer, it will automatically install Pip at the same time. The only thing that is necessary is making sure it is using the most current version.
 
-In your terminal, enter the following command:
+In your terminal, enter the following command on macOS:
+
+```
+pip3 install -U pip
+```
+
+Or on Windows:
 
 ```
 pip install -U pip
