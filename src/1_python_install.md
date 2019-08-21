@@ -45,4 +45,9 @@ In your terminal, enter the following command:
 pip install -U pip
 ```
 
+If you receive a permissions error after running this command, use the following:
+
+```
+pip install -U --user pip
+```
 After it finishes installing, your computer should be fully setup for use with Python.
