@@ -37,9 +37,11 @@ The next screen allows you to set your PATH environment, which is what allows yo
 
 On the next screen, make sure that "Use the OpenSSL Library" option is checked, and move on to the next page.
 
-![](./images/git/git_line_ending.png)
+![](./images/git/openssl.png)
 
 Make sure that check the top option ("Checkout Windows-style"), as these settings will help tell Git what type of computer you are using, and will allow it to convert files as necessary. This lets other people view your code no matter what operating system they are on.
+
+![](./images/git/git_line_ending.png)
 
 After this step, you should select the default terminal emulator that Git Bash uses. Please ensure that you are using MinTTY.
 
@@ -49,9 +51,9 @@ The following step should be left as its defaults:
 
 ![](./images/git/git_options.png)
 
-If you are given the option to install experimental options on the next page, please do not select any of them at the moment. Often times they are not yet fully tested, and can sometimes cause issues that are best to avoid.
+If you are given the option to install experimental options on the next page, please do __not__ select any of them at the moment. Often, they are not yet fully tested and can cause issues that are best to avoid.
 
-Finally, you should now be able to install Git onto your computer. Once it is finished, you can move on to the **Create a GitHub Account** section.
+Click `Install` to finish installing Git onto your computer. Once it is finished, you can move on to the **Create a GitHub Account** section.
 
 ### Mac Users
 After you have downloaded the installer file, run the file. If you get an error saying that the file is from an unidentified developer, you should hold "Control" while clicking on the file, and then select "Open".
