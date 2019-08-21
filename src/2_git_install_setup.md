@@ -2,7 +2,7 @@
 
 We will use Git to work together on our shared codebase. Git is version-control open-source software that allows us to work on code individually while we test, document, and prepare new functions and features. Once we are ready to share the new additions to the larger project, we can open a pull request to receive feedback and modify our code until it is accepted and incorporated into the larger project's codebase.
 
-GitHub is a popular code repository web-based hosting service web-based hosting service that uses Git to help developers collaborate on code. It offers a desktop program to help make Git more intuitive.
+GitHub is a popular code repository web-based hosting service that uses Git to help developers collaborate on code. It offers a desktop program to help make Git more intuitive.
 
 
 ## Install Git
