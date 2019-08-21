@@ -17,8 +17,6 @@ Or you can check your version on Windows by typing:
 python --version
 ```
 
-![](./images/setup_python_1.png)
-
 If you receive an error or a version of Python lower than 3.7, you should continue to install for your operating system.
 
 Please note that if your version of Python is installed through Anaconda or homebrew, you should continue with the guide and use Python's GUI installer.
