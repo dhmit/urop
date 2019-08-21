@@ -31,7 +31,7 @@ Once you have checked all of the boxes displayed in the picture, hit "Next" to m
 
 Git allows you to designate a default text editor for handling merge conflicts and other changes that you will need to make to your code. We will be using Atom for this, but will change the settings at a later point. For now, leave the default editor as Vim.
 
-The next screen allows you to set your PATH environment, which is what allows you to use Git from the command line. Make sure that the middle option is checked.
+The next screen allows you to set your PATH environment, which is what allows you to use Git from the command line. Make sure that the last option is checked.
 
 ![](./images/git/git_path.png)
 
@@ -41,7 +41,7 @@ On the next screen, make sure that "Use the OpenSSL Library" option is checked, 
 
 Make sure that check the top option ("Checkout Windows-style"), as these settings will help tell Git what type of computer you are using, and will allow it to convert files as necessary. This lets other people view your code no matter what operating system they are on.
 
-After this step, you should select the default terminal emulator that Git uses. Please ensure that you are using MinTTY.
+After this step, you should select the default terminal emulator that Git Bash uses. Please ensure that you are using MinTTY.
 
 ![](./images/git/git_terminal.png)
 
