@@ -12,7 +12,7 @@ For many of you, this might be your first experience writing software on a large
 
 ## Communication
 1. GitHub:
-- If you do not already have an account, create one. Ideally choose a username that makes it easy for us to identify you -- and remember that your GitHub account is going to be a part of your professional identity. 
+- If you do not already have an account, create one. Ideally choose a username that makes it easy for us to identify you -- and remember that your GitHub account is going to be a part of your professional identity.
 - Email Ryaan <rahmed@mit.edu> with your username, so he can add you to our organization.
 
 1. Join Slack, and join the mitdhlab workspace.
@@ -31,19 +31,12 @@ https://atom.io/
 
 
 
-## Install PyCharm 
-
-## Install npm
-https://nodejs.org/
-Choose the LTS (long term support) version, not the Current version.
+## Install PyCharm
 
 
 ## Windows users
 
 You'll need to install Git for Windows, which comes with Bash for Windows.
 
-On this screen, pick Sublime Text as your default editor for Git.
 
-## 
-
-
+##
