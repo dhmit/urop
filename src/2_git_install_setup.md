@@ -78,7 +78,7 @@ If you are unfamiliar with how GitHub works, feel free to take a look at [GitHub
 ## Install Atom
 Atom is a text editor created by GitHub that allows you to make quick edits to code as well as manage several Git commands directly from the editor.
 
-When [Installing Atom](https://atom.io), make sure to install the appropriate version for your machine and follow the installation steps.
+When [installing Atom](https://atom.io), make sure to install the appropriate version for your machine and follow the installation steps.
 
 
 ## Cloning the Repository
@@ -112,7 +112,7 @@ After the project finishes downloading, you should now have a "Project" pane wit
 ## Sync with GitHub
 Atom is incredibly powerful because it is heavily integrated with GitHub, but first it is necessary to sign in to GitHub to allow it to perform some of the necessary commands.
 
-After the project is successfully loaded onto your computer, click on the GitHub logo in the bottom-right of Atom
+After the project is successfully loaded onto your computer, click on the GitHub logo in the bottom-right of Atom.
 
 ![](./images/github_button.png)
 
