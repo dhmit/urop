@@ -37,7 +37,7 @@ With Python fully installed, we can now move on to installing Pip.
 
 Pip is a package manager for Python that will download and install all of the Python packages that we may need for our projects.
 
-After Python is installed onto your computer, it will automatically install Pip at the same time. The only thing that is necessary is making sure it is using the most current version.
+After Python is installed onto your computer, it will automatically install pip at the same time. The only thing that is necessary is making sure it is using the most current version.
 
 In your terminal, enter the following command on macOS:
 
@@ -56,4 +56,4 @@ If you receive a permissions error after running this command, use the following
 ```
 pip install -U --user pip
 ```
-After it finishes installing, your computer should be fully setup for use with Python.
+After it finishes installing, your computer should be fully set up for use with Python.
