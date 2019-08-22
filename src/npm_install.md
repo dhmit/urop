@@ -9,7 +9,7 @@ The first thing that you need to do is download the Node.js installer from the [
 
 While the setup process is different for each operating system, all of the defaults are desired for each of them.
 
-Note: On Windows, Node.js will ask to install Chocolatey, which should not be done at this time.
+Note: On Windows, Node.js will ask to install Chocolatey, which should __not__ be done at this time.
 
 After the installer has finished, verify that everything was installed properly by opening your terminal and entering the following commands:
 
@@ -43,4 +43,4 @@ Now that we are in the directory that contains all of our package requirements f
 $ npm install
 ```
 
-After npm indexes and installs the required packages, you will be setup for using and editing all of the frontend code in the repository.
+After npm indexes and installs the required packages, you will be set up for using and editing all front-end code in the repository.
