@@ -63,7 +63,7 @@ on the left.
 ## Configuration
 As a final step, we'll change some configuration settings.
 
-On Mac, select PyCharm -> Preferences, On Windows File -> Settings
+On a Mac, select `PyCharm -> Preferences`; On Windows, `File -> Settings`
 ![](./images/pycharm_config_4.png)
 
 
@@ -81,6 +81,6 @@ Select "New Environment" and make sure that you are using a base interpreter tha
 
 Leave the location for the interpreter as the default provided by PyCharm.
 
-After this is configured and you've hit `OK`, you will see the project interpreter screen again. Once this is finished, press `Apply` to save your changes.
+After this is configured and you've hit `OK`, you will see the project interpreter screen again. Once this is finished, press `Apply` to save your changes, and then click `OK` to finish.
 
-With this step done, you have now completed the PyCharm installation and configuration.
+You have now completed the PyCharm installation and configuration.
