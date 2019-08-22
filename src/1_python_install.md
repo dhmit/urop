@@ -51,9 +51,17 @@ Or on Windows:
 pip install -U pip
 ```
 
-If you receive a permissions error after running this command, use the following:
+If you receive a permissions error after running this command, use the following on Windows:
 
 ```
 pip install -U --user pip
 ```
+
+And on Mac:
+
+```
+pip3 install -U --user pip
+```
+
+
 After it finishes installing, your computer should be fully setup for use with Python.
