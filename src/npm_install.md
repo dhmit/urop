@@ -29,7 +29,7 @@ At the bottom left of the PyCharm window, there should be a button labelled `Ter
 
 ![](./images/find_terminal.png)
 
-Once it is open, it should function the same as other terminals that you may have used. Note that there is now a (venv) marker at the start of the line - this indicates that we are using the virtual environment that was set up with PyCharm.
+Once it is open, it should function the same as other terminals that you may have used. Note that there is now a (venv) marker at the start of the line - this indicates that we are using the virtual environment that was [set up with PyCharm](3_pycharm_install_setup.md).
 
 In the PyCharm terminal, enter the `frontend` directory with:
 

@@ -27,7 +27,10 @@ First, visit [Python's Download Page](https://www.python.org/downloads/) and dow
 
 Once it has downloaded, run the installation file and follow the steps that appear on the screen.
 
-![](./images/python_org_2.png)
+On Windows: It is necessary to click `Add Python to Path` on the first screen and then choose `Install Now`
+
+
+![](./images/python_path.png)
 
 Note that the screen may appear different based upon your operating system, but the procedure is the same across all systems.
 
