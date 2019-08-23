@@ -33,6 +33,8 @@ for src_file in SRC_DIR.iterdir():
     with open(src_file) as f:
         src_md = f.read()
 
+    src_md = src_md.replace('.md)', '.html)') # fix links
+
     content_html = markdown.markdown(src_md)
     out_html = template_html.replace(CONTENT_TAG, content_html)
 
