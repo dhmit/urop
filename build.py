@@ -20,6 +20,9 @@ os.makedirs(BUILD_DIR)
 # Copy images from src to build
 shutil.copytree(SRC_IMG_DIR, BUILD_IMG_DIR)
 
+with open(Path(BUILD_DIR / 'CNAME'), 'w') as f:
+    f.write('urop.dhmit.xyz')
+
 # Load template
 with open(TEMPLATE) as f:
     template_html = f.read()
