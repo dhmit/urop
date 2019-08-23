@@ -8,7 +8,7 @@ In order to foster an inclusive and positive space, behavior and language among 
 
 *   Use inclusive language
   * Refrain from generalizing or stereotyping
-  * Opt for gender-neutral language in documentation and conversation (e.g. avoid “guys” and other gendered words)
+  * Opt for gender-neutral language in documentation and conversation (e.g. avoid "guys" and other gendered words)
 *   Be respectful of differing viewpoints and acknowledge that we all have diverse experiences
 *   Accept and give feedback gracefully
 *   Show empathy towards others
@@ -23,7 +23,7 @@ Project maintainers have the right and responsibility to remove, edit, or reject
 
 ## Scope
 
-This Code of Conduct applies to all content on the Digital Humanities Lab’s GitHub organization, or any other official Digital Humanities Lab web presence allowing for community interactions, as well as at all official events, whether offline or online.
+This Code of Conduct applies to all content on the Digital Humanities Lab's GitHub organization, or any other official Digital Humanities Lab web presence allowing for community interactions, as well as at all official events, whether offline or online.
 
 The Code of Conduct also applies within project spaces and in public spaces whenever an individual is representing the Digital Humanities Lab or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed or de facto representative at an online or offline event.
 
