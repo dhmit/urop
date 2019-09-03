@@ -19,8 +19,9 @@ for src_file in SRC_DIR.iterdir():
     src_md = src_md.replace('.md)', '.html)') # fix links
 
     html_string = markdown.markdown(src_md)
-    html_string = html_string.replace('<h1>', '{% block title %}') # fix links
-    html_string = html_string.replace('</h1>', '{% endblock %}') # fix links
+    html_string = html_string.replace('<h1>', '{% block title %}') # h1 to title block
+    html_string = html_string.replace('</h1>', '{% endblock %}')
+    html_string = html_string.replace('<img', '<img class="img-fluid"') # add img-fluid class
     html_string = "{% extends 'base.html' %}\n" + html_string
 
     html_filename = src_file.name.replace(src_file.suffix, '.html')

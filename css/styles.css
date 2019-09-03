@@ -2,6 +2,10 @@ body {
   font-size: .875rem;
 }
 
+.img-fluid {
+  max-width: 512px; !important
+
+}
 .feather {
   width: 16px;
   height: 16px;
