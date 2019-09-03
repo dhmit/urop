@@ -6,20 +6,25 @@ import shutil
 import jinja2
 
 TEMPLATE_DIR = Path('./templates')
-SRC_IMG_DIR = Path('./md/images')
 BUILD_DIR = Path('./docs')
+
+SRC_IMG_DIR = Path('./md/images')
 BUILD_IMG_DIR = Path(BUILD_DIR / 'images')
+
+SRC_CSS_DIR = Path('./css')
+BUILD_CSS_DIR = Path(BUILD_DIR / 'css')
 
 # Clean and remake build dir
 if os.path.exists(BUILD_DIR):
     shutil.rmtree(BUILD_DIR)
 os.makedirs(BUILD_DIR)
 
-# Copy images from src to build
+# Copy assets to build
 shutil.copytree(SRC_IMG_DIR, BUILD_IMG_DIR)
+shutil.copytree(SRC_CSS_DIR, BUILD_CSS_DIR)
 
 # Write out CNAME
-with open(Path(TEMPLATE_DIR / 'CNAME'), 'w') as f:
+with open(Path(BUILD_DIR / 'CNAME'), 'w') as f:
     f.write('urop.dhmit.xyz')
 
 # setup Jinja2 template loader and environment
@@ -29,7 +34,7 @@ template_env = jinja2.Environment(loader=template_loader)
 # Process markdown into html and save it in build
 for template in TEMPLATE_DIR.iterdir():
     print('Building ', template)
-    if template.is_dir() or template.name == 'base.html':
+    if template.is_dir() or template.name == 'base.html' or template.name.endswith('swp'):
         continue
 
     template = template_env.get_template(template.name)
