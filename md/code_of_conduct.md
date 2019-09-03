@@ -31,4 +31,3 @@ The Code of Conduct also applies within project spaces and in public spaces when
 
 This Code of Conduct is inspired by the [Contributor Covenant](https://www.contributor-covenant.org/), the [Geek Feminism Code of Conduct](https://geekfeminism.org/about/code-of-conduct/) and the [Drupal Code of Conduct](https://www.drupal.org/dcoc).
 
-

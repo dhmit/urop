@@ -1,10 +1,11 @@
-<h1>Installing and Setting Up Git</h1>
+{% extends 'base.html' %}
+{% block title %}Installing and Setting Up Git{% endblock %}
 <p>We will use Git to work together on our shared codebase. Git is version-control open-source software that allows us to work on code individually while we test, document, and prepare new functions and features. Once we are ready to share the new additions to the larger project, we can open a pull request to receive feedback and modify our code until it is accepted and incorporated into the larger project's codebase.</p>
 <p>GitHub is a popular code repository web-based hosting service that uses Git to help developers collaborate on code. It offers a desktop program to help make Git more intuitive.</p>
 <h2>Install Git</h2>
 <p>Open up a terminal window and type the following command to check whether Git is installed:</p>
 <p><code>git --version</code></p>
-<p>If you receive output that indicates that <code>git</code> is not a recognized command, it is most likely because Git is not installed. If you are working with the most current version of Git, feel free to move on to the <strong>Create a GitHub Account</strong> section.</p>
+<p>If you receive output that indicates that <code>git</code> is not a recognized command, it is most likely because Git is not installed. If instead your git version is 2.20+, skip ahead to <strong>install atom</strong>.</p>
 <p>If you have determined that Git is not installed on your computer, you can download the installer for the current version from <a href="https://git-scm.com">Git's website</a>.</p>
 <p><img alt="" src="./images/git/git_site.png" /></p>
 <h3>Windows Users</h3>
@@ -32,10 +33,6 @@
 <p>You should now get another screen with a ".pkg" file. Double click on it and follow the remaining steps. You will probably need to enter your password at some point in the process.</p>
 <p>Git should now be installed on your computer. Once you are finished, you can move on to the <strong>Create a GitHub Account</strong> section.</p>
 <p><img alt="" src="./images/git/git_dmg.png" /></p>
-<h2>Create a GitHub Account</h2>
-<p>Next, you should create a <a href="https://github.com/join">GitHub account</a> if you don't already have one.</p>
-<p>It is worth noting that you can get added benefits through GitHub and other technology organizations — including unlimited private code repos — by signing up for the <a href="https://education.github.com/pack">Student Developer Pack.</a></p>
-<p>If you are unfamiliar with how GitHub works, feel free to take a look at <a href="https://guides.github.com/introduction/flow/">GitHub's Workflow</a>.</p>
 <h2>Install Atom</h2>
 <p>Atom is a text editor created by GitHub that allows you to make quick edits to code as well as manage several Git commands directly from the editor.</p>
 <p>When <a href="https://atom.io">Installing Atom</a>, make sure to install the appropriate version for your machine and follow the installation steps.</p>

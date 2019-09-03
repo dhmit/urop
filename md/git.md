@@ -4,6 +4,7 @@ We will use Git to work together on our shared codebase. Git is version-control 
 
 GitHub is a popular code repository web-based hosting service that uses Git to help developers collaborate on code. It offers a desktop program to help make Git more intuitive.
 
+If you are unfamiliar with Git and GitHub, please take a moment to read [Understanding the GitHub flow](https://guides.github.com/introduction/flow/).
 
 ## Install Git
 Open up a terminal window and type the following command to check whether Git is installed:
@@ -12,7 +13,7 @@ Open up a terminal window and type the following command to check whether Git is
 git --version
 ```
 
-If you receive output that indicates that `git` is not a recognized command, it is most likely because Git is not installed. If you are working with the most current version of Git, feel free to move on to the **Create a GitHub Account** section.
+If you receive output that indicates that `git` is not a recognized command, it is most likely because Git is not installed. If instead your git version is 2.20+, skip ahead to **install atom**.
 
 If you have determined that Git is not installed on your computer, you can download the installer for the current version from [Git's website](https://git-scm.com).
 
@@ -65,14 +66,6 @@ You should now get another screen with a ".pkg" file. Double click on it and fol
 Git should now be installed on your computer. Once you are finished, you can move on to the **Create a GitHub Account** section.
 
 ![](./images/git/git_dmg.png)
-
-
-## Create a GitHub Account
-Next, you should create a [GitHub account](https://github.com/join) if you don't already have one.
-
-It is worth noting that you can get added benefits through GitHub and other technology organizations — including unlimited private code repos — by signing up for the [Student Developer Pack.](https://education.github.com/pack)
-
-If you are unfamiliar with how GitHub works, feel free to take a look at [GitHub's Workflow](https://guides.github.com/introduction/flow/).
 
 
 ## Install Atom
