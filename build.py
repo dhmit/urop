@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import markdown
 import os
 import shutil
 
-SRC_DIR = Path('./src')
-SRC_IMG_DIR = Path(SRC_DIR / 'images')
+import jinja2
+
+TEMPLATE_DIR = Path('./templates')
+SRC_IMG_DIR = Path('./md/images')
 BUILD_DIR = Path('./docs')
 BUILD_IMG_DIR = Path(BUILD_DIR / 'images')
-
-TEMPLATE = Path('./template.html')
-CONTENT_TAG = '{{ content }}'
 
 # Clean and remake build dir
 if os.path.exists(BUILD_DIR):
@@ -20,30 +18,26 @@ os.makedirs(BUILD_DIR)
 # Copy images from src to build
 shutil.copytree(SRC_IMG_DIR, BUILD_IMG_DIR)
 
-with open(Path(BUILD_DIR / 'CNAME'), 'w') as f:
+# Write out CNAME
+with open(Path(TEMPLATE_DIR / 'CNAME'), 'w') as f:
     f.write('urop.dhmit.xyz')
 
-# Load template
-with open(TEMPLATE) as f:
-    template_html = f.read()
+# setup Jinja2 template loader and environment
+template_loader = jinja2.FileSystemLoader(searchpath=str(TEMPLATE_DIR))
+template_env = jinja2.Environment(loader=template_loader)
 
 # Process markdown into html and save it in build
-for src_file in SRC_DIR.iterdir():
-    if src_file.is_dir():
+for template in TEMPLATE_DIR.iterdir():
+    print('Building ', template)
+    if template.is_dir() or template.name == 'base.html':
         continue
 
-    print(src_file)
-    with open(src_file) as f:
-        src_md = f.read()
+    template = template_env.get_template(template.name)
+    rendered_template = template.render()
 
-    src_md = src_md.replace('.md)', '.html)') # fix links
+    build_filename = template.name
+    build_path = Path(BUILD_DIR / build_filename)
 
-    content_html = markdown.markdown(src_md)
-    out_html = template_html.replace(CONTENT_TAG, content_html)
-
-    html_filename = src_file.name.replace(src_file.suffix, '.html')
-    html_path = Path(BUILD_DIR / html_filename)
-
-    with open(html_path, 'w') as html_file:
-        html_file.write(out_html)
+    with open(build_path, 'w') as build_file:
+        build_file.write(rendered_template)
 
