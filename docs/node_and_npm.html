@@ -92,19 +92,29 @@
 
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>MIT Digital Humanities: UROP site</h1>
+                        <h1>Node and npm</h1>
                     </div>
 
                     <div>
                         
-<p>Welcome to the Digital Humanties lab UROP site. The purpose of this site is to provide the information you'll need to get setup and work on projects in the lab.</p>
-<h2>Technical Onboarding</h2>
-<p><a href="intro.html">Introduction</a></p>
-<p><a href="git_and_atom.html">Installing Atom and Git</a></p>
-<p><a href="python.html">Installing Python</a></p>
-<p><a href="pycharm.html">Setting up PyCharm</a></p>
-<p><a href="npm.html">Installing npm</a></p>
-<p><a href="windows.html">Windows Workarounds</a></p>
+<p>Node is a JavaScript runtime environment, and npm is a package manager for Node projects. We'll use both as tools for building the frontend of our web applications.</p>
+<h5>Check if you have Node and npm installed</h5>
+<p>Open your terminal and run
+<code>node --version</code></p>
+<p>If you get an error, or if the version you have installed is &lt; 10.16, continue to <a href="">Installing Node.js and npm</a></p>
+<p>If you have Node.js &gt;= 10.16, run
+<code>npm --version</code></p>
+<p>If you get an error, or if the version you have installed is &lt; 6, continue to <a href="">Installing Node.js and npm</a>.</p>
+<p>If both are already installed with the specified versions, continue to <a href="">Setting up Prompted Readings</a>.</p>
+<h5>Installing Node.js and npm</h5>
+<p>Download the Node.js installer from the <a href="https://nodejs.org">Node Website</a>. </p>
+<p>Make sure that you download the LTS (Long Term Support) version (marked "Recommended For Most Users"), <em>not</em> the Current version, which is potentially unstable.</p>
+<p><img class="img-fluid" alt="" src="./images/node.jpg" /></p>
+<p>Run the installer; the default options are all fine. On Windows, the Node.js installer will ask to install Chocolatey. Do not do so.</p>
+<p>After the installer has finished, verify that everything was installed properly by opening your terminal and once again entering the following commands:</p>
+<p><code>$ node --version
+$ npm --version</code></p>
+<p>If both of these commands run without errors and return a version number (node &gt;= 10.16, npm &gt;= 6), then you have successfully installed Node.js and npm.</p>
 
                     </div>
 

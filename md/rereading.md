@@ -1,24 +1,25 @@
-# NPM Setup
+# Setting up Prompted Readings 
 
-npm is a manager that will handle almost every package that we will use with our Javascript code. Because it is packaged with Node.js, you will need to install both of these together.
+Open PyCharm, and select "Open".
+![](./images/pycharm_init_6.png)
 
-## Installing Node.js
-The first thing that you need to do is download the Node.js installer from the [Node Website](https://nodejs.org). There are two stable releases, but you want to make sure that you download the most current version.
+Select the path to your prompted_readings repo. This will bring up the main PyCharm window with the loaded prompted_readings directory
+on the left.
 
-![](./images/node.png)
+On a Mac, select `PyCharm -> Preferences`; On Windows, `File -> Settings`
+![](./images/pycharm_config_4.png)
 
-While the setup process is different for each operating system, all of the defaults are desired for each of them.
+Then, you need to configure your Python interpreter under "Project: prompted_readings"
+-> Project Interpreter. Click on the wheel in the top right and select "Add".
+![](./images/pycharm_config_6.png)
 
-Note: On Windows, Node.js will ask to install Chocolatey, which should not be done at this time.
+Select "New Environment". Make sure that the base interpreter is the path that you noted when installing Python.
 
-After the installer has finished, verify that everything was installed properly by opening your terminal and entering the following commands:
+![](./images/new_venv.png)
 
-```
-$ node -v
-$ npm -v
-```
+Leave the location for the interpreter as the default provided by PyCharm.
 
-If both of these commands run without errors and return a version number, then you have successfully installed Node.js and npm.
+Apply your changes and exit settings.
 
 ## Preparing npm
 Once npm is installed, you will be able to download the necessary requirements for the repository.
@@ -44,3 +45,4 @@ $ npm install
 ```
 
 After npm indexes and installs the required packages, you will be setup for using and editing all of the frontend code in the repository.
+
