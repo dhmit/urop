@@ -2,6 +2,10 @@ body {
   font-size: .875rem;
 }
 
+#main {
+    max-width: 1024px;
+}
+
 .img-fluid {
   max-width: 512px; !important
 
