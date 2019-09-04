@@ -20,9 +20,10 @@ for src_file in SRC_DIR.iterdir():
 
     html_string = markdown.markdown(src_md)
     html_string = html_string.replace('<h1>', '{% block title %}') # h1 to title block
-    html_string = html_string.replace('</h1>', '{% endblock %}')
+    html_string = html_string.replace('</h1>',
+                                      '{% endblock %}\n{% block content %}')
     html_string = html_string.replace('<img', '<img class="img-fluid"') # add img-fluid class
-    html_string = "{% extends 'base.html' %}\n" + html_string
+    html_string = "{% extends 'base.html' %}\n" + html_string + '\n{% endblock %}'
 
     html_filename = src_file.name.replace(src_file.suffix, '.html')
     html_path = Path(HTML_DIR / html_filename)

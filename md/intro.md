@@ -2,13 +2,19 @@
 
 This document will walk you through the process of setting up the tools that we use in the DH Lab to do our work.
 
-## Preliminary notes
-
-We support macOS 10.13+ and Windows 10. 
+This might be your first experience writing software on a large team, which requires a set of practices to allow us to work towards a common goal without stepping on each others toes. By the end of this guide, you should be ready to contribute code to our shared project, to create issues in our shared bug tracker, and to communicate with other members on the team.
 
 There are a lot of tools available to help you write and maintain code. We're going to ask you to use a specific set of tools for all of your labwork. This is so that if something goes wrong, we can help, and so that you can help each other as you gain mastery of these tools.
 
-This might be your first experience writing software on a large team, which requires a set of practices to allow us to work towards a common goal without stepping on each others toes. By the end of this guide, you should be ready to contribute code to our shared project, to create issues in our shared bug tracker, and to communicate with other members on the team.
+##### Operating System
+
+We support macOS 10.13+ and Windows 10. We love Linux, but we do not support it for labwork, except for the use of Ubuntu on our web servers.
+
+##### A note about the command line
+<p>Moving forward, whenever we write 'the terminal' or 'the command line' on macOS we mean Terminal.app (found in your Applications folder) and on Windows the Command Prompt (Start Menu > Windows System, or just start typing 'Command Prompt' once you open the Start Menu).</p>
+
+<p>Windows users: later on in this guide, we'll install a third-party command line so that you'll have access to the same set of command line tools as macOS users, but stick with Command Prompt for the time being.</p>
+
 
 ## Communication
 

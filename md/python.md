@@ -1,70 +1,103 @@
-# Python Installation
+# Python 
 
-This document will walk you through the process of installing Python to start working on projects in the MIT DH Lab.
+This document will walk you through the process of installing Python 3.7. Please read the beginning of this guide **even if** you already have Python installed, as we need to ensure that you're using a version of Python that's compatible with the lab's development tools. 
 
-## Install Python
-Though many operating systems ship with a version of Python, we need to ensure that we're using the most up-to-date version available. We'll walk you through the installation for both Mac and Windows.
+##### Check if Python is Installed
 
-You can check whether you have Python 3 already installed on Mac by opening a terminal window and typing:
+Open the terminal and run the following command
+
+macOS
 
 ```
 python3 --version
 ```
 
-Or you can check your version on Windows by typing:
-
+Windows
 ```
 python --version
 ```
 
-If you receive an error or a version of Python lower than 3.7, you should continue to install for your operating system.
+If you receive an error or your version of Python is < 3.7, skip ahead to [Install Python](install_python).
 
-Please note that if your version of Python is installed through Anaconda or homebrew, you should continue with the guide and use Python's GUI installer.
+If you have Python 3.7 already installed, try the following command in the terminal:
 
-First, visit [Python's Download Page](https://www.python.org/downloads/) and download the latest version of Python for your operating system.
+macOS
+```
+which python3
+```
 
-![](./images/python_org_1.png)
+windows
+```
+which python
+```
 
-Once it has downloaded, run the installation file and follow the steps that appear on the screen.
+This will show you the location of your Python interpreter. If this path contains any reference to 'Anaconda' -- a popular Python distribution that you might be using in some of your classes -- please follow the instructions below to install Python.
 
-On Windows: It is necessary to click `Add Python to Path` on the first screen and then choose `Install Now`
 
+##### Install Python
+Visit the [Python download page](https://www.python.org/downloads/), download, and install Python 3.7 for your operating system.
+
+On Windows, make sure to click `Add Python to Path` on the first screen.
 
 ![](./images/python_path.png)
 
-Note that the screen may appear different based upon your operating system, but the procedure is the same across all systems.
+Once Python is installed, open your terminal and run:
 
-With Python fully installed, we can now move on to installing Pip.
+macOS
+```
+python3
+```
 
-## Updating Pip
+Windows
+```
+python
+```
 
-Pip is a package manager for Python that will download and install all of the Python packages that we may need for our projects.
+This will start the Python Shell, which should report Python version 3.7.x (where ideally x is 4). Try running some code, if you like, and then quit by running ```quit()``` in the shell.
 
-After Python is installed onto your computer, it will automatically install Pip at the same time. The only thing that is necessary is making sure it is using the most current version.
+Open the terminal and run the following command
 
-In your terminal, enter the following command on macOS:
+macOS
+```
+which python3
+```
 
+Windows
+```
+which python
+```
+
+This tells you where your Python interpreter is installed. Please take note of this path; we'll use it later.
+
+If at an earlier stage you discovered that you had Python installed via Anaconda and this path _still_ references Anaconda, find Ryaan, who will attempt to perform an exorcism on your machine.
+
+
+##### Updating Pip
+
+Pip is a package manager for Python. Python comes with Pip, but we just need to make sure that you have the most recent version.
+
+In your terminal, enter the following command:
+
+macOS
 ```
 pip3 install -U pip
 ```
 
-Or on Windows:
-
+Windows
 ```
 pip install -U pip
 ```
 
-If you receive a permissions error after running this command, use the following on Windows:
+If you receive a permissions error after running this command, try instead:
 
-```
-pip install -U --user pip
-```
 
-And on Mac:
+macOS
 
 ```
 pip3 install -U --user pip
 ```
 
-
-After it finishes installing, your computer should be fully setup for use with Python.
+Windows
+```
+pip install -U --user pip
+```

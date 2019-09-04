@@ -85,11 +85,60 @@
 
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>{% block title %}{% endblock %}</h1>
+                        <h1>Python</h1>
                     </div>
 
                     <div>
-                        {% block content %}{% endblock %}
+                        
+<p>This document will walk you through the process of installing Python 3.7. Please read the beginning of this guide <strong>even if</strong> you already have Python installed, as we need to ensure that you're using a version of Python that's compatible with the lab's development tools. </p>
+<h5>Check if Python is Installed</h5>
+<p>Open the terminal and run the following command</p>
+<p>macOS</p>
+<p><code>python3 --version</code></p>
+<p>Windows
+<code>python --version</code></p>
+<p>If you receive an error or your version of Python is &lt; 3.7, skip ahead to <a href="install_python">Install Python</a>.</p>
+<p>If you have Python 3.7 already installed, try the following command in the terminal:</p>
+<p>macOS
+<code>which python3</code></p>
+<p>windows
+<code>which python</code></p>
+<p>This will show you the location of your Python interpreter. If this path contains any reference to 'Anaconda' -- a popular Python distribution that you might be using in some of your classes -- please follow the instructions below to install Python.</p>
+<h5>Install Python</h5>
+<p>Visit the <a href="https://www.python.org/downloads/">Python download page</a>, download, and install Python 3.7 for your operating system.</p>
+<p>On Windows, make sure to click <code>Add Python to Path</code> on the first screen.</p>
+<p><img class="img-fluid" alt="" src="./images/python_path.png" /></p>
+<p>Once Python is installed, open your terminal and run:</p>
+<p>macOS
+<code>python3</code></p>
+<p>Windows
+<code>python</code></p>
+<p>This will start the Python Shell, which should report Python version 3.7.x (where ideally x is 4). Try running some code, if you like, and then quit by running <code>quit()</code> in the shell.</p>
+<p>Open the terminal and run the following command</p>
+<p>macOS
+<code>which python3</code></p>
+<p>Windows
+<code>which python</code></p>
+<p>This tells you where your Python interpreter is installed. Please take note of this path; we'll use it later.</p>
+<p>If at an earlier stage you discovered that you had Python installed via Anaconda and this path <em>still</em> references Anaconda, find Ryaan, who will attempt to perform an exorcism on your machine.</p>
+<h5>Updating Pip</h5>
+<p>Pip is a package manager for Python. Python comes with Pip, but we just need to make sure that you have the most recent version.</p>
+<p>In your terminal, enter the following command:</p>
+<p>macOS
+<code>pip3 install -U pip</code></p>
+<p>Windows
+<code>pip install -U pip</code></p>
+<p>If you receive a permissions error after running this command, try instead:</p>
+<p>macOS</p>
+<p><code>pip3 install -U --user pip</code></p>
+<p>Windows
+<code>pip install -U --user pip</code></p>
+
+
+<a href="./git_and_atom.html" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Git and Atom</a>
+<a href="./pycharm.html" class="btn btn-outline-primary float-right col-5 col-md-3">PyCharm &rarr;</a>
+
+
                     </div>
 
 

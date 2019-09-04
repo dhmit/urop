@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}NPM Setup{% endblock %}
+{% block content %}
 <p>npm is a manager that will handle almost every package that we will use with our Javascript code. Because it is packaged with Node.js, you will need to install both of these together.</p>
 <h2>Installing Node.js</h2>
 <p>The first thing that you need to do is download the Node.js installer from the <a href="https://nodejs.org">Node Website</a>. There are two stable releases, but you want to make sure that you download the most current version.</p>
@@ -21,3 +22,4 @@ $ npm -v</code></p>
 <p>Now that we are in the directory that contains all of our package requirements for our Javascript, we can install everything that you need with the following command:</p>
 <p><code>$ npm install</code></p>
 <p>After npm indexes and installs the required packages, you will be setup for using and editing all of the frontend code in the repository.</p>
+{% endblock %}
