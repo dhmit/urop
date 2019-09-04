@@ -153,3 +153,5 @@ yarn-error.log*
 .idea/workspace.xml
 webpack-stats-dev.json
 webpack-stats.json
+
+*.swp

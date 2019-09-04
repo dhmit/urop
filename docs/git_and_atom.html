@@ -26,7 +26,13 @@
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link active" href="intro.html">
-                                    <span class="numeral">0</span> Intro and Comms
+                                    <span class="numeral">0</span> Intro
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="communication.html">
+                                    <span class="numeral">1</span> Communication 
                                 </a>
                             </li>
 
@@ -61,12 +67,6 @@
                         </h6>
 
                         <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="code_of_conduct.html">
-                                    Code of Conduct 
-                                </a>
-                            </li>
-
                             <li class="nav-item">
                                 <a class="nav-link active" href="contract.html">
                                     UROP Contract 
@@ -106,29 +106,96 @@
 <p>Open the terminal and enter the following command to check whether Git is installed:</p>
 <p><code>git --version</code></p>
 <p>If you receive output that indicates that <code>git</code> is not a recognized command, it is most likely because Git is not installed. Download the current installer from the <a href="https://git-scm.com">Git website</a>, and continue to the instructions below.
-<p>If instead you find that git is installed with version 2.20+, you can skip ahead to <a href="#cloning">Cloning the Repository</a>.</p>
+<p>If instead you find that git is installed with version 2.20+, you can skip ahead to <a href="python.html">Python</a>.</p>
 <h5>Install git</h5>
-<p>If you're on macOS, run the installer and skip ahead to <a href="#cloning">Cloning the Repository</a>.</p>
-<p>If you're on Windows, follow the instructions below.</p>
-<p>Launch the installer and accept the license information displayed at its start.</p>
-<p>You will now see a screen showing several installation options. Make sure that you have all of these boxes checked:</p>
-<p><img class="img-fluid" alt="" src="./images/git/git_install_options.png" /></p>
-<p>Select Atom as your default editor for Git.</p>
-<p><img class="img-fluid" alt="" src="./images/git/atom.png" /></p>
-<p>The next screen allows you to set your PATH environment, which is what allows you to use Git from the command line. Make sure that the last option is checked.</p>
-<p><img class="img-fluid" alt="" src="./images/git/git_path.png" /></p>
-<p>On the next screen, make sure that "Use the OpenSSL Library" option is checked, and move on to the next page.</p>
-<p><img class="img-fluid" alt="" src="./images/git/openssl.png" /></p>
-<p>Make sure that check the top option ("Checkout Windows-style"), as these settings will help tell Git what type of computer you are using, and will allow it to convert files as necessary. This lets other people view your code no matter what operating system they are on.</p>
-<p><img class="img-fluid" alt="" src="./images/git/git_line_ending.png" /></p>
-<p>After this step, you should select the default terminal emulator that Git Bash uses. Please ensure that you are using MinTTY.</p>
-<p><img class="img-fluid" alt="" src="./images/git/git_terminal.png" /></p>
-<p>The following step should be left as its defaults:</p>
-<p><img class="img-fluid" alt="" src="./images/git/git_options.png" /></p>
-<p>If you are given the option to install experimental options on the next page, please do <strong>not</strong> select any of them.</p>
-<p>Click <code>Install</code> to finish installing Git onto your computer.</p>
+<p>If you're on macOS, run the installer and skip ahead to <a href="python.html">Python</a>.</p>
 
-<a href="./intro.html" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Intro and Comms</a>
+<p>If you're on Windows, follow the instructions below.</p>
+
+<p>Launch the installer and accept the license information displayed at its start.</p>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>You will now see a screen showing several installation options. Make sure that you have all of these boxes checked.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+            src="./images/git/git_install_options.png" /></p>
+    </div>
+</div>
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>Select Atom as your default editor for Git.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/atom.png" /></p>
+    </div>
+</div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>Select the last option here, which adds the Git command line tools to your PATH for the Command Prompt.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/git_path.png" /></p>
+    </div>
+</div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>On the next screen, make sure that "Use the OpenSSL Library" option is checked, and move on to the next page.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/openssl.png" /></p>
+    </div>
+</div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>Select the following line ending conversions.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/git_line_ending.png" /></p>
+    </div>
+</div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>After this step, you should select the default terminal emulator that Git Bash uses. Please ensure that you are using MinTTY.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/git_terminal.png" /></p>
+    </div>
+</div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>The following step should be left with default values.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/git_options.png" /></p>
+    </div>
+</div>
+
+
+<p>If you are given the option to install experimental options on the next page, please do <strong>not</strong> select any of them.</p>
+
+
+<a href="./communication.html" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Communication</a>
 <a href="./python.html" class="btn btn-outline-primary float-right col-5 col-md-3">Python &rarr;</a>
 
 

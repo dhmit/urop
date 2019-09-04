@@ -26,7 +26,13 @@
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link active" href="intro.html">
-                                    <span class="numeral">0</span> Intro and Comms
+                                    <span class="numeral">0</span> Intro
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="communication.html">
+                                    <span class="numeral">1</span> Communication 
                                 </a>
                             </li>
 
@@ -62,12 +68,6 @@
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="code_of_conduct.html">
-                                    Code of Conduct 
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
                                 <a class="nav-link active" href="contract.html">
                                     UROP Contract 
                                 </a>
@@ -97,34 +97,115 @@
                     <div>
                         
 <p>This document will walk you through the process of installing Python 3.7. Please read the beginning of this guide <strong>even if</strong> you already have Python installed, as we need to ensure that you're using a version of Python that's compatible with the lab's development tools. </p>
+
 <h5>Check if Python is Installed</h5>
-<p>Open the terminal and run the following command</p>
-<p>macOS</p>
-<p><code>python3 --version</code></p>
-<p>Windows
-<code>python --version</code></p>
+<p>Open your terminal and run the following command</p>
+
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            python3 --version
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            python --version
+        </kbd>
+    </div>
+</div>
+<br>
+
+
 <p>If you receive an error or your version of Python is &lt; 3.7, skip ahead to <a href="install_python">Install Python</a>.</p>
 <p>If you have Python 3.7 already installed, try the following command in the terminal:</p>
-<p>macOS
-<code>which python3</code></p>
-<p>windows
-<code>which python</code></p>
-<p>This will show you the location of your Python interpreter. If this path contains any reference to 'Anaconda' -- a popular Python distribution that you might be using in some of your classes -- please follow the instructions below to install Python.</p>
+
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            which python3
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            which python
+        </kbd>
+    </div>
+</div>
+<br>
+
+<p>This will output the location of your Python interpreter. If the output contains any reference to 'Anaconda' -- a popular Python distribution that you might be using in some of your classes -- please follow the instructions below to install Python.</p>
+
 <h5>Install Python</h5>
+
 <p>Visit the <a href="https://www.python.org/downloads/">Python download page</a>, download, and install Python 3.7 for your operating system.</p>
-<p>On Windows, make sure to click <code>Add Python to Path</code> on the first screen.</p>
-<p><img class="img-fluid" alt="" src="./images/python_path.png" /></p>
+
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>On Windows, make sure to click <code>Add Python to Path</code> on the first screen.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/python_path.png" /></p>
+    </div>
+</div>
+
+
 <p>Once Python is installed, open your terminal and run:</p>
-<p>macOS
-<code>python3</code></p>
-<p>Windows
-<code>python</code></p>
-<p>This will start the Python Shell, which should report Python version 3.7.x (where ideally x is 4). Try running some code, if you like, and then quit by running <code>quit()</code> in the shell.</p>
-<p>Open the terminal and run the following command</p>
-<p>macOS
-<code>which python3</code></p>
-<p>Windows
-<code>which python</code></p>
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            python3
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            python
+        </kbd>
+    </div>
+</div>
+<br>
+<p>This will start the Python Shell, which should report Python version 3.7.x (where ideally x is 4). Try running some code, if you like, and then quit by running <kbd>quit()</kbd> in the shell.</p>
+<p>Finally, open the terminal and run the following command:</p>
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            which python3
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            which python
+        </kbd>
+    </div>
+</div>
+<br>
+
+
 <p>This tells you where your Python interpreter is installed. Please take note of this path; we'll use it later.</p>
 <p>If at an earlier stage you discovered that you had Python installed via Anaconda and this path <em>still</em> references Anaconda, find Ryaan, who will attempt to perform an exorcism on your machine.</p>
 <h5>Updating Pip</h5>
