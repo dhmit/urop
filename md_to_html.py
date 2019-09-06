@@ -9,7 +9,7 @@ HTML_DIR = Path('./html')
 
 # Process markdown into html and save it in ./html
 for src_file in SRC_DIR.iterdir():
-    if src_file.is_dir():
+    if src_file.is_dir() or src_file.name.endswith('swp'):
         continue
 
     print(src_file)

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dhmit urop guide</title>
+        <meta name="author" content="MIT Digital Humanities">
+        <meta name="description" content="UROP guide for the MIT Programs in Digital Humanities">
+        <meta name="keywords" content="digital humanities, MIT, urop">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="css/styles.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <div class="pl-3 pt-3">
+                        <strong><a href='index.html'>dhmit urop guide<a></strong>
+                        </div>
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Technical Onboarding</span>
+                        </h6>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="intro.html">
+                                    <span class="numeral">0</span> Intro
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="communication.html">
+                                    <span class="numeral">1</span> Communication 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="git.html">
+                                    <span class="numeral">2</span> Git
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="python.html">
+                                    <span class="numeral">3</span> Python
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="pycharm.html">
+                                    <span class="numeral">4</span> PyCharm
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="node_and_npm.html">
+                                    <span class="numeral">5</span> Node and npm
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="rereading.html">
+                                    <span class="numeral">5</span> Project setup
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="first_pr.html">
+                                    <span class="numeral">5</span> First PR
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Other Materials</span>
+                        </h6>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contract.html">
+                                    UROP Contract 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="schedule.html">
+                                    Lab Schedule
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html">
+                                    Contact Info
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <main role="main" id="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 pb-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1>Setting up Rereading</h1>
+                    </div>
+
+                    <div>
+                        
+<p>At this point, you have all of the tools necessary to work on our project installed -- Git, Atom, Python, Node/npm, and PyCharm -- so let's put it all together and get the project running.</p>
+<h5>Cloning the Repository</h5>
+
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Open GitHub Desktop. If this is your first time using the application and you've already been added to the dhmit organization, dhmit projects should appear in the left hand pane. Click on <code>dhmit/rereading</code>, and click <code>Clone dhmit/rereading</code>.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/github_desktop_clone_0.png" /></p>
+    </div>
+</div>
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>If this option doesn't appear, click <code>Clone a repository from the Internet...</code> or go to <code>File</code> -&gt; <code>Clone repository</code>. In the URL tab, enter <code>https://github.com/dhmit/rereading.git</code>.</p>
+<p>Leave the <code>Local path</code> field as is, but take note of it, as you'll need it later. Click <code>Clone</code> to download the repo.
+
+
+
+
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/github_desktop_clone_1.png" /></p>
+    </div>
+</div>
+
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Once the repo is cloned, you should see a screen that looks like this. Try clicking <code>Show in Explorer</code> to see where the project has ended up on your computer, or click <code>View on GitHub</code> to go to our project page on GitHub.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/github_desktop_clone_2.png" /></p>
+    </div>
+</div>
+
+
+
+
+
+<h3>Setting up our project in PyCharm</h3>
+<h5>Open the project</h5>
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+
+<p>Open PyCharm, select "Open", and open the folder where you cloned the repo in the step above. By default on Windows this is <code>C:\Users\YOUR_USER_NAME\Documents\GitHub\rereading</code> and on macOS <code>/Users/YOUR_USER_NAME/Documents/GitHub/rereading</code>.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pycharm_open.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Once it's loaded, you should see the <code>rereading</code> folder appear in the <code>Project</code> pane on the left.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pycharm_project_pane.png" /></p>
+    </div>
+</div>
+
+
+
+<h5>Setup Python environment and packages</h5>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Open the settings window (macOS <code>PyCharm -&gt; Preferences</code>; Windows, <code>File -&gt; Settings</code>), and go to "Project: rereading" -&gt; Project Interpreter. Click on the wheel in the top right and select "Add".
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pycharm_interpreter_0.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Select "New Environment". Make sure that the base interpreter is the path that you noted when installing Python. Leave the location for the interpreter as the default provided by PyCharm.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/new_venv.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Apply your changes, wait for the virtual environment to be created, and exit the settings window.</p>
+<p>Click <code>Terminal</code> in the bottom status bar. You should see <code>(venv)</code> at the beginning of your prompt. If you do not, restart PyCharm and check again. If you still don't see <code>(venv)</code> appear, go back to the beginning of this section and make sure you correctly setup a new environment.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_django_venv.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>In the <code>Project</code> panel, find and open the <code>requirements.txt</code> file in the top-level <code>rereading</code> folder. Wait until PyCharm automatically detects that this file contains our Python package requirements. Click <code>Install requirements</code> in the banner that pops up, and click <code>Install</code> once the <code>Choose Packages to Install</code> window pops up. (If it asks you to install a <em>plugin</em> as shown in the top banner here, you can safely click <code>Ignore extension</code>. You should see the installation process begin in the bottom status bar. We can let this run while moving on to the next step, but we'll come back to this to make sure it worked.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pycharm_requirements.png" /></p>
+    </div>
+</div>
+
+
+
+<h5>Setting up a Django run configuration</h5>
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Our project uses Django, a Python web framework. If we let PyCharm know about Django, we get lots of nice debugging features.</p>
+<p>Go back to the settings window. Under <code>Languages &amp; Frameworks</code> -&gt; <code>Django</code> check <code>Enable Django Support</code>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_django_0.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Set the <code>Django project root</code> to be the <code>backend</code> folder within our project.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_django_1.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Set the <code>Settings</code> file to be <code>config/settings/dev.py</code>.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_django_2.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>If the Django pane now looks something like this, you can click OK to apply and exit the settings.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_django_3.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Click the big <code>Add Configuration</code> button in the top bar. In the <code>Run/Debug Configurations</code> window that appears, click the + in the top left corner, and select <code>Django server</code>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_django_4.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Name this configuration <code>Run backend</code> and click <code>OK</code> with all of the defaults in place. At this point in the process, you've installed all the third-party packages we need to run our project and made PyCharm aware of how to run our Django server. Let's check that everything worked.</p>
+<p>Go back to the terminal inside Django, and execute <kbd>pip freeze</kbd>. This should output a list that's exactly the same as the contents of the <code>requirements.txt</code> file you opened earlier. Type <kbd>cd backend</kbd> to enter the backend folder, and then run <kbd>python manage.py migrate</kbd>. This will setup a local development database on your machine.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pip_freeze_migrate.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Click the green triangular play button in the top right corner of PyCharm to run the server. If everything is working, you should see some output like this in the run panel.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_run_server.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Click on the link where the site is being run locally <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>, where you should see... well... an error message. This is because we are not yet running the frontend development server. If you're seeing this error, that means that everything is working so far!
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_backend_without_frontend.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Navigate to <a href="http://127.0.0.1:8000/api/">http://127.0.0.1:8000/api/</a>, and you should see a Django REST framework debug page, which looks like this. If this is all working, we're nearly there! If not, try running the above steps again, and if all else fails, find a staff member or a returning lab member who can help you troubleshoot.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_django_rest.png" /></p>
+    </div>
+</div>
+
+
+
+<h5>Setting up npm</h5>
+
+<p>Now that the Python/Django backend part of the site is up and running on your machine, the last step is to setup the JavaScript/React frontend. </p>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>In the project pane, find and open <code>frontend/src/App.js</code>. Once you open this file, wait a moment, and PyCharm should throw about a million errors. PyCharm should also detect that it's missing two configurations, both of which are shown here in the banners that appear. Click <code>Run 'npm install</code> to install all of the JavaScript dependencies for our project. This is going to take a little while. </p>
+        <p>Once that's done, click <code>Switch</code> to switch the language version to React JSX. Give that a little while to run, as well (you'll see a progress bar in the bottom status bar). Once it's done, the errors should vanish.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pycharm_npm.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Now, go back to what used to be the <code>Add Configurations</code> button but now says <code>Run backend</code>. Click <code>Edit configurations</code> to go back to the <code>Run/Debug Configurations</code> window. Click the same + in the top left corner, and then select npm. Name this configuration <code>Run frontend</code>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_frontend_0.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>In the <code>package.json</code> field, click the dropdown menu down arrow, and select <code>frontend/package.json</code>. This is the file that tells PyCharm and npm how our frontend application is configured.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pycharm_package_json.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>In the <code>scripts</code> field, select <code>start</code> from the dropdown menu.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_pycharm_npm_start.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Click OK and exit the settings. Once again, click the green triangle 'Run' button next to <code>Run frontend</code> which will start the frontend development server. Once you see a success message in the run panel, go back to <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>, where you should now see a 'Hello, world!' message instead of an error message.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_hello_world.png" /></p>
+    </div>
+</div>
+
+
+
+<p>Congratulations! You've got the project up and running on your machine. </p>
+<h5>Closing and restarting the project</h5>
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Close PyCharm, terminate any processes when it asks, and then restart PyCharm. In order to run the project, you have to go to this dropdown menu, click <code>Run backend</code> and then the triangular 'Run' button next to it, and then click <code>Run frontend</code> and do the same.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_run.png" /></p>
+    </div>
+</div>
+
+
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+<p>Once you see both <code>Run backend</code> and <code>Run frontend</code> tabs open in the <code>Run</code> panel, and both show success messages, you can go back to the site running locally on your machine. Please note that the frontend pane will show a url ending in <code>:3000</code>. This is another way to access the frontend directly without running the Django server, but for this project, we'll be ignoring that entirely.
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/rereading_run_tab.png" /></p>
+    </div>
+</div>
+
+
+
+
+                    </div>
+
+
+                </main>
+            </div>
+        </div>
+
+    </body>
+</html>
