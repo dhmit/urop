@@ -109,50 +109,31 @@
 
                 <main role="main" id="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 pb-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Node.js and npm</h1>
+                        <h1>Tech Tutorials</h1>
                     </div>
 
                     <div>
                         
-<p>Node.js is a JavaScript runtime environment, and npm is a package manager for Node projects. We'll use both as tools for building the frontend of our web applications.</p>
-<h5>Check if you have Node and npm installed</h5>
-<p>Open your terminal and run
-<kbd>node --version</kbd></p>
-<p>If you get an error, or if the version you have installed is &lt; 10.16, continue below to <a href="#installing_node">Installing Node.js and npm</a></p>
-<p>If you have Node &gt;= 10.16, run
-<kbd>npm --version</kbd></p>
-<p>If you get an error, or if the version you have installed is &lt; 6, continue below to <a href="#installing_node">Installing Node.js and npm</a>.</p>
-<p>If both are already installed with the specified versions, continue to <a href="rereading.html">Setting up Rereading</a>.</p>
+<p>There are two main parts to our fall project:
+<ul>
+    <li>backend code written in Python using the Django web framework to implement a RESTful API</li>
+    <li>frontend code written in JavaScript using the React framework for building user interfaces</li>
+</ul>
+</p>
 
-<h5><a name="installing_node">Installing Node.js and npm<a></h5>
-<p>Download the Node.js installer from the <a href="https://nodejs.org">Node Website</a>. </p>
-
-
-<hr class="d-lg-none">
-<div class="row">
-    <div class="col-lg-4">
-        <p>Make sure that you download the LTS (Long Term Support) version (marked "Recommended For Most Users"), <em>not</em> the Current version, which is potentially unstable.</p>
-    </div>
-    <div class="col-lg-8">
-        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
-                src="./images/node.jpg" /></p>
-    </div>
-</div>
-
-<p>Run the installer; the default options are all fine. On Windows, the Node.js installer will ask to install Chocolatey. Do not do so.</p>
-
-<p>After the installer has finished, verify that everything was installed properly by opening your terminal and once again entering the following commands:</p>
-
-<p><kbd>node --version</kbd></p>
-
-and
-
-<p><kbd>npm --version</kbd></p>
-
-<p>If both of these commands run without errors and return a version number (node &gt;= 10.16, npm &gt;= 6), then you have successfully installed Node.js and npm.</p>
-
-<a href="./pycharm.html" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; PyCharm</a>
-<a href="./rereading.html" class="btn btn-outline-primary float-right col-5 col-md-3">Installing rereading &rarr;</a>
+<p>If some or all of that was completely foreign to you, do not fear! We'll be covering these concepts throughout the semester, and by jumping into the deep end in our Friday hack sessions and working with these tools, you'll find your way in no time at all.</p>
+<p>Here is a collection of materials you can use to start developing fluency with the tools we'll be using:</p>
+<h5>Python and Django</h5>
+<p>We won't be covering any introductory Python material, as we expect that you'll be getting enough of that from your coursework. If you have any questions, feel free to ask anyone on staff. You can also check out some of the Python books we have in our lending library, including one by our very own former postdoc <a href="http://lisatagliaferri.com/">Lisa Tagliaferri</a>!</p>
+<p><a href="https://docs.djangoproject.com/en/2.2/intro/">Django tutorial</a> &mdash;
+Django's own documentation is fantastic, and reading through (and if you have time <em>working through</em>) the tutorial will get you up to speed on how Django works.</p>
+<p><a href="https://wsvincent.com/official-django-rest-framework-tutorial-beginners-guide/">Django REST Framework tutorial</a> &mdash;
+Once you have your head around how Django's models work, have a read through (or follow along with) this tutorial about DRF, the Django package that we'll be using to implement our backend API.</p>
+<h5>JavaScript and React</h5>
+<p><a href="https://javascript.info/">The Modern JavaScript Tutorial</a> &mdash;
+If you have little-to-no experience with JavaScript or are not familiar with the conventions of modern JavaScript (ES6+) this tutorial is a nice, concise introduction and reference to the language.</p>
+<p><a href="https://reactjs.org/tutorial/tutorial.html">React tutorial</a> &mdash;
+From React's official docs, this walks you through putting together a game of tic-tac-toe using the React framework. A couple of things to make your time with this material more productive: when it says you can choose whether to do the tutorial in the browser or in a local dev environment, do it in a local dev environment. In the setup step 5, where it says <code>Add a file named index.js in the src/ folder with this JS code.</code>, please do not download or copy this code into your local file. Instead, copy it out by hand, line-by-line. I know this is tedious, but you will learn much more this way.</p>
 
                     </div>
 
