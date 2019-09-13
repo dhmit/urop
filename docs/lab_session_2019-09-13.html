@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dhmit urop guide</title>
+        <meta name="author" content="MIT Digital Humanities">
+        <meta name="description" content="UROP guide for the MIT Programs in Digital Humanities">
+        <meta name="keywords" content="digital humanities, MIT, urop">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <div class="pl-3 pt-3">
+                        <strong><a href='index.html'>dhmit urop guide<a></strong>
+                        </div>
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Technical Onboarding</span>
+                        </h6>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="intro.html">
+                                    <span class="numeral">0</span> Intro
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="communication.html">
+                                    <span class="numeral">1</span> Communication 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="git.html">
+                                    <span class="numeral">2</span> Git
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="python.html">
+                                    <span class="numeral">3</span> Python
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="pycharm.html">
+                                    <span class="numeral">4</span> PyCharm
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="node_and_npm.html">
+                                    <span class="numeral">5</span> Node and npm
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="rereading.html">
+                                    <span class="numeral">6</span> Project setup
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="tutorials.html">
+                                    <span class="numeral">7</span> Tech Tutorials
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Other Materials</span>
+                        </h6>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contract.html">
+                                    UROP Contract 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="schedule.html">
+                                    Lab Schedule
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="sessions.html">
+                                    Lab Sessions
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html">
+                                    Contact Info
+                                </a>
+                            </li>
+
+
+
+
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <main role="main" id="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 pb-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1>2019-09-13 Lab Session</h1>
+                    </div>
+
+                    <div>
+                        
+<h3>Using GitHub Desktop and GitHub</h3>
+
+<p>One of the most important things you'll need to familiarize yourself with in this lab is working with Git through GitHub Desktop. This tool helps us manage the complexity of having 30+ developers all working on the same codebase.</p>
+
+<p>In this lab, we'll use a 'feature branch' workflow for Git. Git lets us create multiple branches of the codebase with different changes; the workflow we'll be using means that one branch -- <code>master</code> -- will only accept changes that have been reviewed and approved by your peers and staff.</p>
+
+<p>Whenever we want to work on the codebase, we'll create a branch, make our changes, push that branch to GitHub, and when the feature is ready to merge into the shared codebase, make a pull request. A pull request (PR) notifies teammates that you have code that you want to merge into our master branch that is ready for review.</p>
+
+<p>Atlassian has a great series of Git tutorials, and <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">this one on the 'Feature Branch Workflow'</a> is worth a skim. It uses the command line interface to Git, whereas we'll be using GitHub Desktop in this lab.</p>
+
+<p>Onward to your first PR on this project. Do this tutorial in groups of three to five, so gather a few of your colleauges, open GitHub Desktop, and let's get started.</p>
+
+<p>Some of the steps that follow should be performed on only one machine, but please make sure that everyone follows along for everything.</p>
+
+<h5>Fetching and pulling from master (everyone do this)</h5>
+<p>When you sit down to work <em>always</em> start by pulling the latest changes from the master branch, so that your local copy of the codebase doesn't diverge too much from the current version.</p>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Start by clicking <code>Fetch origin</code>. This downloads the latest code from GitHub. Once that's done, click the same button, now labelled <code>Pull origin</code>. This merges the downloaded code into your current branch. The little number on the right shows how many commits your branch is behind the code that you've downloaded. For now, you can think of a commit as a single save. Ryaan's made a bunch of commits over the last few days, so you should see something here.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/0.png" /></p>
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/1.png" /></p>
+    </div>
+</div>
+
+
+
+<h5>Create a feature branch (do this on one computer only)</h5>
+<p>Instead of working directly on the master branch, we'll make a feature branch for your first commits and PR.</p>
+<div class="row">
+    <div class="col-lg-4">
+        <p>Click the <code>Current branch</code> button and click <code>New branch</code>. Call your new branch <code>group_first_names_first_PR</code> (e.g., ryaan_myke_first_PR) and click <code>Create branch</code>. When this is complete, you should see the 'Current branch' button show that you're on your newly created branch.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/2.png" /></p>
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/3.png" /></p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Click 'Publish branch' to send this newly created branch to GitHub, so that the rest of your team can check it out.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/4.png" /></p>
+    </div>
+</div>
+
+<h5>Check out the new branch (do this on the other computers)</h5>
+<div class="row">
+    <div class="col-lg-4">
+        <p>Click <code>Fetch origin</code> again to grab all of the latest data from GitHub, including the information that your colleague created a new branch. Click <code>Current branch</code>, and you should now see this branch appearing in the dropdown list. Click it to check it out.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/5.png" /></p>
+    </div>
+</div>
+
+<p>At this point, everyone in your group should be on the same branch, as indicated by the text under <code>Current branch</code>. Wait until everyone's synced up, and then move on to the next step. If you can't get everyone synced up, ask a staff member or returning UROP for help move on to the next step. If you can't get everyone synced up, ask a staff member or returning UROP for help.</p>
+
+
+<h5 class="h5">Make a commit to share with everyone (do this on one computer only)</h5>
+<div class="row">
+    <div class="col-lg-4">
+        <p>Open our project in PyCharm. Find the folder <code>docs/first_pr</code>, right click on it, and create a new file. Name this file again with the first names of everyone on your team, and give it the extension <code>.md</code> for Markdown.
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/6.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>When you create a new file in PyCharm, it asks if you want to add it to Git. It doesn't really matter what you choose here; we do want to add it to Git, but we'll be adding everything through GitHub Desktop anyway.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/7.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Add some content to this file - a heading (starting with <code>#</code>), and the name of the team member on whose computer you're doing this step.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/8.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Now, go back to GitHub Desktop. You should see a screen like this, which shows the file you added and the changes you made in that file. In the bottom left corner (in the smaller box next to your profile picture), write a commit message, describing the changes you made, and then click <code>Commit to YOUR_BRANCH</code>.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/9.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Now click <code>Push origin</code> to send your changes to GitHub, so the rest of your team can download them.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/10.png" /></p>
+    </div>
+</div>
+
+
+<h5>Make a change and commit it (on the other computers)</h5>
+<p>Click <code>Fetch origin</code> and <code>Pull origin</code> to merge the changes from the last step into your local copy. Open PyCharm and add your own name to the file that was created. Make a commit, in the same manner as above. Now STOP -- DO NOT PUSH / FETCH / PULL -- wait until everyone's made a change to this file and commited it. We're about to cause your first merge conflict. </p>
+<p>Once everyone's ready, this might be a good time to grab a staff member if no one on your team has worked with Git before. Here's what's about to happen: Git is usually very good at merging work, but we've just made a bunch of <em>different</em> changes in the same place to the same file.</p>
+<p>One member of your team can now click <code>Push origin</code>. This should cause no problems.</p>
+<div class="row">
+    <div class="col-lg-4">
+        <p>The next member of the team should now click <code>Push origin</code>, which should cause an error message like this. Make sure everyone on the team reads and understands this message before moving on. Then, click <code>Fetch</code> and then <code>Pull origin</code>.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/11.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>UH OH. Merge conflict time. Because we've made two changes to the same file in the same place, Git doesn't know how to merge them, so we'll have to do it manually. Click <code>Open in Atom</code>.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/12.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Atom has a great merge conflict resolution tool, but it assumes that you want either one change or the other. If you click <code>Use me</code> on either of these, you'll clobber the other change. Instead, click the <code>...</code> next to <code>Use me</code> and choose <code>Resolve as Ours Then Theirs</code> to combine both changes into the file. Save the file and exit Atom.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/13.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Back in GitHub Desktop, you should see this status, and click <code>Commit merge</code>. You can now click <code>Push origin</code>, and repeat this process with everyone else in the group.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/14.png" /></p>
+    </div>
+</div>
+
+<p>Just to be clear: most of the time we're working, chances are you won't be working directly on the same part of the same file as a teammate, so generally Git will resolve conflicts for us... but merge conflicts do happen, and you should be ready to resolve them if necessary.</p>
+
+
+
+<h5>Make a Pull Request (on one computer)</h5>
+<div class="row">
+    <div class="col-lg-4">
+        <p>Once everyone's contribution is merged into the branch, do this step on a machine that has all of the commits from everyone in your group. Click <code>Create Pull Request</code>.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/15.png" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>Take some time to examine the webpage that launches. You should see a list of the commits that you've all made (make sure they're all there!), as well as a list of changes you've made to the project. Give the PR a descritive name, and in the <code>Leave a comment</code> box, describe the contribution that this PR makes to the project. I like to write a bulleted list of anything the reviewer should know about the PR. Click the <code>Reviewers</code> field and request a review from <code>ryaanahmed</code>. Finally, click <code>Create pull request</code>.</p>
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/16.png" /></p>
+    </div>
+</div>
+
+<p>Although this first PR is trivial, once you're writing real code in the system, you may receive feedback on a pull request that asks for changes before we merge it into the master branch.</p>
+
+
+<h5>One last thing...</h5>
+<p>Go back to GitHub Desktop. Now that you've made a PR, you can switch your <code>Current branch</code> back to master. When you next sit down to start making a new feature, you'll repeat the steps above to work on a new branch, push that branch to GitHub, and then make a PR when it's ready to merge into the codebase.</p>
+
+<h5>While you're working on a feature branch</h5>
+<div class="row">
+    <div class="col-lg-4">
+        <p>Whenever you start working, if you're on a branch, clicking <code>Fetch origin</code> and then <code>Pull origin</code> only pulls changes from your current branch. You'll want to make a habit of clicking <code>Fetch origin</code>, <code>Pull origin</code>, and then <em>also</em> going to the menu item <code>Branch</code> -&gt; <code>Update from master</code>. This will merge any changes from the master branch into your current working branch, so that your feature branch doesn't drift too far away from master.
+    </div>
+    <div class="col-lg-8">
+    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+            src="./images/session_2019-09-13/17.png" /></p>
+    </div>
+</div>
+
+<h5>Things to remember</h5>
+<p>Commit often. My practice is that whenever I do anything that feels like a win, I make a commit with a descriptive message of what I've done. (e.g., <code>Added button to the instructor view.</code>; <code>Wrote a test for the Student model</code>; <code>Fixed dumb mistake I made with that button earlier; now it works!</code>) A commit should not have the granularity of a single file save, but nor should you wait until you finish implementing a big feature before commiting.</p>
+<p>Always always always be descriptive in your commit messages and PRs. These are a form of communication to your teammates.</p>
+
+<h5>I'm done, now what?</h5>
+Find a member of staff, who'll help you with next steps.
+
+
+                    </div>
+
+
+                </main>
+            </div>
+        </div>
+
+    </body>
+</html>
