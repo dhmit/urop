@@ -11,8 +11,8 @@ BUILD_DIR = Path('./docs')
 SRC_IMG_DIR = Path('./md/images')
 BUILD_IMG_DIR = Path(BUILD_DIR / 'images')
 
-SRC_CSS_DIR = Path('./css')
-BUILD_CSS_DIR = Path(BUILD_DIR / 'css')
+SRC_ASSETS_DIR = Path('./assets')
+BUILD_ASSETS_DIR = Path(BUILD_DIR / 'assets')
 
 # Clean and remake build dir
 if os.path.exists(BUILD_DIR):
@@ -21,7 +21,7 @@ os.makedirs(BUILD_DIR)
 
 # Copy assets to build
 shutil.copytree(SRC_IMG_DIR, BUILD_IMG_DIR)
-shutil.copytree(SRC_CSS_DIR, BUILD_CSS_DIR)
+shutil.copytree(SRC_ASSETS_DIR, BUILD_ASSETS_DIR)
 
 # Write out CNAME
 with open(Path(BUILD_DIR / 'CNAME'), 'w') as f:
