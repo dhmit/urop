@@ -137,8 +137,9 @@ so that you keep both the changes that I've made and your existing changes, in t
 <h5>Good Style</h5>
 <p>Before you do anything else, make sure the code that you've written so far follows
 the lab style guide. We follow <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>, which
-is the Python standard style guide. The actual style guide is worth a skim at some point
-in your career, but happily PyCharm enforces PEP 8 automatically.</p>
+is the Python standard style guide (with an exception of limiting line length to 99 chars rather than 79).
+The actual style guide is worth a skim at some point in your career, but happily PyCharm
+enforces PEP 8 automatically.</p>
 
 
 <div class="row">
@@ -155,13 +156,8 @@ in your career, but happily PyCharm enforces PEP 8 automatically.</p>
     </div>
 </div>
 
-
-
-
-
 <p>Good style may seem merely cosmetic, but it's essential for a large project for everyone to follow
 the same style, so that the codebase is consistent and readable.</p>
-
 
 <div class="row">
     <div class="col-lg-4">
@@ -172,9 +168,6 @@ the same style, so that the codebase is consistent and readable.</p>
             src="./images/session_2019-09-20/1.png" /></p>
     </div>
 </div>
-
-
-
 
 <p>Our CI system checks for adherence to the style guide, and PRs that do not follow the style guide
 will be rejected automatically.</p>
@@ -193,7 +186,7 @@ as an argument, and returns your results rather than printing them.</p>
     student_data = load_data_csv(csv_path)
     total_view_time = 0
     for row in student_data:
-        for view_time in row['views']:
+        for view_time in row.get('views'):
             total_view_time += view_time
     print(total_view_time)
         </code></pre>
@@ -208,7 +201,7 @@ as an argument, and returns your results rather than printing them.</p>
         <pre><code class="language-python">def compute_total_view_time(student_data):
     total_view_time = 0
     for row in student_data:
-        for view_time in row['views']:
+        for view_time in row.get('views'):
             total_view_time += view_time
     return total_view_time
 
@@ -222,19 +215,22 @@ def run_analysis():
 
 <h5>Document your code</h5>
 <p>Now that your analysis is factored out into its own function, give it a docstring.
-<a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a> is a basic guide to writing good docstrings.
-In a nutshell, someone should be able to read your docstring and know at a glance:
-- what the function does
-- what its expected inputs are
-- what its expected outputs are</p>
+<a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a> is a basic guide to what docstrings are
+and how to write a good one. See below for an example.
+In a nutshell, a docstring is a block comment that tells the reader:
+<ul>
+    <li>what the function does</li>
+    <li>what its expected inputs are</li>
+    <li>what its expected outputs are</li>
+</ul>
 <p>Keep in mind that the intended audience of your docstring is not you, right now, but rather your 
 colleagues (making it easier for them to use your code) and you, three months from now,
 when you've completely forgotten that you'd ever even written this thing.</p>
-<p>If you start typing three double quotes and hit enter under your function definition, PyCharm
+<p>If you start typing three double quotes and hit enter under your function declaration, PyCharm
 should automatically create a <code>:param</code> field for each argument to your function
-and a `:return``` field. This format is both for clarity and so that tools that automatically
+and a <code>:return</code> field. This format is both for clarity and so that tools that automatically
 create publishable documentation out of our docstrings can read the inputs and outputs to our
-functions. If PyCharm doesn't do this, see my example below.</p>
+functions. If PyCharm doesn't do this, just follow the format in the example here.</p>
 
 <div class="row">
     <div class="col-lg-3">
@@ -250,7 +246,7 @@ functions. If PyCharm doesn't do this, see my example below.</p>
     """
     total_view_time = 0
     for row in student_data:
-        for view_time in row['views']:
+        for view_time in row.get('views'):
             total_view_time += view_time
     return total_view_time</code></pre>
     </div>
@@ -263,17 +259,17 @@ that our codebase remains correct as it evolves. It is also a way to force ourse
 to think about edge cases in our code that we might have not handled.</p>
 
 <p>There are a number of testing tools we'll use throughout the project; here, we introduce
-Python's builtin unittest library, a version of which we'll eventually use to test our
+Python's builtin <code>unittest</code> library, a version of which we'll eventually use to test our
 Django backend code.</p>
 
 <div class="row">
-<div class="col-lg-3">
-    <p>Near the bottom of the <code>analysis.py</code> file you should see a new class <code>TestAnalysisMethods</code>,
-    which subclasses <code>unittest.TestCase</code>. You'll also notice that the <code class="text-nowrap language-python">if __name__ == '__main__'</code> block now contains a call to run the tests.</p>
+    <div class="col-lg-3">
+        <p>Near the bottom of the <code>analysis.py</code> file you should see a new class <code>TestAnalysisMethods</code>, which subclasses <code>unittest.TestCase</code>. This class is where we define our unit tests for this module.</p>
+        <p>You'll also notice that the <code class="text-nowrap language-python">if __name__ == '__main__'</code> block now contains a call to run the tests.</p>
     </div>
 
     <div class="col-lg-9">
-    <pre><code class="language-python">class TestAnalysisMethods(unittest.TestCase):
+        <pre><code class="language-python">class TestAnalysisMethods(unittest.TestCase):
     def setUp(self):
         test_data_path = Path('data', 'test_data.csv')
         self.test_student_data = load_data_csv(test_data_path)
@@ -291,21 +287,21 @@ Django backend code.</p>
 
 if __name__ == '__main__':
     run_analysis()
-    unittest.main()</code></pre>
-</div>
+    unittest.main()  # run the tests</code></pre>
+    </div>
 </div>
 
 
 <p>When this test case is run by the test runner, it first calls the <code>setUp()</code> method, followed by
-all the tests defined in it, which must have names starting with <code>test_</code>.</p>
+all the tests defined in it, which must have names starting with <code>test_</code>. Properties created within the <code>setUp()</code> method, such as <code>self.test_student_data</code> here, are available to all tests within this class.</p>
 
 
 <div class="row">
     <div class="col-lg-5">
-        <p>You'll notice in our <code>setUp()</code> method, we're loading some test data, instead of running our tests
+        <p>In our <code>setUp()</code> method, we're loading some test data, instead of running our tests
         on the full dataset. This is to avoid coupling our tests to the current state of the actual data, which
-        will change as we collect more: this practice of creating artificial data for your tests is known
-        as creating 'test fixtures'.</p>
+        will change as we collect more. The artificial data we sometimes use for tests are called
+        'test fixtures'.</p>
     </div>
 
     <div class="col-lg-7">
@@ -318,8 +314,8 @@ all the tests defined in it, which must have names starting with <code>test_</co
 
 <div class="row">
     <div class="col-lg-4">
-        <p>Take a moment to read the test we've already written <code>test_compute_total_view_time</code>. The main
-        feature of the test is that it calls our function on the test data, and asserts that the result
+        <p>Read the test we've already written: <code>test_compute_total_view_time</code>. The main
+        feature of this test is that it calls our function on the test data, and asserts that the result
         is equal to our predicted result. You can find a list of assertions that you can make in a Python
         unittest test <a href="https://docs.python.org/3/library/unittest.html#assert-methods">here</a>.</p>
     </div>
@@ -342,7 +338,7 @@ the test, I realized I wasn't sure if I had correctly handled the case in which 
 field contains an empty list, so I added this to my test. Turns out I had, so no problem,
 but if I hadn't, this would have been an opportunity to go back and improve the robustness
 of my function.</p>
-<p>Once understand what's going on in the included test code, write a unit test for your analysis
+<p>Once you understand what's going on in the included test code, write a unit test for your analysis
 function. See if you can find an edge case that breaks your function and improve it.</p>
 
 <h5>Make a PR</h5>
