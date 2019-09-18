@@ -8,8 +8,9 @@ on 9/27. Until then, we'll continue work on the analysis projects that we starte
 which requires good style, documentation, and testing.</p>
 
 <h5>First!</h5>
-<p>When you next update your analysis branch from master, you'll probably encounter some merge conflicts between
-your code and the changes I've made to <code>analysis/analysis.py</code>. Do not fear! Resolve these conflicts
+<p>As always, update your branch from master, per the instructions <a href="lab_session-2019-09-13.html">in the last guide</a>.<p>
+
+<p>You'll probably encounter some merge conflicts between your code and the changes I've made to <code>analysis/analysis.py</code>. Do not fear! Resolve these conflicts
 so that you keep both the changes that I've made and your existing changes, in the same manner as in the
 <a href='lab_session_2019-09-13.html'>last lab session guide</a>.</p>
 
@@ -84,6 +85,7 @@ as an argument, and returns your results rather than printing them.</p>
             total_view_time += view_time
     return total_view_time
 
+
 def run_analysis():
     csv_path = Path('data', 'rereading_data_2019-09-13.csv')
     student_data = load_data_csv(csv_path)
@@ -145,23 +147,35 @@ Django backend code.</p>
     <div class="col-lg-3">
         <p>Near the bottom of the <code>analysis.py</code> file you should see a new class <code>TestAnalysisMethods</code>, which subclasses <code>unittest.TestCase</code>. This class is where we define our unit tests for this module.</p>
         <p>You'll also notice that the <code class="text-nowrap language-python">if __name__ == '__main__'</code> block now contains a call to run the tests.</p>
+        <p>When this test case is run by the test runner, it first calls the <code>setUp()</code> method, followed by all the tests defined in it, which must have names starting with <code>test_</code>. Properties created within the <code>setUp()</code> method, such as <code>self.test_student_data</code> here, are available to all tests within this class.</p>
+        
     </div>
 
     <div class="col-lg-9">
         <pre><code class="language-python">class TestAnalysisMethods(unittest.TestCase):
-    def setUp(self):
-        test_data_path = Path('data', 'test_data.csv')
-        self.test_student_data = load_data_csv(test_data_path)
+def setUp(self):
+    test_data_path = Path('data', 'test_data.csv')
+    self.test_student_data = load_data_csv(test_data_path)
+    self.default_student_data = [  # model default values
+        {
+            'id': 0,
+            'question': '',
+            'context': '',
+            'response': '',
+            'views': [],
+            'student_id': 0,
+            'scroll_ups': 0,
+        }
+    ]
 
-    def test_compute_total_view_time(self):
-        total_view_time = compute_total_view_time(self.test_student_data)
-        self.assertEqual(total_view_time, 6.385)
 
-        # check it doesn't crash on empty views field
-        no_views_student_data = [
-            {'views': []},
-        ]
-        compute_total_view_time(no_views_student_data)
+def test_compute_total_view_time(self):
+    total_view_time = compute_total_view_time(self.test_student_data)
+    self.assertEqual(total_view_time, 6.385)
+
+    # check we don't crash on the defaults from the model!
+    total_view_time = compute_total_view_time(self.default_student_data)
+    self.assertEqual(total_view_time, 0)
 
 
 if __name__ == '__main__':
@@ -171,8 +185,6 @@ if __name__ == '__main__':
 </div>
 
 
-<p>When this test case is run by the test runner, it first calls the <code>setUp()</code> method, followed by
-all the tests defined in it, which must have names starting with <code>test_</code>. Properties created within the <code>setUp()</code> method, such as <code>self.test_student_data</code> here, are available to all tests within this class.</p>
 
 
 <div class="row">
@@ -180,13 +192,25 @@ all the tests defined in it, which must have names starting with <code>test_</co
         <p>In our <code>setUp()</code> method, we're loading some test data, instead of running our tests
         on the full dataset. This is to avoid coupling our tests to the current state of the actual data, which
         will change as we collect more. The artificial data we sometimes use for tests are called
-        'test fixtures'.</p>
+        'test fixtures'. Note that we're both loading test data from a file (<code>self.test_student_data</code>),
+        and creating another dataset in code (<code>self.default_student_data</code>).</p>
     </div>
 
     <div class="col-lg-7">
         <pre><code class="language-python">def setUp(self):
     test_data_path = Path('data', 'test_data.csv')
-    self.test_student_data = load_data_csv(test_data_path)</code></pre>
+    self.test_student_data = load_data_csv(test_data_path)
+    self.default_student_data = [  # model default values
+        {
+            'id': 0,
+            'question': '',
+            'context': '',
+            'response': '',
+            'views': [],
+            'student_id': 0,
+            'scroll_ups': 0,
+        }
+    ]</code></pre>
     </div>
 </div>
 
@@ -204,19 +228,17 @@ all the tests defined in it, which must have names starting with <code>test_</co
     total_view_time = compute_total_view_time(self.test_student_data)
     self.assertEqual(total_view_time, 6.385)
 
-    # check it doesn't crash on empty views field
-    no_views_student_data = [
-        {'views': []},
-    ]
-    compute_total_view_time(no_views_student_data)</code></pre>
+    # check we don't crash on the defaults from the model!
+    total_view_time = compute_total_view_time(self.default_student_data)
+    self.assertEqual(total_view_time, 0)</code></pre>
     </div>
 </div>
 
-<p>You'll also notice that for my test, I wrote an additional mini piece of test data. As I was writing
-the test, I realized I wasn't sure if I had correctly handled the case in which the <code>views</code>
-field contains an empty list, so I added this to my test. Turns out I had, so no problem,
-but if I hadn't, this would have been an opportunity to go back and improve the robustness
-of my function.</p>
+<p>Testing and writing code becomes a valuable feedback cycle; as you get better at writing tests,
+your tests will find bugs in your code that you didn't anticipate, which you can fix before they
+bite anyone else. In this case, perhaps I wasn't sure that my analysis function handled the default
+values, including the empty list for the <code>views</code> field correctly. If this test had caused
+a crash, that would be an opportunity to go back and make my code more robust.</p>
 <p>Once you understand what's going on in the included test code, write a unit test for your analysis
 function. See if you can find an edge case that breaks your function and improve it.</p>
 
