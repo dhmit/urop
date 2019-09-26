@@ -126,7 +126,8 @@
 on 9/27. Until then, we'll continue work on the analysis projects that we started in the Friday session 9/13.</p>
 <p>Please continue to meet between now and then with your group to work, coordinating via Slack.</p>
 <p>The goal for this guide is to introduce the way that we'll be writing real project code,
-which requires good style, documentation, and testing.</p>
+which requires good style, documentation, and testing. You can follow the instructiosn below
+as soon as you have any working analysis code.</p>
 
 <h5>First!</h5>
 <p>As always, update your branch from master, per the instructions <a href="lab_session_2019-09-13.html#update_branch_from_master">in the last guide</a>.<p>
@@ -274,29 +275,29 @@ Django backend code.</p>
 
     <div class="col-lg-9">
         <pre><code class="language-python">class TestAnalysisMethods(unittest.TestCase):
-def setUp(self):
-    test_data_path = Path('data', 'test_data.csv')
-    self.test_student_data = load_data_csv(test_data_path)
-    self.default_student_data = [  # model default values
-        {
-            'id': 0,
-            'question': '',
-            'context': '',
-            'response': '',
-            'views': [],
-            'student_id': 0,
-            'scroll_ups': 0,
-        }
-    ]
+    def setUp(self):
+        test_data_path = Path('data', 'test_data.csv')
+        self.test_student_data = load_data_csv(test_data_path)
+        self.default_student_data = [  # model default values
+            {
+                'id': 0,
+                'question': '',
+                'context': '',
+                'response': '',
+                'views': [],
+                'student_id': 0,
+                'scroll_ups': 0,
+            }
+        ]
 
 
-def test_compute_total_view_time(self):
-    total_view_time = compute_total_view_time(self.test_student_data)
-    self.assertEqual(total_view_time, 6.385)
+    def test_compute_total_view_time(self):
+        total_view_time = compute_total_view_time(self.test_student_data)
+        self.assertEqual(total_view_time, 6.385)
 
-    # check we don't crash on the defaults from the model!
-    total_view_time = compute_total_view_time(self.default_student_data)
-    self.assertEqual(total_view_time, 0)
+        # check we don't crash on the defaults from the model!
+        total_view_time = compute_total_view_time(self.default_student_data)
+        self.assertEqual(total_view_time, 0)
 
 
 if __name__ == '__main__':
@@ -364,7 +365,7 @@ a crash, that would be an opportunity to go back and make our code more robust.<
 function. See if you can find an edge case that breaks your function and improve it.</p>
 
 <h5>Make a PR</h5>
-<p>Once your code is cleaned up, refactored, documented, and tested, make a PR, so that we can
+<p>Once your group's code is cleaned up, refactored, documented, and tested, make a PR, so that we can
 merge it into the <code>master</code> branch.</p>
 
                     </div>
