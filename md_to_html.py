@@ -13,7 +13,7 @@ for src_file in SRC_DIR.iterdir():
         continue
 
     print(src_file)
-    with open(src_file) as f:
+    with open(src_file, encoding='utf-8') as f:
         src_md = f.read()
 
     src_md = src_md.replace('.md)', '.html)') # fix links
@@ -28,6 +28,6 @@ for src_file in SRC_DIR.iterdir():
     html_filename = src_file.name.replace(src_file.suffix, '.html')
     html_path = Path(HTML_DIR / html_filename)
 
-    with open(html_path, 'w') as html_file:
+    with open(html_path, 'w', encoding='utf-8') as html_file:
         html_file.write(html_string)
 

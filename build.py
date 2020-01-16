@@ -24,14 +24,14 @@ shutil.copytree(SRC_IMG_DIR, BUILD_IMG_DIR)
 shutil.copytree(SRC_ASSETS_DIR, BUILD_ASSETS_DIR)
 
 # Write out CNAME
-with open(Path(BUILD_DIR / 'CNAME'), 'w') as f:
+with open(Path(BUILD_DIR / 'CNAME'), 'w', encoding='utf-8') as f:
     f.write('urop.dhmit.xyz')
 
 # setup Jinja2 template loader and environment
 template_loader = jinja2.FileSystemLoader(searchpath=str(TEMPLATE_DIR))
 template_env = jinja2.Environment(loader=template_loader)
 
-# Process markdown into html and save it in build
+# Process take templates from html, run jinja, output into build
 for template in TEMPLATE_DIR.iterdir():
     print('Building ', template)
     if template.is_dir() or template.name == 'base.html' or template.name.endswith('swp'):
@@ -43,6 +43,6 @@ for template in TEMPLATE_DIR.iterdir():
     build_filename = template.name
     build_path = Path(BUILD_DIR / build_filename)
 
-    with open(build_path, 'w') as build_file:
+    with open(build_path, 'w', encoding='utf-8') as build_file:
         build_file.write(rendered_template)
 

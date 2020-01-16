@@ -1,6 +1,6 @@
 # Tech Tutorials
 
-There are two main parts to our fall project:
+The usual tech stack that the DH Lab uses for web projects is:
 - backend code written in Python using the Django web framework to implement a RESTful API
 - frontend code written in JavaScript using the React framework for building user interfaces
 
@@ -23,3 +23,16 @@ If you have little-to-no experience with JavaScript or are not familiar with the
 
 [React tutorial](https://reactjs.org/tutorial/tutorial.html)
 From React's official docs, this walks you through putting together a game of tic-tac-toe using the React framework. A couple of things to make your time with this material more productive: when it says you can choose whether to do the tutorial in the browser or in a local dev environment, do it in a local dev environment. In the setup step 5, where it says -- "Add a file named index.js in the src/ folder with this JS code." -- please do not download or copy this code into your local file. Instead, copy it out by hand, line-by-line. I know this is tedious, but you will learn much more this way.
+
+
+##### Mapping
+[D3 in Depth - Geographic](https://www.d3indepth.com/geographic/)
+Read me first! This is a great rundown of how D3 interacts with GeoJSON to produce SVGs of maps.
+
+[More than you ever wanted to know about GeoJSON](https://macwright.org/2015/03/23/geojson-second-bite.html)
+A bunch more about GeoJSON.
+
+[GeoJSON.io](http://geojson.io)
+Fun tool for playing around with GeoJSON.
+
+
