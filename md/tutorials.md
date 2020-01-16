@@ -35,4 +35,8 @@ A bunch more about GeoJSON.
 [GeoJSON.io](http://geojson.io)
 Fun tool for playing around with GeoJSON.
 
+[MDN web docs - SVG Tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
+We'll be manipulating SVGs a lot. Get familiar with these docs.
+
+
 
