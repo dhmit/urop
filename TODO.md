@@ -58,6 +58,3 @@ Configs / code quality
 - standard .gitignore
 - Getting ESLint and Pylint integrated
 - basic editor config (see Gender Novels for an example)
-
-???
-qwertasdfg

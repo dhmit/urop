@@ -2,14 +2,19 @@
 {% block title %}Node.js and npm{% endblock %}
 
 {% block content %}
+
 <p>Node.js is a JavaScript runtime environment, and npm is a package manager for Node projects. We'll use both as tools for building the frontend of our web applications.</p>
+
+<p><em>Returning UROPs</em>: You probably need to update Node. Run the installer as below.</p>
+
+
 <h5>Check if you have Node and npm installed</h5>
 <p>Open your terminal and run
 <kbd>node --version</kbd></p>
-<p>If you get an error, or if the version you have installed is &lt; 10.16, continue below to <a href="#installing_node">Installing Node.js and npm</a></p>
-<p>If you have Node &gt;= 10.16, run
+<p>If you get an error, or if the version you have installed is &lt; 12.18, continue below to <a href="#installing_node">Installing Node.js and npm</a></p>
+<p>If you have Node &gt;= 12.18, run
 <kbd>npm --version</kbd></p>
-<p>If you get an error, or if the version you have installed is &lt; 6, continue below to <a href="#installing_node">Installing Node.js and npm</a>.</p>
+<p>If you get an error, or if the version you have installed is &lt; 6.14, continue below to <a href="#installing_node">Installing Node.js and npm</a>.</p>
 <p>If both are already installed with the specified versions, continue to <a href="rereading.html">Setting up Rereading</a>.</p>
 
 <h5><a name="installing_node">Installing Node.js and npm<a></h5>
@@ -17,17 +22,31 @@
 
 
 <hr class="d-lg-none">
+
 <div class="row">
     <div class="col-lg-4">
         <p>Make sure that you download the LTS (Long Term Support) version (marked "Recommended For Most Users"), <em>not</em> the Current version, which is potentially unstable.</p>
     </div>
     <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
-                src="./images/node.jpg" /></p>
+                src="./images/node_lts.png" /></p>
     </div>
 </div>
 
-<p>Run the installer; the default options are all fine. On Windows, the Node.js installer will ask to install Chocolatey. Do not do so.</p>
+<p>Run the installer; the default options are all fine.</p>
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>
+        On Windows, the Node.js installer will ask if you want to install Tools for Native Modules. <em>Do not</em> do so. (This option installs a whole bunch of extra stuff that will later cause you a headache.)
+        </p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/node_native_modules.png" /></p>
+    </div>
+</div>
+
 
 <p>After the installer has finished, verify that everything was installed properly by opening your terminal and once again entering the following commands:</p>
 
@@ -39,6 +58,15 @@ and
 
 <p>If both of these commands run without errors and return a version number (node &gt;= 10.16, npm &gt;= 6), then you have successfully installed Node.js and npm.</p>
 
+
+<h5>That's it for tools!</h5>
+<p>
+That's all the software you'll need to do your work for the DH Lab. Next, we'll move on to installing this semester's project.
+</p>
+
+
+
 <a href="./pycharm.html" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; PyCharm</a>
-<a href="./rereading.html" class="btn btn-outline-primary float-right col-5 col-md-3">Installing rereading &rarr;</a>
+<a href="./paris_project_installation.html" class="btn btn-outline-primary float-right col-5 col-md-3">Installing paris_1970 &rarr;</a>
 {% endblock %}
+

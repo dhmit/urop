@@ -60,12 +60,6 @@
                                     <span class="numeral">5</span> Node and npm
                                 </a>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link active" href="rereading.html">
-                                    <span class="numeral">6</span> Project setup
-                                </a>
-                            </li>
                         </ul>
 
 
@@ -74,12 +68,6 @@
                         </h6>
 
                         <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="democracy-africa.html">
-                                    Spring 2020 Info
-                                </a>
-                            </li>
-
                             <li class="nav-item">
                                 <a class="nav-link active" href="contract.html">
                                     UROP Contract 
@@ -132,22 +120,27 @@
 <h5>Install git command line tools</h5>
 <p>If you are on Windows, whether or not you know you have Git installed at the command line, skip ahead to <a href="#install_git">Install Git</a>, as we need to make sure you have a few options set correctly in your installation.</p>
 <p>If you're on macOS, open the terminal and enter the following command to check whether Git is installed:</p>
-<p><code>git --version</code></p>
+<p><kbd>git --version</kbd></p>
+
+
 <p>If you receive output that indicates that <code>git</code> is not a recognized command, it is most likely because Git is not installed. Download the current installer from the <a href="https://git-scm.com">Git website</a>, and continue to the instructions below.
-<p>If instead you find that git is installed with version 2.20+, you can skip ahead to <a href="python.html">Python</a>.</p>
+
+<p>If instead,  you recieve output that says something like <code>git version 2.x.y</code>, (where we don't really mind what x or y are), that means git is installed, and you can skip ahead to <a href="python.html">Python</a>.</p>
+
 <h5><a name="install_git">Install git</a></h5>
 <p>If you're on macOS, run the installer and skip ahead to <a href="python.html">Python</a>.</p>
 
 <p>If you're on Windows, follow the instructions below.</p>
 
-<p>Launch the installer and accept the license information displayed at its start.</p>
+<p>Launch the installer and accept the license information displayed at its start. There are a lot of installation options for git, and we're going to change some from the defaults and leave others alone. Please follow along carefully.
+</p>
 
 <div class="row">
     <div class="col-lg-4">
         <p>You will now see a screen showing several installation options. Make sure that you have all of these boxes checked.</p>
     </div>
     <div class="col-lg-8">
-    <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
             src="./images/git/git_install_options.png" /></p>
     </div>
 </div>
@@ -208,6 +201,7 @@
     </div>
 </div>
 
+
 <hr class="d-lg-none">
 <div class="row">
     <div class="col-lg-4">
@@ -215,12 +209,48 @@
     </div>
     <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
-                src="./images/git/git_options.png" /></p>
+                src="./images/git/git_pull_default.png" /></p>
     </div>
 </div>
 
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>The following step should be left with default values.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/git_credential_manager.png" /></p>
+    </div>
+</div>
 
-<p>If you are given the option to install experimental options on the next page, please do <strong>not</strong> select any of them.</p>
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>The following step should be left with default values.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/git_extra_options.png" /></p>
+    </div>
+</div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>Nope.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="./images/git/git_experimental_options.png" /></p>
+    </div>
+</div>
+
+<p>
+Run the installer, and then move on to installing Python.
+</p>
+
+
 
 <a href="./communication.html" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Communication</a>
 <a href="./python.html" class="btn btn-outline-primary float-right col-5 col-md-3">Python &rarr;</a>
