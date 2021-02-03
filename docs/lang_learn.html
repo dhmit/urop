@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dhmit urop guide</title>
+        <meta name="author" content="MIT Digital Humanities">
+        <meta name="description" content="UROP guide for the MIT Programs in Digital Humanities">
+        <meta name="keywords" content="digital humanities, MIT, urop">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="assets/styles.css" rel="stylesheet">
+        <link href="assets/prism.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <div class="pl-3 pt-3">
+                        <strong><a href='index.html'>dhmit urop guide<a></strong>
+                        </div>
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Technical Onboarding</span>
+                        </h6>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="intro.html">
+                                    <span class="numeral">0</span> Intro
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="communication.html">
+                                    <span class="numeral">1</span> Communication 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="git.html">
+                                    <span class="numeral">2</span> Git
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="python.html">
+                                    <span class="numeral">3</span> Python
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="pycharm.html">
+                                    <span class="numeral">4</span> PyCharm
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="node_and_npm.html">
+                                    <span class="numeral">5</span> Node and npm
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Other Materials</span>
+                        </h6>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contract.html">
+                                    UROP Contract 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="tutorials.html">
+                                    Tech Tutorials
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <main role="main" id="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 pb-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1>Setting up Lang Learn</h1>
+                    </div>
+
+                    <div>
+                        
+<p>At this point, you have all of the tools necessary to work on our project installed -- Git, Atom, Python, Node/npm, and PyCharm -- so let's put it all together and get the project running.</p>
+<p>If you have not yet completed the Technical Onboarding guide, you're in the wrong place. Head over to the <a href="intro.html">Intro</a> and get started there. You'll end up back here eventually.</p>
+<h5>Cloning the Repository</h5>
+<p>Open GitHub Desktop. If this is your first time using the application and you've already been added to the dhmit organization, dhmit projects should appear in the repositories pane, under the "Filter your repositories" search box. Click on <code>dhmit/lang_learn</code>, and click <code>Clone dhmit/lang_learn</code>.</p>
+<p><img class="img-fluid" alt="" src="./images/lang_learn/clone_0.png" /></p>
+<p>If this option doesn't appear, click <code>Clone a repository from the Internet...</code> or go to <code>File</code> -&gt; <code>Clone repository</code>. In the URL tab, enter <code>dhmit/lang_learn.git</code>.</p>
+<p>Leave the <code>Local path</code> field as is, but take note of it, as you'll need it later. Click <code>Clone</code> to download the repo.
+<img class="img-fluid" alt="" src="./images/lang_learn/clone_1.png" /></p>
+<p>Once the repo is cloned, you should see a screen that looks like this. Try clicking on Windows <code>Show in Explorer</code> or on macOS <code>Show in Finder</code> to see where the project has ended up on your computer, or click <code>View on GitHub</code> to go to our project page on GitHub.
+<img class="img-fluid" alt="" src="./images/lang_learn/clone_2.png" /></p>
+<h3>Setting up our project in PyCharm</h3>
+<h5>Open the project</h5>
+<p>Open PyCharm. In the menu bar, select File-&gt;Open, and open the folder where you cloned the repo in the step above. By default on Windows this is <code>C:\Users\YOUR_USER_NAME\Documents\GitHub\lang_learn</code> and on macOS <code>/Users/YOUR_USER_NAME/Documents/GitHub/lang_learn</code>.
+<img class="img-fluid" alt="" src="./images/lang_learn/pycharm_open.png" /></p>
+<p>If you get this dialog box, always select "This Window" (the default) or "New Window" if you want to have multiple projects open at once. (Ryaan doesn't recommend the latter: PyCharm is very resource-intensive, so unless you absolutely need to have two projects open at once, click "This Window".)
+<img class="img-fluid" alt="" src="./images/lang_learn/pycharm_this_window.png" /></p>
+<p>Once it's loaded, you should see the <code>lang_learn</code> folder appear in the <code>Project</code> pane on the left.
+<img class="img-fluid" alt="" src="./images/lang_learn/pycharm_project_pane.png" /></p>
+<h5>Setup Python environment and packages</h5>
+<p>Open the settings window (macOS <code>PyCharm -&gt; Preferences</code>; Windows, <code>File -&gt; Settings</code>), and go to "Project: lang_learn" -&gt; Project Interpreter. Click on the wheel in the top right and select "Add".
+<img class="img-fluid" alt="" src="./images/lang_learn/pycharm_interpreter_0.png" /></p>
+<p>Select "New Environment". Make sure that the base interpreter is the path that you noted when installing Python. Leave the location for the interpreter as the default provided by PyCharm.
+<img class="img-fluid" alt="" src="./images/lang_learn/new_venv.png" /></p>
+<p>Apply your changes, wait for the virtual environment to be created, and exit the settings window.</p>
+<p>Click <code>Terminal</code> in the bottom status bar. You should see <code>(venv)</code> at the beginning of your prompt. If you do not, restart PyCharm and check again. If you still don't see <code>(venv)</code> appear, go back to the beginning of this section and make sure you correctly setup a new environment.
+<img class="img-fluid" alt="" src="./images/lang_learn/django_venv.png" /></p>
+<p>Go back to the Project Interpreter window, and ensure that the Python Interpreter field is populated with the name <code>Python 3.8 (lang_learn)</code> followed by a path. If this says anything else, find Ryaan to get help fixing it.</p>
+<p><kbd>TODO: Maybe we are changing to 3.9 python...</kbd>
+<img class="img-fluid" alt="" src="./images/lang_learn/python_check.png" /></p>
+<p>In the <code>Project</code> panel, find and open the <code>requirements.txt</code> file in the top-level <code>lang_learn</code> folder. Wait until PyCharm automatically detects that this file contains our Python package requirements. Click <code>Install requirements</code> in the banner that pops up, and click <code>Install</code> once the <code>Choose Packages to Install</code> window pops up. (If it asks you to install a <em>plugin</em>, you can safely click <code>Ignore extension</code>) You should see the installation process begin in the bottom status bar. We can let this run while moving on to the next step, but we'll come back to this to make sure it worked.
+<img class="img-fluid" alt="" src="./images/lang_learn/pycharm_requirements.png" /></p>
+<h5>Setting up a Django run configuration</h5>
+<p>Our project uses Django, a Python web framework. If we let PyCharm know about Django, we get lots of nice debugging features.</p>
+<p>Go back to the settings window. Under <code>Languages &amp; Frameworks</code> -&gt; <code>Django</code>.</p>
+<p>Our project repository has some PyCharm settings saved within it, so it should look something like this. If it does, great, move on to Setting up a Backend Run Configuration.</p>
+<p>Otherwise, if <code>Enable Django Support</code> is not checked, then check it, and follow the directions below.
+<img class="img-fluid" alt="" src="./images/lang_learn/django_0.png" /></p>
+<p>Set the <code>Django project root</code> to be the <code>backend</code> folder within our project.
+<img class="img-fluid" alt="" src="./images/lang_learn/django_1.png" /></p>
+<p>Set the <code>Settings</code> file to be <code>config/settings/dev.py</code>.
+<img class="img-fluid" alt="" src="./images/lang_learn/django_2.png" /></p>
+<p>If the Django pane now looks something like this, you can click OK to apply and exit the settings.
+<img class="img-fluid" alt="" src="./images/lang_learn/django_0.png" /></p>
+<p>Click the big <code>Add Configuration</code> button in the top bar. In the <code>Run/Debug Configurations</code> window that appears, click the + in the top left corner, and select <code>Django server</code>
+<img class="img-fluid" alt="" src="./images/lang_learn/django_3.png" /></p>
+<p>Name this configuration <code>Run backend</code> and click <code>OK</code> with all of the defaults in place. At this point in the process, you've installed all the third-party packages we need to run our project and made PyCharm aware of how to run our Django server. Let's check that everything worked.</p>
+<p>Go back to the terminal inside Django, and execute <kbd>pip freeze</kbd>. This should output a list that's exactly the same as the contents of the <code>requirements.txt</code> file you opened earlier.
+<img class="img-fluid" alt="" src="./images/lang_learn/pip_freeze.png" /></p>
+<p>Type <kbd>cd backend</kbd> to enter the backend folder, and then run <kbd>TODO: python manage.py migrate or SOMETHING OTHER COMMAND?</kbd>. This will setup a local development database on your machine.</p>
+<p><kbd>TODO: Do screenshot after we make a command to populate database with sample data</kbd></p>
+<p>Click the green triangular play button in the menu bar next to "Run backend" to run the Django development server. If everything is working, you should see some output like this in the run panel.
+<img class="img-fluid" alt="" src="./images/lang_learn/run_backend.png" /></p>
+<p>Click on the link where the site is being run locally <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>, where you should see... well... an error message. This is because we are not yet running the frontend development server. If you're seeing this error, that means that everything is working so far!
+<img class="img-fluid" alt="" src="./images/lang_learn/backend_without_frontend.png" /></p>
+<p>Navigate to <a href="http://127.0.0.1:8000/api/all_text">http://127.0.0.1:8000/api/all_text</a>, and you should see a Django REST framework debug page, which looks like this. If this is all working, we're nearly there! If not, try running the above steps again, and if all else fails, find a staff member or a returning lab member who can help you troubleshoot.</p>
+<p><kbd>TODO: Do screenshot after we make a command to populate database with sample data</kbd></p>
+<h5>Setting up npm</h5>
+<p>Now that the Python/Django backend part of the site is up and running on your machine, the last step is to setup the JavaScript/React frontend.</p>
+<p>In the project pane, find and open <code>frontend/src/App.js</code>.</p>
+<p><em>Do not click</em> Run 'npm install'.</p>
+<p>If you see a banner saying <code>Switch language version to React JSX</code>, <em>do</em> click that.</p>
+<p><kbd>TODO: I wasn't able to get the banners to show up.</kbd></p>
+<p>Instead, go back to the terminal, and navigate to the <code>frontend</code> directory</p>
+<p>See the image here - you may need to issue a few <code>cd</code> commands to get there. If you do not know how to do that, ask a returning UROP for help.</p>
+<p>Once you're in the <code>frontend</code> directory, issue the command <kbd>npm ci</kbd>. You might have to wait a little while now, as npm installs all of the Node modules we need to build the frontend.</p>
+<p>Now, go back to what used to be the <code>Add Configurations</code> button but now says <code>Run backend</code>. Click <code>Edit configurations</code> to go back to the <code>Run/Debug Configurations</code> window. Click the same + in the top left corner, and then select npm. Name this configuration <code>Run frontend</code>
+<img class="img-fluid" alt="" src="./images/lang_learn/frontend_0.png" /></p>
+<p>In the <code>package.json</code> field, click the dropdown menu down arrow, and select <code>frontend/package.json</code>. This is the file that tells PyCharm and npm how our frontend application is configured.
+<img class="img-fluid" alt="" src="./images/lang_learn/frontend_1.png" /></p>
+<p>In the <code>scripts</code> field, select <code>start</code> from the dropdown menu.
+<img class="img-fluid" alt="" src="./images/lang_learn/frontend_2.png" /></p>
+<p>Click OK and exit the settings. Once again, click the green triangle 'Run' button next to <code>Run frontend</code> which will start the frontend development server. Once you see a success message in the run panel, go back to <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>, where you should now see the prototype landing page made by our IAP UROPs.</p>
+<p><kbd>TODO: Put screenshot here after we set up sample data</kbd></p>
+<p>Congratulations! You've got the project up and running on your machine.</p>
+<h5>Closing and restarting the project</h5>
+<p>Close PyCharm, terminate any processes when it asks, and then restart PyCharm. In order to run the project, you have to go to this dropdown menu, click <code>Run backend</code> and then the triangular 'Run' button next to it, and then click <code>Run frontend</code> and do the same.
+<img class="img-fluid" alt="" src="./images/lang_learn/run.png" /></p>
+<p>Once you see both <code>Run backend</code> and <code>Run frontend</code> tabs open in the <code>Run</code> panel, and both show success messages, you can go back to the site running locally on your machine.</p>
+<p>Please note that the frontend pane will show a url ending in <code>:3000</code>. This is another way to access the frontend directly without running the Django server, but for this project, we'll be ignoring that entirely.
+<img class="img-fluid" alt="" src="./images/lang_learn/run_tab.png" /></p>
+
+                    </div>
+
+
+                </main>
+            </div>
+        </div>
+
+        <!-- Prism.js for syntax highlighting in code blocks: https://prismjs.com -->
+        <script src="assets/prism.js"></script>
+    </body>
+</html>
