@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
+{% macro row(text, image) -%}
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            {{ text }}
+        </div>
+        <div class="col-lg-8">
+            {{ image }}
+        </div>
+    </div>
+{%- endmacro %}
+
 {% block title %}Setting up Lang Learn{% endblock %}
 {% block content %}
 <p>At this point, you have all of the tools necessary to work on our project installed -- Git, Atom, Python, Node/npm, and PyCharm -- so let's put it all together and get the project running.</p>
