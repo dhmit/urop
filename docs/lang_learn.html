@@ -95,8 +95,17 @@
                         
 
 <p>At this point, you have all of the tools necessary to work on our project installed -- Git, Atom, Python, Node/npm, and PyCharm -- so let&#x27;s put it all together and get the project running.</p>
+
 <p>If you have not yet completed the Technical Onboarding guide, you&#x27;re in the wrong place. Head over to the <a href="intro.html">Intro</a> and get started there. You&#x27;ll end up back here eventually.</p>
+
+<h5>Enable JSON1 extension on SQLite (Windows users only)</h5>
+<p>
+Our project uses the Django JSONField class. Windows users on Python 3.8 will need to download the latest sqlite3 dlls in order to use this functionality. Please follow <a href="https://code.djangoproject.com/wiki/JSON1Extension">the instructions in the Django documentation</a> to do so before continuing with this installation guide.
+</p>
+
+
 <h5>Cloning the Repository</h5>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -107,6 +116,8 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/clone_0.png" /></p>
         </div>
     </div>
+
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -118,6 +129,8 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/clone_1.png" /></p>
         </div>
     </div>
+
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -196,13 +209,14 @@
     <div class="row">
         <div class="col-lg-4">
             <p>Go back to the Project Interpreter window, and ensure that the Python Interpreter field is populated with the name <code>Python 3.8 (lang_learn)</code> followed by a path. If this says anything else, find Ryaan to get help fixing it.</p>
-<p><kbd>TODO: Maybe we are changing to 3.9 python...</kbd>
+
 
         </div>
         <div class="col-lg-8">
             <p><img class="img-fluid" alt="" src="./images/lang_learn/python_check.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -214,6 +228,7 @@
         </div>
     </div>
 <h5>Setting up a Django run configuration</h5>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -227,6 +242,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/django_0.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -237,6 +253,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/django_1.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -247,6 +264,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/django_2.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -257,6 +275,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/django_0.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -267,6 +286,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/django_3.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -278,11 +298,11 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/pip_freeze.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
-            <p>Type <kbd>cd backend</kbd> to enter the backend folder, and then run <kbd>TODO: python manage.py migrate or SOMETHING OTHER COMMAND?</kbd>. This will setup a local development database on your machine.</p>
-<p><kbd>TODO: Do screenshot after we make a command to populate database with sample data</kbd></p>
+            <p>Type <kbd>cd backend</kbd> to enter the backend folder, and then run <kbd>python manage.py migrate</kbd>. This will setup a local development database on your machine.</p>
 <p>Click the green triangular play button in the menu bar next to "Run backend" to run the Django development server. If everything is working, you should see some output like this in the run panel.
 
         </div>
@@ -290,6 +310,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/run_backend.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -300,8 +321,24 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/backend_without_frontend.png" /></p>
         </div>
     </div>
+
+
+<hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            
 <p>Navigate to <a href="http://127.0.0.1:8000/api/all_text">http://127.0.0.1:8000/api/all_text</a>, and you should see a Django REST framework debug page, which looks like this. If this is all working, we&#x27;re nearly there! If not, try running the above steps again, and if all else fails, find a staff member or a returning lab member who can help you troubleshoot.</p>
-<p><kbd>TODO: Do screenshot after we make a command to populate database with sample data</kbd></p>
+
+
+        </div>
+        <div class="col-lg-8">
+            <p><img class='img-fluid' alt='' src='./images/lang_learn/django_rest_framework.png' /></p>
+        </div>
+    </div>
+
+
+
+
 <h5>Setting up npm</h5>
 <hr class="d-lg-none">
     <div class="row">
@@ -310,10 +347,24 @@
 <p>In the project pane, find and open <code>frontend/src/App.js</code>.</p>
 <p><em>Do not click</em> Run &#x27;npm install&#x27;.</p>
 <p>If you see a banner saying <code>Switch language version to React JSX</code>, <em>do</em> click that.</p>
-<p><kbd>TODO: I wasn&#x27;t able to get the banners to show up.</kbd></p>
+
+
 <p>Instead, go back to the terminal, and navigate to the <code>frontend</code> directory</p>
 <p>See the image here - you may need to issue a few <code>cd</code> commands to get there. If you do not know how to do that, ask a returning UROP for help.</p>
 <p>Once you&#x27;re in the <code>frontend</code> directory, issue the command <kbd>npm ci</kbd>. You might have to wait a little while now, as npm installs all of the Node modules we need to build the frontend.</p>
+
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="./images/lang_learn/npm_ci.png" /></p>
+        </div>
+    </div>
+
+
+<hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            
+
 <p>Now, go back to what used to be the <code>Add Configurations</code> button but now says <code>Run backend</code>. Click <code>Edit configurations</code> to go back to the <code>Run/Debug Configurations</code> window. Click the same + in the top left corner, and then select npm. Name this configuration <code>Run frontend</code>
 
         </div>
@@ -321,6 +372,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/frontend_0.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -331,6 +383,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/frontend_1.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -342,9 +395,9 @@
         </div>
     </div>
 <p>Click OK and exit the settings. Once again, click the green triangle &#x27;Run&#x27; button next to <code>Run frontend</code> which will start the frontend development server. Once you see a success message in the run panel, go back to <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>, where you should now see the prototype landing page made by our IAP UROPs.</p>
-<p><kbd>TODO: Put screenshot here after we set up sample data</kbd></p>
 <p>Congratulations! You&#x27;ve got the project up and running on your machine.</p>
 <h5>Closing and restarting the project</h5>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
@@ -355,6 +408,7 @@
             <p><img class="img-fluid" alt="" src="./images/lang_learn/run.png" /></p>
         </div>
     </div>
+
 <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
