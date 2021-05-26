@@ -1,0 +1,180 @@
+---
+layout: layouts/base
+meta_title: 'dhmit UROP guide | Gender Analysis Toolkit'
+title: 'Setting up Gender Analysis Toolkit'
+---
+
+<section>
+    <p>At this point, you have all of the tools necessary to work on our project installed -- Git, Atom, Python, Node/npm, and PyCharm -- so let&#x27;s put it all together and get the Summer 2021 projects running.</p>
+    <p>If you have not yet completed the Technical Onboarding guide, you&#x27;re in the wrong place. Head over to the <a href="/intro">Intro</a> and get started there. You&#x27;ll end up back here eventually.</p>
+    <p>In this guide, you’ll find the following sections:</p>
+    <ol>
+        <li><a href="#general-sqlite">Enable JSON1 extension on SQLite (Windows users only)</a></li>
+        <li><a href="#general-cloning-repos">Cloning the Repository</a></li>
+        <li>
+            <a href="#gatk-setup">Setting up the Gender Analysis Toolkit project</a>
+            <ol>
+                <li><a href="#gatk-pycharm">Setting up GATK in PyCharm</a></li>
+                <li><a href="#gatk-environment">Setup Python environment and packages for GATK</a></li>
+            </ol>
+        </li>
+        <li>
+            <a href="#gatk-usage">Using the Gender Analysis Toolkit project</a>
+            <ol>
+                <li><a href="#gatk-general-usage">General usage notes</a></li>
+                <li><a href="#gatk-tests">Running tests</a></li>
+            </ol>
+        </li>
+    </ol>
+</section>
+
+<section id="general-sqlite">
+    <h2>Enable JSON1 extension on SQLite (Windows users only)</h2>
+    <p>
+        Our Sonification project uses the Django JSONField class. Windows users on Python 3.9.5 will need to download the latest sqlite3 dlls in order to use this functionality. Please follow <a href="https://code.djangoproject.com/wiki/JSON1Extension">the instructions in the Django documentation</a> to do so before continuing with this installation guide.
+    </p>
+</section>
+
+<section id="general-cloning-repos">
+    <h2>Cloning the Repository</h2>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>Open GitHub Desktop. If this is your first time using the application and you&#x27;ve already been added to the dhmit organization, dhmit projects should appear in the repositories pane, under the "Filter your repositories" search box. Click on <code>dhmit/gender_analysis</code>, and click <code>Clone dhmit/gender_analysis</code>.</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/clone_0.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>If this option doesn&#x27;t appear, click <code>Clone a repository from the Internet...</code> or go to <code>File</code> -&gt; <code>Clone repository</code>. In the URL tab, enter <code>dhmit/gender_analysis.git</code>.</p>
+            <p>Leave the <code>Local path</code> field as is, but take note of it, as you&#x27;ll need it later. Click <code>Clone</code> to download the repo.</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/clone_1.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>Once the repo is cloned, you should see a screen that looks like this. Try clicking on Windows <code>Show in Explorer</code> or on macOS <code>Show in Finder</code> to see where the project has ended up on your computer, or click <code>View on GitHub</code> to go to our project page on GitHub.</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/clone_2.png" /></p>
+        </div>
+    </div>
+</section>
+
+<section id="gatk-setup">
+    <h2>Setting up the Gender Analysis Toolkit project</h2>
+
+    <section id="gatk-pycharm">
+        <h3>Setting up GATK in PyCharm</h3>
+
+        <h4>Open the project</h4>
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Open PyCharm. In the menu bar, select File-&gt;Open, and open the folder where you cloned the repo in the step above. By default on Windows this is <code>C:\\Users\\YOUR_USER_NAME\\Documents\\GitHub\\gender_analysis</code> and on macOS <code>/Users/YOUR_USER_NAME/Documents/GitHub/gender_analysis</code>.
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_open.png" /></p>
+            </div>
+        </div>
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>If you get this dialog box, always select "This Window" (the default) or "New Window" if you want to have multiple projects open at once. (Ryaan doesn&#x27;t recommend the latter: PyCharm is very resource-intensive, so unless you absolutely need to have two projects open at once, click "This Window".)</p>
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_this_window.png" /></p>
+            </div>
+        </div>
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Once it&#x27;s loaded, you should see the <code>gender_analysis</code> folder appear in the <code>Project</code> pane on the left.</p>
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_project_pane.png" /></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gatk-environment">
+        <h3>Setup Python environment and packages for GATK</h3>
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Open the settings window (macOS <code>PyCharm -&gt; Preferences</code>; Windows, <code>File -&gt; Settings</code>), and go to "Project: gender_analysis" -&gt; Project Interpreter. Click on the wheel in the top right and select "Add".</p>
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_interpreter_0.png" /></p>
+            </div>
+        </div>
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Select "New Environment". Make sure that the base interpreter is the path that you noted when installing Python. Leave the location for the interpreter as the default provided by PyCharm.</p>
+
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/new_venv.png" /></p>
+            </div>
+        </div>
+
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Apply your changes, wait for the virtual environment to be created, and exit the settings window.</p>
+                <p>Click <code>Terminal</code> in the bottom status bar. You should see <code>(venv)</code> at the beginning of your prompt. If you do not, restart PyCharm and check again. If you still don&#x27;t see <code>(venv)</code> appear, go back to the beginning of this section and make sure you correctly setup a new environment.</p>
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/django_venv.png" /></p>
+            </div>
+        </div>
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Go back to the Project Interpreter window, and ensure that the Python Interpreter field is populated with the name <code>Python 3.9 (gender_analysis)</code> followed by a path. If this says anything else, find Mike or Ryaan to get help fixing it.</p>
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/python_check.png" /></p>
+            </div>
+        </div>
+
+        <hr class="d-lg-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>In the <code>Project</code> panel, find and open the <code>requirements.txt</code> file in the top-level <code>gender_analysis</code> folder. Wait until PyCharm automatically detects that this file contains our Python package requirements. Click <code>Install requirements</code> in the banner that pops up, and click <code>Install</code> once the <code>Choose Packages to Install</code> window pops up. (If it asks you to install a <em>plugin</em>, you can safely click <code>Ignore extension</code>) You should see the installation process begin in the bottom status bar. We can let this run while moving on to the next step, but we&#x27;ll come back to this to make sure it worked.</p>
+            </div>
+            <div class="col-lg-8">
+                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_requirements.png" /></p>
+            </div>
+        </div>
+
+        <p>At this point, you've completed the setup for the <code>gender_analysis</code> project! Here are a few usage notes, but if you’ve worked with the <code>gender_analysis</code> project before, feel free to skip these and get started.</p>
+    </section>
+</section>
+
+<section id="gatk-usage">
+    <h2>Using the Gender Analysis Toolkit</h2>
+
+    <h3 id="gatk-general-usage">General usage notes</h3>
+    <p>PLACEHOLDER</p>
+
+    <h3 id="gatk-tests">Running tests</h3>
+    <p>PLACEHOLDER</p>
+</section>
