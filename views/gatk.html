@@ -5,11 +5,11 @@ title: 'Setting up Gender Analysis Toolkit'
 ---
 
 <section>
-    <p>At this point, you have all of the tools necessary to work on our project installed -- Git, Atom, Python, Node/npm, and PyCharm -- so let&#x27;s put it all together and get the Summer 2021 projects running.</p>
+    <p>At this point, you have all of the tools necessary to work on our Summer 2021 projects installed -- Git, Atom, Python, Node/npm, and PyCharm -- so let&#x27;s put it all together and get our first project running.</p>
     <p>If you have not yet completed the Technical Onboarding guide, you&#x27;re in the wrong place. Head over to the <a href="/intro">Intro</a> and get started there. You&#x27;ll end up back here eventually.</p>
+    <p>For the first half of the summer, we’ll focus on the <a href="https://github.com/dhmit/gender_analysis" target="_blank">Gender Analysis Toolkit</a>. For this project, we’ll make use of Git, Python, and PyCharm. We’ll reserve using Node/npm for the summer's second project, <a href="/sonification">Sonification Techinques</a>.</p>
     <p>In this guide, you’ll find the following sections:</p>
     <ol>
-        <li><a href="#general-sqlite">Enable JSON1 extension on SQLite (Windows users only)</a></li>
         <li><a href="#general-cloning-repos">Cloning the Repository</a></li>
         <li>
             <a href="#gatk-setup">Setting up the Gender Analysis Toolkit project</a>
@@ -19,20 +19,13 @@ title: 'Setting up Gender Analysis Toolkit'
             </ol>
         </li>
         <li>
-            <a href="#gatk-usage">Using the Gender Analysis Toolkit project</a>
+            <a href="#gatk-usage">Tips for local development</a>
             <ol>
                 <li><a href="#gatk-general-usage">General usage notes</a></li>
-                <li><a href="#gatk-tests">Running tests</a></li>
+                <li><a href="#gatk-tests">Tests, coverage, and linting</a></li>
             </ol>
         </li>
     </ol>
-</section>
-
-<section id="general-sqlite">
-    <h2>Enable JSON1 extension on SQLite (Windows users only)</h2>
-    <p>
-        Our Sonification project uses the Django JSONField class. Windows users on Python 3.9.5 will need to download the latest sqlite3 dlls in order to use this functionality. Please follow <a href="https://code.djangoproject.com/wiki/JSON1Extension">the instructions in the Django documentation</a> to do so before continuing with this installation guide.
-    </p>
 </section>
 
 <section id="general-cloning-repos">
@@ -44,18 +37,18 @@ title: 'Setting up Gender Analysis Toolkit'
             <p>Open GitHub Desktop. If this is your first time using the application and you&#x27;ve already been added to the dhmit organization, dhmit projects should appear in the repositories pane, under the "Filter your repositories" search box. Click on <code>dhmit/gender_analysis</code>, and click <code>Clone dhmit/gender_analysis</code>.</p>
         </div>
         <div class="col-lg-8">
-            <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/clone_0.png" /></p>
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/clone_0.png" /></p>
         </div>
     </div>
 
     <hr class="d-lg-none">
     <div class="row">
         <div class="col-lg-4">
-            <p>If this option doesn&#x27;t appear, click <code>Clone a repository from the Internet...</code> or go to <code>File</code> -&gt; <code>Clone repository</code>. In the URL tab, enter <code>dhmit/gender_analysis.git</code>.</p>
+            <p>If this option doesn&#x27;t appear, click <code>Clone a repository from the Internet...</code> or go to <code>File</code> -&gt; <code>Clone repository</code>. In the URL tab, enter <code>dhmit/gender_analysis</code>.</p>
             <p>Leave the <code>Local path</code> field as is, but take note of it, as you&#x27;ll need it later. Click <code>Clone</code> to download the repo.</p>
         </div>
         <div class="col-lg-8">
-            <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/clone_1.png" /></p>
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/clone_2.png" /></p>
         </div>
     </div>
 
@@ -65,7 +58,7 @@ title: 'Setting up Gender Analysis Toolkit'
             <p>Once the repo is cloned, you should see a screen that looks like this. Try clicking on Windows <code>Show in Explorer</code> or on macOS <code>Show in Finder</code> to see where the project has ended up on your computer, or click <code>View on GitHub</code> to go to our project page on GitHub.</p>
         </div>
         <div class="col-lg-8">
-            <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/clone_2.png" /></p>
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/clone_2.png" /></p>
         </div>
     </div>
 </section>
@@ -84,7 +77,7 @@ title: 'Setting up Gender Analysis Toolkit'
                 <p>Open PyCharm. In the menu bar, select File-&gt;Open, and open the folder where you cloned the repo in the step above. By default on Windows this is <code>C:\\Users\\YOUR_USER_NAME\\Documents\\GitHub\\gender_analysis</code> and on macOS <code>/Users/YOUR_USER_NAME/Documents/GitHub/gender_analysis</code>.
             </div>
             <div class="col-lg-8">
-                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_open.png" /></p>
+                <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_path.png" /></p>
             </div>
         </div>
 
@@ -104,7 +97,7 @@ title: 'Setting up Gender Analysis Toolkit'
                 <p>Once it&#x27;s loaded, you should see the <code>gender_analysis</code> folder appear in the <code>Project</code> pane on the left.</p>
             </div>
             <div class="col-lg-8">
-                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_project_pane.png" /></p>
+                <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_blank_slate.png" /></p>
             </div>
         </div>
     </section>
@@ -118,7 +111,7 @@ title: 'Setting up Gender Analysis Toolkit'
                 <p>Open the settings window (macOS <code>PyCharm -&gt; Preferences</code>; Windows, <code>File -&gt; Settings</code>), and go to "Project: gender_analysis" -&gt; Project Interpreter. Click on the wheel in the top right and select "Add".</p>
             </div>
             <div class="col-lg-8">
-                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_interpreter_0.png" /></p>
+                <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_environment_1.png" /></p>
             </div>
         </div>
 
@@ -129,7 +122,7 @@ title: 'Setting up Gender Analysis Toolkit'
 
             </div>
             <div class="col-lg-8">
-                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/new_venv.png" /></p>
+                <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_environment_2.png" /></p>
             </div>
         </div>
 
@@ -141,7 +134,7 @@ title: 'Setting up Gender Analysis Toolkit'
                 <p>Click <code>Terminal</code> in the bottom status bar. You should see <code>(venv)</code> at the beginning of your prompt. If you do not, restart PyCharm and check again. If you still don&#x27;t see <code>(venv)</code> appear, go back to the beginning of this section and make sure you correctly setup a new environment.</p>
             </div>
             <div class="col-lg-8">
-                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/django_venv.png" /></p>
+                <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_environment_3.png" /></p>
             </div>
         </div>
 
@@ -151,7 +144,7 @@ title: 'Setting up Gender Analysis Toolkit'
                 <p>Go back to the Project Interpreter window, and ensure that the Python Interpreter field is populated with the name <code>Python 3.9 (gender_analysis)</code> followed by a path. If this says anything else, find Mike or Ryaan to get help fixing it.</p>
             </div>
             <div class="col-lg-8">
-                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/python_check.png" /></p>
+                <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_environment_4.png" /></p>
             </div>
         </div>
 
@@ -161,7 +154,7 @@ title: 'Setting up Gender Analysis Toolkit'
                 <p>In the <code>Project</code> panel, find and open the <code>requirements.txt</code> file in the top-level <code>gender_analysis</code> folder. Wait until PyCharm automatically detects that this file contains our Python package requirements. Click <code>Install requirements</code> in the banner that pops up, and click <code>Install</code> once the <code>Choose Packages to Install</code> window pops up. (If it asks you to install a <em>plugin</em>, you can safely click <code>Ignore extension</code>) You should see the installation process begin in the bottom status bar. We can let this run while moving on to the next step, but we&#x27;ll come back to this to make sure it worked.</p>
             </div>
             <div class="col-lg-8">
-                <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_requirements.png" /></p>
+                <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_install_requirements.png" /></p>
             </div>
         </div>
 
@@ -169,12 +162,121 @@ title: 'Setting up Gender Analysis Toolkit'
     </section>
 </section>
 
-<section id="gatk-usage">
-    <h2>Using the Gender Analysis Toolkit</h2>
+<section id="gatk-development">
+    <h2>Tips for local development</h2>
 
     <h3 id="gatk-general-usage">General usage notes</h3>
-    <p>PLACEHOLDER</p>
+    <p>You can find user-facing documentation <a href="https://gender-analysis.readthedocs.io/en/latest/index.html" target="_blank">here</a> that roughly outlines how to use the Gender Analysis Toolkit. Over the course of the summer, we’ll make significant updates and modifications to both the codebase and these docs.</p>
 
-    <h3 id="gatk-tests">Running tests</h3>
-    <p>PLACEHOLDER</p>
+    <h3 id="gatk-tests">Tests, coverage, and linting</h3>
+
+    <h4><code>pytest</code></h4>
+    <p>The <code>gender_analysis</code> project includes several packages and configurations to assist us in ensuring our code is well-formatted and tested. For both docstring and unit/integration testing, we use <a href="https://pypi.org/project/pytest/" target="_blank"><code>pytest</code></a>, a standard Python testing package. To use <code>pytest</code>, you can either execute the command <code>pytest</code> in PyCharm's <code>Terminal</code> or set up a configuration for a one-click testing and coverage run.</p>
+
+    <h5>Running <code>pytest</code> from the Terminal</h5>
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>Click on the <code>Terminal</code> tab in the bottom status bar of PyCharm to open a terminal prompt for your virtual environment. Enter the command <code>pytest</code> to run all docstring and unit tests for the entire project. You should see terminal output that looks something like:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_test_terminal_1.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>You can also run specific docstring or unit tests by specifying a filepath: <code>pytest gender_analysis/analysis/proximity.py</code>. You should see terminal output that looks something like:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_test_terminal_2.png.png" /></p>
+        </div>
+    </div>
+
+    <h5>Running <code>pytest</code> from PyCharm configuration</h5>
+    <p>You can also configure PyCharm to include a one-click option for running tests. To do so, follow the following steps.</p>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>Click on <code>Add Configuration...</code> in the status bar at the top of PyCharm:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_configuration_1.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>In the following menu, click the <code>+</code> button:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_configuration_2.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>Navigate down to the <code>pytest</code> option and add any additional configuration you’d like or leave the default settings intact:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_configuration_3.png" /></p>
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_configuration_4.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>You configuration for <code>pytest</code> are now intact! When you’d like to run your tests, click the 'play' button in PyCharm's top status bar:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_configuration_5.png" /></p>
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_add_configuration_6.png" /></p>
+        </div>
+    </div>
+
+
+    <h4><code>coverage</code></h4>
+    <p>The <code>gender_analysis</code> project also includes the <a href="https://pypi.org/project/coverage/" target="_blank">`coverage`</a> package, which allows us easily to learn how much of our code is covered by tests and to produce visualizations to help us track down uncovered code. While it is not necessarily adviseable or even desirable to have complete code coverage, it’s a good idea to ensure that the majority of our code is covered by testing.</p>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>To run a coverage report of our codebase, execute the command <code>coverage run</code> in the <code>Terminal</code>. You should see something like this:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_coverage_1.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>You can follow this up by executing the command <code>coverage report</code> in the <code>Terminal</code> to view our current code coverage. You should see something like this:</p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_coverage_2.png" /></p>
+        </div>
+    </div>
+
+    <hr class="d-lg-none">
+    <div class="row">
+        <div class="col-lg-4">
+            <p>And finally you can run <code>coverage html</code> in the <code>Terminal</code> to generate HTML files containing detailed coverage information that you can open and navigate in the browser:</p>
+        </div>
+        <div class="col-lg-8">
+            <div><img class="img-fluid" alt="" src="/assets/images/gatk/pycharm_coverage_3.png" /></div>
+            <div><img class="img-fluid" alt="" src="/assets/images/gatk/browser_coverage_1.png" /></div>
+            <div><img class="img-fluid" alt="" src="/assets/images/gatk/browser_coverage_2.png" /></div>
+        </div>
+    </div>
+
+    <h4>pylint</h4>
+    <p>Similar to <code>pytest</code> and <code>coverage</code> above, you can run <code>pylint</code> followed by a filepath (ex. <code>pylint gender_analysis</code>) in the PyCharm <code>Terminal</code> to perform automatic Python style linting on the project. In the words of the <a href="http://pylint.pycqa.org/en/latest/" target="_blank">pylint docs</a>: "pylint is a tool that checks for errors in Python code, tries to enforce a coding standard and looks for <a href="https://martinfowler.com/bliki/CodeSmell.html" target="_blank">code smells</a>. It can also look for certain type errors, it can recommend suggestions about how particular blocks can be refactored and can offer you details about the code's complexity." <code>pylint</code> runs automatically when you open a pull request on GitHub, so it’s worth the time to run <code>pylint</code> locally every once in a while while you develop and to correct anything that it flags.</p>
 </section>
+
+<a href="/" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Return to home</a>
