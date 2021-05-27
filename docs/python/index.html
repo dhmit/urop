@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dhmit UROP guide | Python</title>
+        <meta name="author" content="MIT Digital Humanities">
+        <meta name="description" content="UROP guide for the MIT Programs in Digital Humanities">
+        <meta name="keywords" content="digital humanities, MIT, urop">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="/assets/css/styles.css" rel="stylesheet">
+        <link href="/assets/css/prism.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="global-wrapper">
+            <nav class="sidebar bg-light">
+                <p><strong><a href='/'>dhmit urop guide</a></strong></p>
+                <p class="text-muted mt-4 mb-1 ">Technical Onboarding</p>
+
+                <ol class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="/intro"><span class="numeral">0</span> Intro</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/communication"><span class="numeral">1</span> Communication</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/git"><span class="numeral">2</span> Git</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/python"><span class="numeral">3</span> Python</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/pycharm"><span class="numeral">4</span> PyCharm</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/node-and-npm"><span class="numeral">5</span> Node and npm</a>
+                    </li>
+                </ol>
+
+                <p class="sidebar-heading d-flex justify-content-between align-items-center mt-4 mb-1 text-muted"><span>Other Materials</span></p>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="/contract">UROP Contract</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/tutorials">Tech Tutorials</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="main">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="header border-bottom pb-3 mb-3">Python</h1>
+
+                        
+<p>This document will walk you through the process of installing Python 3.9.5. Please read the beginning of this guide <strong>even if</strong> you already have Python installed, as we need to ensure that you're using a version of Python that's compatible with the lab's development tools. </p>
+
+<p>
+    <em>Returning UROPs</em>: Note that the version of Python used by the lab is now 3.9.5. Following the instructions to install below will update your Python version if you’re on an older version.
+</p>
+
+<h2>Check if Python is Installed</h2>
+<p>Open your terminal and run the following command</p>
+
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            python3 --version
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            python --version
+        </kbd>
+    </div>
+</div>
+<br>
+
+
+<p>If you receive an error or your version of Python is not 3.9.5, skip ahead to <a href="#install_python">Install Python</a>.</p>
+<p>If you have Python 3.9.5 already installed, try the following command in the terminal:</p>
+
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            which python3
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            which python
+        </kbd>
+    </div>
+</div>
+<br>
+
+<p>This will output the location of your Python interpreter. If the output contains any reference to 'Anaconda'&mdash;a popular Python distribution that you might be using in some of your classes&mdash;please follow the instructions below to <a href="#install_python">Install Python</a>.</p>
+
+<p>macOS users should make a habit of typing <kbd>python3</kbd> whenever they need to call Python at the command line, whereas Windows users can simply type <kbd>python</kbd>. This is because macOS still ships with Python 2.7 installed, which you <em>should not</em> try to uninstall, as it's essential for some system software.</p>
+
+<h2><a name="install_python">Install Python<a></h2>
+
+<p>Visit the <a href="https://www.python.org/downloads/">Python download page</a>, download, and install Python 3.9.5 for your operating system.</p>
+
+
+<div class="row">
+    <div class="col-lg-4">
+        <p>On Windows, make sure to click <code>Add Python to Path</code> on the first screen.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="/assets/images/python_path.png" /></p>
+    </div>
+</div>
+
+
+<p>Once Python is installed, open your terminal and run:</p>
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            python3
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            python
+        </kbd>
+    </div>
+</div>
+<br>
+<p>This will start the Python Shell, which should report Python version 3.9.5. Try running some code, if you like, and then quit by running <kbd>quit()</kbd> in the shell.</p>
+<p>Finally, open the terminal and run the following command:</p>
+
+<div class="row">
+    <div class="col-2">macOS</div>
+    <div class="col">
+        <kbd>
+            which python3
+        </kbd>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">Windows</div>
+    <div class="col">
+        <kbd>
+            which python
+        </kbd>
+    </div>
+</div>
+<br>
+
+
+<p>This tells you where on your hard drive your Python interpreter is installed. Please take note of this path; we'll use it later.</p>
+<p>If at an earlier stage you discovered that you had Python installed via Anaconda and this path <em>still</em> references Anaconda, find Ryaan, who will attempt to perform an exorcism on your machine.</p>
+
+<a href="/git_and_atom" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Git and Atom</a>
+<a href="/pycharm" class="btn btn-outline-primary float-right col-5 col-md-3">PyCharm &rarr;</a>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Prism.js for syntax highlighting in code blocks: https://prismjs.com -->
+        <script src="/assets/js/prism.js"></script>
+    </body>
+</html>

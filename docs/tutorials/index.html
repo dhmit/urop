@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dhmit UROP guide | Tutorials</title>
+        <meta name="author" content="MIT Digital Humanities">
+        <meta name="description" content="UROP guide for the MIT Programs in Digital Humanities">
+        <meta name="keywords" content="digital humanities, MIT, urop">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="/assets/css/styles.css" rel="stylesheet">
+        <link href="/assets/css/prism.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="global-wrapper">
+            <nav class="sidebar bg-light">
+                <p><strong><a href='/'>dhmit urop guide</a></strong></p>
+                <p class="text-muted mt-4 mb-1 ">Technical Onboarding</p>
+
+                <ol class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="/intro"><span class="numeral">0</span> Intro</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/communication"><span class="numeral">1</span> Communication</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/git"><span class="numeral">2</span> Git</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/python"><span class="numeral">3</span> Python</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/pycharm"><span class="numeral">4</span> PyCharm</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/node-and-npm"><span class="numeral">5</span> Node and npm</a>
+                    </li>
+                </ol>
+
+                <p class="sidebar-heading d-flex justify-content-between align-items-center mt-4 mb-1 text-muted"><span>Other Materials</span></p>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="/contract">UROP Contract</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/tutorials">Tech Tutorials</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="main">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="header border-bottom pb-3 mb-3">Tech Tutorials</h1>
+
+                        
+<section>
+    <p>The usual tech stack that the DH Lab uses for web projects is:</p>
+    <ul>
+        <li>backend code written in Python using the Django web framework to implement a RESTful API</li>
+        <li>frontend code written in JavaScript using the React framework for building user interfaces</li>
+    </ul>
+    <p>If some or all of that was completely foreign to you, do not fear! We'll be covering these concepts throughout the semester, and by working with these tools you'll find your way in no time at all.</p>
+    <p>Here is a collection of materials you can use to start developing fluency with the tools we'll be using:</p>
+</section>
+
+<section>
+    <h2>Git</h2>
+    <p>
+    <a href='/git-workflow'>Git workflow tutorial</a>: An introductory exercise for the lab's Git workflow.
+    </p>
+</section>
+
+<section>
+    <h2>Python and Django</h2>
+    <p>We won't be covering any introductory Python material, as we expect that you'll be getting enough of that from your coursework. If you have any questions, feel free to ask anyone on staff. You can also check out some of the Python books we have in our lending library, including one by our very own former postdoc <a href="http://lisatagliaferri.com/">Lisa Tagliaferri</a>!</p>
+    <p><a href="https://docs.djangoproject.com/en/2.2/intro/">Django tutorial</a>:
+    Django's own documentation is fantastic, and reading through (and if you have time <em>working through</em>) the tutorial will get you up to speed on how Django works.</p>
+    <p><a href="https://wsvincent.com/official-django-rest-framework-tutorial-beginners-guide/">Django REST Framework tutorial</a>:
+    Once you have your head around how Django's models work, have a read through (or follow along with) this tutorial about DRF, the Django package that we'll be using to implement our backend API.</p>
+</section>
+
+<section>
+    <h2>JavaScript and React</h2>
+    <p><a href="https://javascript.info/">The Modern JavaScript Tutorial</a>:
+    If you have little-to-no experience with JavaScript or are not familiar with the conventions of modern JavaScript (ES6+) this tutorial is a nice, concise introduction and reference to the language.</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web">MDN web docs</a>:
+    Mozilla has extensive documentation and tutorials for almost every modern frontend web technology.
+    </p>
+    <p><a href="https://reactjs.org/tutorial/tutorial.html">React tutorial</a>:
+    From React's official docs, this walks you through putting together a game of tic-tac-toe using the React framework. A couple of things to make your time with this material more productive: when it says you can choose whether to do the tutorial in the browser or in a local dev environment, do it in a local dev environment. In the setup step 5, where it says -- "Add a file named index.js in the src/ folder with this JS code." -- please do not download or copy this code into your local file. Instead, copy it out by hand, line-by-line. I know this is tedious, but you will learn much more this way.</p>
+</section>
+
+<section>
+    <h2>Computer Vision</h2>
+    <p>
+    <a href='https://docs.opencv.org/master/d6/d00/tutorial_py_root.html'>OpenCV-Python Official Tutorials</a>: Tutorials for OpenCV hosted in the official docs. Almost everything we will want to do this semester is in here somewhere, so do some exploring!
+    </p>
+</section>
+
+<section>
+    <h2>Mapping</h2>
+    <p><a href="https://www.d3indepth.com/geographic/">D3 in Depth - Geographic</a>:
+    Read me first! This is a great rundown of how D3 interacts with GeoJSON to produce SVGs of maps.</p>
+    <p><a href="https://macwright.org/2015/03/23/geojson-second-bite.html">More than you ever wanted to know about GeoJSON</a>:
+    A bunch more about GeoJSON.</p>
+    <p><a href="http://geojson.io">GeoJSON.io</a>:
+    Fun tool for playing around with GeoJSON.</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">MDN web docs - SVG Tutorial</a>:
+    We'll be manipulating SVGs a lot. Get familiar with these docs.</p>
+</section>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Prism.js for syntax highlighting in code blocks: https://prismjs.com -->
+        <script src="/assets/js/prism.js"></script>
+    </body>
+</html>

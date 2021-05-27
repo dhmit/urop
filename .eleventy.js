@@ -4,7 +4,8 @@ module.exports = function(eleventyConfig) {
     passthroughFileCopy: true,
     dir: {
       input: "views",
-      includes: '../_includes'
+      includes: '../_includes',
+      output: "docs"
     }
   }
 }
