@@ -9,9 +9,9 @@ title: 'Git Workflow'
 
     <p>One of the most important things you'll need to familiarize yourself with in this lab is working with Git through GitHub Desktop. This tool helps us manage the complexity of having 30+ developers all working on the same codebase.</p>
 
-    <p>In this lab, we'll use a 'feature branch' workflow for Git. Git lets us create multiple branches of the codebase with different changes; the workflow we'll be using means that one branch&mdash;<code>master</code>&mdash;will only accept changes that have been reviewed and approved by your peers and staff.</p>
+    <p>In this lab, we'll use a 'feature branch' workflow for Git. Git lets us create multiple branches of the codebase with different changes; the workflow we'll be using means that one branch&mdash;<code>main</code>&mdash;will only accept changes that have been reviewed and approved by your peers and staff.</p>
 
-    <p>Whenever we want to work on the codebase, we'll create a branch, make our changes, push that branch to GitHub, and when the feature is ready to merge into the shared codebase, make a pull request. A pull request (PR) notifies teammates that you have code that you want to merge into our master branch that is ready for review.</p>
+    <p>Whenever we want to work on the codebase, we'll create a branch, make our changes, push that branch to GitHub, and when the feature is ready to merge into the shared codebase, make a pull request. A pull request (PR) notifies teammates that you have code that you want to merge into our main branch that is ready for review.</p>
 
     <p>Atlassian has a great series of Git tutorials, and <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">this one on the 'Feature Branch Workflow'</a> is worth a skim. It uses the command line interface to Git, whereas we'll be using GitHub Desktop in this lab.</p>
 
@@ -21,8 +21,8 @@ title: 'Git Workflow'
 </section>
 
 <section>
-    <h2>Fetching and pulling from master (everyone do this)</h2>
-    <p>When you sit down to work <em>always</em> start by pulling the latest changes from the master branch, so that your local copy of the codebase doesn't diverge too much from the current version.</p>
+    <h2>Fetching and pulling from main (everyone do this)</h2>
+    <p>When you sit down to work <em>always</em> start by pulling the latest changes from the main branch, so that your local copy of the codebase doesn't diverge too much from the current version.</p>
 
     <div class="row">
         <div class="col-lg-4">
@@ -40,7 +40,7 @@ title: 'Git Workflow'
 
 <section>
     <h2>Create a feature branch (do this on one computer only)</h2>
-    <p>Instead of working directly on the master branch, we'll make a feature branch for your first commits and PR.</p>
+    <p>Instead of working directly on the main branch, we'll make a feature branch for your first commits and PR.</p>
     <div class="row">
         <div class="col-lg-4">
             <p>Click the <code>Current branch</code> button and click <code>New branch</code>. Call your new branch <code>group_first_names_FIRST_PR</code> (e.g., <code>ryaan_erica_cole_first_PR</code>) and click <code>Create branch</code>. When this is complete, you should see the <code>Current branch</code> button show that you're on your newly created branch.</p>
@@ -207,19 +207,19 @@ title: 'Git Workflow'
         </div>
     </div>
 
-    <p>Although this first PR is trivial, once you're writing real code in the system, you may receive feedback on a pull request that asks for changes before we merge it into the master branch.</p>
+    <p>Although this first PR is trivial, once you're writing real code in the system, you may receive feedback on a pull request that asks for changes before we merge it into the main branch.</p>
 </section>
 
 <section>
     <h2>One last thing...</h2>
-    <p>Go back to GitHub Desktop. Now that you've made a PR, you can switch your <code>Current branch</code> back to master. When you next sit down to start making a new feature, you'll repeat the steps above to work on a new branch, push that branch to GitHub, and then make a PR when it's ready to merge into the codebase.</p>
+    <p>Go back to GitHub Desktop. Now that you've made a PR, you can switch your <code>Current branch</code> back to main. When you next sit down to start making a new feature, you'll repeat the steps above to work on a new branch, push that branch to GitHub, and then make a PR when it's ready to merge into the codebase.</p>
 
-    <a name="update_branch_from_master">
+    <a name="update_branch_from_main">
     <h3 class="mt-4">While you're working on a feature branch</h3>
     </a>
     <div class="row">
         <div class="col-lg-4">
-            <p>Whenever you start working, if you're on a branch, clicking <code>Fetch origin</code> and then <code>Pull origin</code> only pulls changes from your current branch. You'll want to make a habit of clicking <code>Fetch origin</code>, <code>Pull origin</code>, and then <em>also</em> going to the menu item <code>Branch</code> -&gt; <code>Update from master</code>. This will merge any changes from the master branch into your current working branch, so that your feature branch doesn't drift too far away from master.
+            <p>Whenever you start working, if you're on a branch, clicking <code>Fetch origin</code> and then <code>Pull origin</code> only pulls changes from your current branch. You'll want to make a habit of clicking <code>Fetch origin</code>, <code>Pull origin</code>, and then <em>also</em> going to the menu item <code>Branch</code> -&gt; <code>Update from main</code>. This will merge any changes from the main branch into your current working branch, so that your feature branch doesn't drift too far away from main.
         </div>
         <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
