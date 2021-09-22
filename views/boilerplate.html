@@ -1,0 +1,490 @@
+---
+layout: layouts/base
+meta_title: 'dhmit UROP guide | Boilerplate'
+title: 'Setting up your project'
+---
+
+<section>
+  <p>At this point, you have all of the tools necessary to work on our project installed -- Git,
+    Atom, Python, Node/npm,
+    and PyCharm -- so let&#x27;s put it all together and get the project running.</p>
+
+  <p>If you have not yet completed the Technical Onboarding guide, you&#x27;re in the wrong place.
+    Head over to the <a
+        href="/intro">Intro</a> and get started there. You&#x27;ll end up back here eventually.</p>
+</section>
+<section>
+  <h2>Create your project</h2>
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Go to the Github-hosted <a href="https://github.com/dhmit/boilerplate">
+        boilerplate repository</a>.
+      </p>
+      <p>Click the "Use this template" button on the top right.</p>
+      <p>On the screen with the heading "Create a new repository from boilerplate", change the owner
+        to `dhmit` from the dropdown on the left, and add a project name. If you don't see `dhmit`
+        in the dropdown, please ask DH staff about it, it's likely because you haven't been added to
+        the team yet. The project name should be short but descriptive. This is just the name to
+        find the project code by, so don't worry about it not being perfect.</p>
+      <p>Click "Create repository from template" button.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/template.png"/></p>
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/boilerplate.png"/></p>
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/project-1.png"/></p>
+    </div>
+  </div>
+</section>
+<section>
+  <h2>Cloning the Repository</h2>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Open GitHub Desktop. If this is your first time using the application and you&#x27;ve
+        already been added to the
+        dhmit organization, dhmit projects should appear in the repositories pane, under the "Filter
+        your repositories"
+        search box. Click on <code>dhmit/your-new-project</code>, and click <code>Clone
+          dhmit/your-new-project</code>.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/project-2.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>If this option doesn&#x27;t appear, click <code>Clone a repository from the
+        Internet...</code> or go to <code>File</code>
+        -&gt; <code>Clone repository</code>. In the URL tab, enter <code>dhmit/your-new-project</code>.
+      </p>
+      <p>Leave the <code>Local path</code> field as is, but take note of it, as you&#x27;ll need it
+        later. Click <code>Clone</code>
+        to download the repo.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/project-3.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Once the repo is cloned, you should see a screen that looks like this. Try clicking on
+        Windows <code>Show in
+          Explorer</code> or on macOS <code>Show in Finder</code> to see where the project has ended
+        up on your computer,
+        or click <code>View on GitHub</code> to go to our project page on GitHub.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/project-4.png"/></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Setting up our project in PyCharm</h2>
+  <h3>Open the project</h3>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Open PyCharm. In the menu bar, select File-&gt;Open, and open the folder where you cloned
+        the repo in the step
+        above. By default on Windows this is <code>C:\\Users\\YOUR_USER_NAME\\Documents\\GitHub\\sonification</code>
+        and
+        on macOS <code>/Users/YOUR_USER_NAME/Documents/GitHub/sonification</code>.
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-3.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>If you get this dialog box, always select "This Window" (the default) or "New Window" if
+        you want to have
+        multiple projects open at once. (Ryaan doesn&#x27;t recommend the latter: PyCharm is very
+        resource-intensive, so
+        unless you absolutely need to have two projects open at once, click "This Window".)</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt="" src="/assets/images/lang-learn/pycharm_this_window.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Once it&#x27;s loaded, you should see the <code>sonification</code> folder appear in the
+        <code>Project</code>
+        pane on the left.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-4.png"/></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Setup Python environment and packages</h2>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Open the settings window (macOS <code>PyCharm -&gt; Preferences</code>; Windows, <code>File
+        -&gt;
+        Settings</code>), and go to "Project: sonification" -&gt; Python Interpreter. Click on the
+        wheel in the top
+        right and select "Add".</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-4a.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Select "New Environment". Make sure that the base interpreter is the path that you noted
+        when installing
+        Python. Leave the location for the interpreter as the default provided by PyCharm.</p>
+
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-5.png"/></p>
+    </div>
+  </div>
+
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Apply your changes, wait for the virtual environment to be created, and exit the settings
+        window.</p>
+      <p>Click <code>Terminal</code> in the bottom status bar. You should see <code>(venv)</code> at
+        the beginning of
+        your prompt. If you do not, restart PyCharm and check again. If you still don&#x27;t see
+        <code>(venv)</code>
+        appear, go back to the beginning of this section and make sure you correctly setup a new
+        environment.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-6.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Go back to the Project Interpreter window, and ensure that the Python Interpreter field is
+        populated with the
+        name <code>Python 3.9 (sonification)</code> followed by a path. If this says anything else,
+        find a staff member
+        to get help fixing it.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-7.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>In the <code>Project</code> panel, find and open the <code>requirements.txt</code> file in
+        the top-level <code>sonification</code>
+        folder. Wait until PyCharm automatically detects that this file contains our Python package
+        requirements. Click
+        <code>Install requirements</code> in the banner that pops up, and click <code>Install</code>
+        once the <code>Choose
+          Packages to Install</code> window pops up. (If it asks you to install a <em>plugin</em>,
+        you can safely click
+        <code>Ignore extension</code>) You should see the installation process begin in the bottom
+        status bar. We can
+        let this run while moving on to the next step, but we&#x27;ll come back to this to make sure
+        it worked.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-8.png"/></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Setting up a Django run configuration</h2>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Our project uses Django, a Python web framework. If we let PyCharm know about Django, we
+        get lots of nice
+        debugging features.</p>
+      <p>Go back to the settings window. Under <code>Languages &amp; Frameworks</code> -&gt; <code>Django</code>.
+      </p>
+      <p>Our project repository has some PyCharm settings saved within it, so it should look
+        something like this. If it
+        does, great, move on to Setting up a Backend Run Configuration.</p>
+      <p>Otherwise, if <code>Enable Django Support</code> is not checked, then check it, and follow
+        the directions
+        below.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-9.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Set the <code>Django project root</code> to be the <code>backend</code> folder within our
+        project.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-10.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Set the <code>Settings</code> file to be <code>config/settings/dev.py</code>.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-11.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>If the Django pane now looks something like this, you can click OK to apply and exit the
+        settings.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-9.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Click the big <code>Add Configuration</code> button in the top bar. In the <code>Run/Debug
+        Configurations</code> window that appears, click the + in the top left corner, and select
+        <code>Django
+          server</code></p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/gatk-web/gatk-web-project-installation-14.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Name this configuration <code>Run backend</code> and click <code>OK</code> with all of the
+        defaults in place.
+        At this point in the process, you&#x27;ve installed all the third-party packages we need to
+        run our project and
+        made PyCharm aware of how to run our Django server. Let&#x27;s check that everything worked.
+      </p>
+      <p>Go back to the terminal inside Django, and execute <kbd>pip freeze</kbd>. This should
+        output a list that&#x27;s
+        exactly the same as the contents of the <code>requirements.txt</code> file you opened
+        earlier.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-12.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Type <kbd>cd backend</kbd> to enter the backend folder, and then run <kbd>python manage.py
+        migrate</kbd>. This
+        will setup a local development database on your machine.</p>
+      <p>Click the green triangular play button in the menu bar next to "Run backend" to run the
+        Django development
+        server. If everything is working, you should see some output like this in the run panel.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-13.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Click on the link where the site is being run locally <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>,
+        where you should see... well... an error message. This is because we are not yet running the
+        frontend
+        development server. If you&#x27;re seeing this error, that means that everything is working
+        so far!</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-14.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Navigate to <a href="http://localhost:8000/api/example/1">http://localhost:8000/api/example/1</a>,
+        and you
+        should see a <a href="https://www.django-rest-framework.org/" target="_blank">Django REST
+          framework</a> debug
+        page, which looks like this. If this is all working, we&#x27;re nearly
+        there! If not, try running the above steps again, and if all else fails, find a staff member
+        or a returning lab
+        member who can help you troubleshoot.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/gatk-web/gatk-web-project-installation-18.png"/></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Setting up npm</h2>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Now that the Python/Django backend part of the site is up and running on your machine, the
+        last step is to
+        setup the JavaScript/React frontend.</p>
+      <p>In the project pane, find and open <code>frontend/index.js</code>.</p>
+      <p><em>Do not click</em> Run &#x27;npm install&#x27;.</p>
+      <p>If you see a banner saying <code>Switch language version to React JSX</code>, <em>do</em>
+        click that.</p>
+      <p>Go back to the terminal and issue the command <kbd>npm ci</kbd>. You might have to wait a
+        little while now, as
+        npm installs all of the Node modules we need to build the frontend.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-15.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Now, go back to what used to be the <code>Add Configurations</code> button but now says
+        <code>Run
+          backend</code>. Click <code>Edit configurations</code> to go back to the <code>Run/Debug
+          Configurations</code>
+        window. Click the same + in the top left corner, and then select npm. Name this
+        configuration <code>Run
+          frontend</code>.</p>
+      <p>The <code>package.json</code> field should already be populated with a filepath to the
+        <code>package.json</code> file at the root of the project, but if not, click the dropdown
+        menu down arrow, and
+        select <code>package.json</code>. This is the file that tells PyCharm and npm how our
+        frontend application is
+        configured.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-16.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-17.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Click OK and exit the settings. Once again, click the green triangle &#x27;Run&#x27; button
+        next to <code>Run
+          frontend</code> which will start the frontend development server. Once you see a success
+        message in the run
+        panel, go back to <a href="http://localhost:8000">http://localhost:8000</a>, where you
+        should now see a page
+        with the title "Welcome to Text-Based Sentiment Analysis!" To see an example page with some
+        additional content,
+        visit <a href="http://localhost:8000/example/1">http://localhost:8000/example/1</a>.
+      </p>
+      <p>Congratulations! You&#x27;ve got the project up and running on your machine.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-18.png"/></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Closing and restarting the project</h2>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Close PyCharm, terminate any processes when it asks, and then restart PyCharm. In order to
+        run the project, you
+        have to go to this dropdown menu, click <code>Run backend</code> and then the triangular
+        &#x27;Run&#x27; button
+        next to it, and then click <code>Run frontend</code> and do the same.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-19.png"/></p>
+    </div>
+  </div>
+
+  <hr class="d-lg-none">
+  <div class="row">
+    <div class="col-lg-4">
+      <p>Once you see both <code>Run backend</code> and <code>Run frontend</code> tabs open in the
+        <code>Run</code>
+        panel, and both show success messages, you can go back to the site running locally on your
+        machine.</p>
+      <p>Please note that the frontend pane will show a url ending in <code>:3000</code>. This is
+        another way to access
+        the frontend directly without running the Django server, but for this project, we&#x27;ll be
+        ignoring that
+        entirely.</p>
+    </div>
+    <div class="col-lg-8">
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/sonification/soni-project-installation-20.png"/></p>
+    </div>
+  </div>
+</section>
+
+<a href="/" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Return to home</a>
