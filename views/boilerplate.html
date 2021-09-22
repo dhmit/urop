@@ -49,8 +49,9 @@ title: 'Setting up your project'
         already been added to the
         dhmit organization, dhmit projects should appear in the repositories pane, under the "Filter
         your repositories"
-        search box. Click on <code>dhmit/your-new-project</code>, and click <code>Clone
-          dhmit/your-new-project</code>.</p>
+        search box. Click on <code>dhmit/<span class="highlight">your-new-project</span></code>, and
+        click <code>Clone
+          dhmit/<span class="highlight">your-new-project</span></code>.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
@@ -63,7 +64,8 @@ title: 'Setting up your project'
     <div class="col-lg-4">
       <p>If this option doesn&#x27;t appear, click <code>Clone a repository from the
         Internet...</code> or go to <code>File</code>
-        -&gt; <code>Clone repository</code>. In the URL tab, enter <code>dhmit/your-new-project</code>.
+        -&gt; <code>Clone repository</code>. In the URL tab, enter
+        <code>dhmit/<span class="highlight">your-new-project</span></code>.
       </p>
       <p>Leave the <code>Local path</code> field as is, but take note of it, as you&#x27;ll need it
         later. Click <code>Clone</code>
@@ -100,13 +102,17 @@ title: 'Setting up your project'
     <div class="col-lg-4">
       <p>Open PyCharm. In the menu bar, select File-&gt;Open, and open the folder where you cloned
         the repo in the step
-        above. By default on Windows this is <code>C:\\Users\\YOUR_USER_NAME\\Documents\\GitHub\\sonification</code>
-        and
-        on macOS <code>/Users/YOUR_USER_NAME/Documents/GitHub/sonification</code>.
+        above. By default on Windows this is
+        <code>C:\\Users\\YOUR_USER_NAME\\Documents\\GitHub\\<span
+            class="highlight">your-new-project</span>
+        </code>
+        and on macOS
+        <code>/Users/YOUR_USER_NAME/Documents/GitHub/<span class="highlight">your-new-project</span>
+        </code>.
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-3.png"/></p>
+              src="/assets/images/boilerplate/project-5.png"/></p>
     </div>
   </div>
 
@@ -127,13 +133,14 @@ title: 'Setting up your project'
   <hr class="d-lg-none">
   <div class="row">
     <div class="col-lg-4">
-      <p>Once it&#x27;s loaded, you should see the <code>sonification</code> folder appear in the
+      <p>Once it&#x27;s loaded, you should see the
+        <code><span class="highlight">your-new-project</span></code> folder appear in the
         <code>Project</code>
         pane on the left.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-4.png"/></p>
+              src="/assets/images/boilerplate/project-6.png"/></p>
     </div>
   </div>
 </section>
@@ -146,13 +153,12 @@ title: 'Setting up your project'
     <div class="col-lg-4">
       <p>Open the settings window (macOS <code>PyCharm -&gt; Preferences</code>; Windows, <code>File
         -&gt;
-        Settings</code>), and go to "Project: sonification" -&gt; Python Interpreter. Click on the
-        wheel in the top
-        right and select "Add".</p>
+        Settings</code>), and go to "Project: <span class="highlight">your-new-project</span>" -&gt;
+        Python Interpreter. Click on the wheel in the top right and select "Add".</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-4a.png"/></p>
+              src="/assets/images/boilerplate/project-7.png"/></p>
     </div>
   </div>
 
@@ -160,13 +166,12 @@ title: 'Setting up your project'
   <div class="row">
     <div class="col-lg-4">
       <p>Select "New Environment". Make sure that the base interpreter is the path that you noted
-        when installing
-        Python. Leave the location for the interpreter as the default provided by PyCharm.</p>
-
+        when installing Python.
+        Leave the location for the interpreter as the default provided by PyCharm.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-5.png"/></p>
+              src="/assets/images/boilerplate/project-8.png"/></p>
     </div>
   </div>
 
@@ -177,15 +182,14 @@ title: 'Setting up your project'
       <p>Apply your changes, wait for the virtual environment to be created, and exit the settings
         window.</p>
       <p>Click <code>Terminal</code> in the bottom status bar. You should see <code>(venv)</code> at
-        the beginning of
-        your prompt. If you do not, restart PyCharm and check again. If you still don&#x27;t see
-        <code>(venv)</code>
+        the beginning of your prompt. If you do not, restart PyCharm and check again.
+        If you still don&#x27;t see <code>(venv)</code>
         appear, go back to the beginning of this section and make sure you correctly setup a new
         environment.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-6.png"/></p>
+              src="/assets/images/boilerplate/project-9.png"/></p>
     </div>
   </div>
 
@@ -194,13 +198,12 @@ title: 'Setting up your project'
     <div class="col-lg-4">
       <p>Go back to the Project Interpreter window, and ensure that the Python Interpreter field is
         populated with the
-        name <code>Python 3.9 (sonification)</code> followed by a path. If this says anything else,
-        find a staff member
-        to get help fixing it.</p>
+        name <code>Python 3.9 (<span class="highlight">your-new-project</span>)</code>
+        followed by a path. If this says anything else, find a staff member to get help fix it.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-7.png"/></p>
+              src="/assets/images/boilerplate/project-10.png"/></p>
     </div>
   </div>
 
@@ -208,21 +211,25 @@ title: 'Setting up your project'
   <div class="row">
     <div class="col-lg-4">
       <p>In the <code>Project</code> panel, find and open the <code>requirements.txt</code> file in
-        the top-level <code>sonification</code>
+        the top-level <code><span class="highlight">your-new-project</span></code>
         folder. Wait until PyCharm automatically detects that this file contains our Python package
         requirements. Click
         <code>Install requirements</code> in the banner that pops up, and click <code>Install</code>
         once the <code>Choose
           Packages to Install</code> window pops up. (If it asks you to install a <em>plugin</em>,
-        you can safely click
-        <code>Ignore extension</code>) You should see the installation process begin in the bottom
-        status bar. We can
-        let this run while moving on to the next step, but we&#x27;ll come back to this to make sure
-        it worked.</p>
+        you can safely click <code>Ignore extension</code>) You should see the installation process
+        begin in the bottom status bar. We can let this run while moving on to the next step,
+        but we&#x27;ll come back to this to make sure it worked.</p>
+      <p>If this does not appear, go to the <code>Terminal</code> and run the command
+        <code>pip install -r requirements.txt</code>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
               src="/assets/images/sonification/soni-project-installation-8.png"/></p>
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/project-11.png"/></p>
+      <p><img class="img-fluid" alt=""
+              src="/assets/images/boilerplate/project-12.png"/></p>
     </div>
   </div>
 </section>
@@ -247,7 +254,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-9.png"/></p>
+              src="/assets/images/boilerplate/project-13.png"/></p>
     </div>
   </div>
 
@@ -259,7 +266,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-10.png"/></p>
+              src="/assets/images/boilerplate/project-14.png"/></p>
     </div>
   </div>
 
@@ -270,7 +277,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-11.png"/></p>
+              src="/assets/images/boilerplate/project-15.png"/></p>
     </div>
   </div>
 
@@ -282,7 +289,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-9.png"/></p>
+              src="/assets/images/boilerplate/project-13.png"/></p>
     </div>
   </div>
 
@@ -296,7 +303,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/gatk-web/gatk-web-project-installation-14.png"/></p>
+              src="/assets/images/boilerplate/project-16.png"/></p>
     </div>
   </div>
 
@@ -315,8 +322,7 @@ title: 'Setting up your project'
         earlier.</p>
     </div>
     <div class="col-lg-8">
-      <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-12.png"/></p>
+      <p><img class="img-fluid" alt="" src="/assets/images/boilerplate/project-17.png"/></p>
     </div>
   </div>
 
@@ -331,8 +337,7 @@ title: 'Setting up your project'
         server. If everything is working, you should see some output like this in the run panel.</p>
     </div>
     <div class="col-lg-8">
-      <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-13.png"/></p>
+      <p><img class="img-fluid" alt="" src="/assets/images/boilerplate/project-18.png"/></p>
     </div>
   </div>
 
@@ -340,14 +345,10 @@ title: 'Setting up your project'
   <div class="row">
     <div class="col-lg-4">
       <p>Click on the link where the site is being run locally <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>,
-        where you should see... well... an error message. This is because we are not yet running the
-        frontend
-        development server. If you&#x27;re seeing this error, that means that everything is working
-        so far!</p>
+        where you should see... well... a mostly empty page and a Hello world!</p>
     </div>
     <div class="col-lg-8">
-      <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-14.png"/></p>
+      <p><img class="img-fluid" alt="" src="/assets/images/boilerplate/project-19.png"/></p>
     </div>
   </div>
 
@@ -355,13 +356,11 @@ title: 'Setting up your project'
   <div class="row">
     <div class="col-lg-4">
       <p>Navigate to <a href="http://localhost:8000/api/example/1">http://localhost:8000/api/example/1</a>,
-        and you
-        should see a <a href="https://www.django-rest-framework.org/" target="_blank">Django REST
-          framework</a> debug
+        and you should see a <a href="https://www.django-rest-framework.org/" target="_blank">
+          Django REST framework</a> debug
         page, which looks like this. If this is all working, we&#x27;re nearly
         there! If not, try running the above steps again, and if all else fails, find a staff member
-        or a returning lab
-        member who can help you troubleshoot.</p>
+        or a returning lab member who can help you troubleshoot.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
@@ -377,19 +376,17 @@ title: 'Setting up your project'
   <div class="row">
     <div class="col-lg-4">
       <p>Now that the Python/Django backend part of the site is up and running on your machine, the
-        last step is to
-        setup the JavaScript/React frontend.</p>
+        last step is to set up the JavaScript/React frontend.</p>
       <p>In the project pane, find and open <code>frontend/index.js</code>.</p>
       <p><em>Do not click</em> Run &#x27;npm install&#x27;.</p>
       <p>If you see a banner saying <code>Switch language version to React JSX</code>, <em>do</em>
         click that.</p>
       <p>Go back to the terminal and issue the command <kbd>npm ci</kbd>. You might have to wait a
-        little while now, as
-        npm installs all of the Node modules we need to build the frontend.</p>
+        little while now, as npm installs all of the Node modules we need to build the frontend.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-15.png"/></p>
+              src="/assets/images/boilerplate/project-20.png"/></p>
     </div>
   </div>
 
@@ -404,7 +401,7 @@ title: 'Setting up your project'
         configuration <code>Run
           frontend</code>.</p>
       <p>The <code>package.json</code> field should already be populated with a filepath to the
-        <code>package.json</code> file at the root of the project, but if not, click the dropdown
+        <code>package.json</code> file at the root of the project, but not, click the dropdown
         menu down arrow, and
         select <code>package.json</code>. This is the file that tells PyCharm and npm how our
         frontend application is
@@ -412,7 +409,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-16.png"/></p>
+              src="/assets/images/boilerplate/project-21.png"/></p>
     </div>
   </div>
 
@@ -423,7 +420,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-17.png"/></p>
+              src="/assets/images/boilerplate/project-22.png"/></p>
     </div>
   </div>
 
@@ -431,20 +428,16 @@ title: 'Setting up your project'
   <div class="row">
     <div class="col-lg-4">
       <p>Click OK and exit the settings. Once again, click the green triangle &#x27;Run&#x27; button
-        next to <code>Run
-          frontend</code> which will start the frontend development server. Once you see a success
-        message in the run
-        panel, go back to <a href="http://localhost:8000">http://localhost:8000</a>, where you
-        should now see a page
-        with the title "Welcome to Text-Based Sentiment Analysis!" To see an example page with some
-        additional content,
-        visit <a href="http://localhost:8000/example/1">http://localhost:8000/example/1</a>.
+        next to <code>Run frontend</code> which will start the frontend development server.
+        Once you see a success message in the run panel, go back to
+        <a href="http://localhost:8000">http://localhost:8000</a>, where you
+        should now see a page with the title "Boilerplate app".
       </p>
       <p>Congratulations! You&#x27;ve got the project up and running on your machine.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-18.png"/></p>
+              src="/assets/images/boilerplate/project-23.png"/></p>
     </div>
   </div>
 </section>
@@ -463,7 +456,7 @@ title: 'Setting up your project'
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-19.png"/></p>
+              src="/assets/images/boilerplate/project-24.png"/></p>
     </div>
   </div>
 
@@ -475,14 +468,11 @@ title: 'Setting up your project'
         panel, and both show success messages, you can go back to the site running locally on your
         machine.</p>
       <p>Please note that the frontend pane will show a url ending in <code>:3000</code>. This is
-        another way to access
-        the frontend directly without running the Django server, but for this project, we&#x27;ll be
-        ignoring that
-        entirely.</p>
+        another way to access the frontend directly without running the Django server.</p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid" alt=""
-              src="/assets/images/sonification/soni-project-installation-20.png"/></p>
+              src="/assets/images/boilerplate/project-25.png"/></p>
     </div>
   </div>
 </section>
