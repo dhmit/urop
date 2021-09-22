@@ -117,3 +117,7 @@ section {
         margin-bottom: 3rem;
     }
 }
+
+.highlight {
+    background-color: #ffff9b;
+}
