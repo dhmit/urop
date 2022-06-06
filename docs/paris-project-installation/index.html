@@ -451,7 +451,7 @@
   <h2>Setting up npm</h2>
 
   <p>Now that the Python/Django backend part of the site is up and running on your machine, the last
-    step is to setup the JavaScript/React frontend. </p>
+    coding step is to setup the JavaScript/React frontend. </p>
 
   <hr class="d-lg-none">
   <div class="row">
@@ -532,7 +532,7 @@
         <code>Run frontend</code> which will start the frontend development server. Once you see a
         success message in the run panel, go back to <a href="http://127.0.0.1:8000"
                                                         target="_blank">http://127.0.0.1:8000</a>,
-        where you should now see the prototype landing page made by our summer UROPs.
+        where you should now see the prototype landing page.
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
@@ -541,55 +541,85 @@
   </div>
   <p>Congratulations! You've got the project up and running on your machine. </p>
 </section>
-
-
 <section>
-  <h2>Closing and restarting the project</h2>
+  <h2>Setting up your photos</h2>
+
+  <p>One final step to get everything to working order is to download the photos so that they can
+    show up when the user clicks around the squares.</p>
   <hr class="d-lg-none">
   <div class="row">
     <div class="col-lg-4">
-      <p>Close PyCharm, terminate any processes when it asks, and then restart PyCharm. In order to
-        run the project, you have to go to this dropdown menu, click <code>Run backend</code> and
-        then the triangular 'Run' button next to it, and then click <code>Run frontend</code> and do
-        the same.
+      <p>Go to the <a
+          target="_blank"
+          href="https://www.dropbox.com/sh/o4x3kqr2mde2g2i/AABGGSdVqGC9oazyWyc_T28ga?dl=0">dropbox
+        folder.</a> and download the entirety of the images folder.</p>
+      <p>Unzip it, and put it into your assets (paris_1970/assets) folder. This might take a while.
+        Now you should be able to
+        see images when you access (a few of the) photos.
+        <a href="http://localhost:8000/photo/6/2/"></a></p>
     </div>
     <div class="col-lg-8">
       <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
-              src="/assets/images/paris/paris_run.png"/></p>
+              src="/assets/images/paris/paris_dropbox.png"/></p>
+      <br/><br/>
+      <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+              src="/assets/images/paris/paris_images.png"/></p>
     </div>
   </div>
 
 
-  <hr class="d-lg-none">
-  <div class="row">
-    <div class="col-lg-4">
-      <p>Once you see both <code>Run backend</code> and <code>Run frontend</code> tabs open in the
-        <code>Run</code> panel at the bottom of PyCharm, and both show success messages, you can go
-        back to the site running locally on your machine.
-      </p>
-
-
-      <p>
-        Please note that the frontend pane will show a url ending in <code>:3000</code>. This is
-        another way to access the frontend directly without running the Django server, but for this
-        project, we'll be ignoring that entirely.
+  <section>
+    <h2>Closing and restarting the project</h2>
+    <hr class="d-lg-none">
+    <div class="row">
+      <div class="col-lg-4">
+        <p>Close PyCharm, terminate any processes when it asks, and then restart PyCharm. In order
+          to
+          run the project, you have to go to this dropdown menu, click <code>Run backend</code> and
+          then the triangular 'Run' button next to it, and then click <code>Run frontend</code> and
+          do
+          the same.
+      </div>
+      <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="/assets/images/paris/paris_run.png"/></p>
+      </div>
     </div>
-    <div class="col-lg-8">
-      <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
-              src="/assets/images/paris/paris_run_tab.png"/></p>
+
+
+    <hr class="d-lg-none">
+    <div class="row">
+      <div class="col-lg-4">
+        <p>Once you see both <code>Run backend</code> and <code>Run frontend</code> tabs open in the
+          <code>Run</code> panel at the bottom of PyCharm, and both show success messages, you can
+          go
+          back to the site running locally on your machine.
+        </p>
+
+
+        <p>
+          Please note that the frontend pane will show a url ending in <code>:3000</code>. This is
+          another way to access the frontend directly without running the Django server, but for
+          this
+          project, we'll be ignoring that entirely.
+      </div>
+      <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
+                src="/assets/images/paris/paris_run_tab.png"/></p>
+      </div>
     </div>
-  </div>
 
-  <strong><p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">GOOD JOB YOU ARE DONE!</a></p>
-  </strong>
+    <strong><p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">GOOD JOB YOU ARE DONE!</a></p>
+    </strong>
 
-  <p>
-    Now find someone who's having trouble, and help them get going, too. If you're a new UROP, ask a
-    returning UROP about the projects they've worked on.
-  </p>
-</section>
+    <p>
+      Now find someone who's having trouble, and help them get going, too. If you're a new UROP, ask
+      a
+      returning UROP about the projects they've worked on.
+    </p>
+  </section>
 
-<a href="/" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Return to home</a>
+  <a href="/" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Return to home</a>
 
             </div>
         </main>
