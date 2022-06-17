@@ -365,10 +365,9 @@ title: 'Setting up paris_1970'
       <p>Go to our <a
           target="_blank"
           href="https://www.dropbox.com/sh/o4x3kqr2mde2g2i/AABGGSdVqGC9oazyWyc_T28ga?dl=0">dropbox
-        folder.</a> and download the <code>db_dump.json</code> file, put it somewhere where you can
-        find it,
-        like in the project itself. Run the following command:
-        <kbd>python manage.py loaddata path/to/the/db_dump.json</kbd>. Now you should see some
+        folder.</a> and download the <code>db_dump.json</code> file, put it in the <b>backend</b> folder.
+        Run the following command:
+        <kbd>python manage.py loaddata db_dump.json</kbd>. Now you should see some
         entries when you access <a href="http://127.0.0.1:8000" target="_blank">
           http://127.0.0.1:8000/api/all_photos</a>
       </p>
