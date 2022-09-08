@@ -30,15 +30,15 @@
             </li>
 
             <li class="nav-item">
-                <a href="/git"><span class="numeral">1</span> Git</a>
+                <a href="/vscode"><span class="numeral">1</span> VS Code</a>
             </li>
 
             <li class="nav-item">
-                <a href="/python"><span class="numeral">2</span> Python</a>
+                <a href="/git"><span class="numeral">2</span> Git</a>
             </li>
 
             <li class="nav-item">
-                <a href="/pycharm"><span class="numeral">3</span> PyCharm</a>
+                <a href="/python"><span class="numeral">3</span> Python</a>
             </li>
 
             <li class="nav-item">
@@ -66,13 +66,12 @@
                 <h1 class="header border-bottom pb-3 mb-3">Python</h1>
 
                 
-<p>This document will walk you through the process of installing Python 3.10.4. Please read the beginning of this guide
+<p>This document will walk you through the process of installing Python 3.10. Please read the beginning of this guide
   <strong>even if</strong> you already have Python installed, as we need to ensure that you're using a version of Python
   that's compatible with the lab's development tools. </p>
 
 <p>
-  <em>Returning UROPs</em>: Note that the version of Python used by the lab is now 3.10.4. Following the instructions to
-  install below will update your Python version if you’re on an older version.
+  <em>Returning UROPs</em>: Note that the version of Python used by the lab is now 3.10. Following the instructions to install below will update your Python version if you’re on an older version. You might need to reinstall your virtual environment. If you need help doing that, ask a peer who knows how or a member of staff.
 </p>
 
 <h2>Check if Python is Installed</h2>
@@ -99,9 +98,9 @@
 <br>
 
 
-<p>If you receive an error or your version of Python is not 3.10.4, skip ahead to <a href="#install_python">Install
+<p>If you receive an error or your version of Python is not 3.10.X (where we don't care what X is), skip ahead to <a href="#install_python">Install
   Python</a>.</p>
-<p>If you have Python 3.10.4 already installed, try the following command in the terminal:</p>
+<p>If you have Python 3.10 already installed, try the following command in the terminal:</p>
 
 
 <div class="row">
@@ -128,34 +127,31 @@
   to <a href="#install_python">Install Python</a>.</p>
 
 <p>macOS users should make a habit of typing <kbd>python3</kbd> whenever they need to call Python at the command line,
-  whereas Windows users can simply type <kbd>python</kbd>. This is because macOS still ships with Python 2.7 installed,
-  which you <em>should not</em> try to uninstall, as it's essential for some system software.</p>
+whereas Windows users can simply type <kbd>python</kbd>. (This is for legacy reasons: macOS shipped with Python 2.7 for a long time.)</p>
 
 <h2><a name="install_python">Install Python<a></h2>
 
-<p>Visit the <a href="https://www.python.org/downloads/">Python download page</a>, download, and install Python 3.10.4
+<p>Visit the <a href="https://www.python.org/downloads/">Python download page</a>, download, and install Python 3.10
   for your operating system.</p>
 
 
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col">
     <p>On Windows, make sure that you’ve selected the <b><u>64-bit</u></b> Python installer and click
         <code>Add Python to Path</code> on the first screen.</p>
-  </div>
-  <div class="col-lg-8">
-    <p><img class="img-fluid mx-2 mx-lg-0 border" alt=""
-            src="/assets/images/python-3-9-installation.png"/></p>
   </div>
 </div>
 
 <p>On macOS, you’ll also need to install version-specific SSL certificates. Open up your Terminal application and type
   the following commands:
   <br>
-  <kbd>cd /Applications/Python\ 3.9</kbd>
+  <kbd>cd /Applications/Python\ 3.10</kbd>
   <br>
   followed by
   <br>
   <kbd>./Install\ Certificates.command</kbd>.
+  <br>
+  Or just go to your "Applications" folder in the Finder, find the "Python 3.10" folder and double click "Install Certificates".
 </p>
 
 <div class="row">
@@ -188,7 +184,7 @@
   </div>
 </div>
 <br>
-<p>This will start the Python Shell, which should report Python version 3.10.4. Try running some code, if you like, and
+<p>This will start the Python Shell, which should report Python version 3.10.X. Try running some code, if you like, and
   then quit by running <kbd>quit()</kbd> in the shell.</p>
 <p>Finally, open the terminal and run the following command:</p>
 
@@ -217,8 +213,8 @@
 <p>If at an earlier stage you discovered that you had Python installed via Anaconda and this path <em>still</em>
   references Anaconda, find a member of staff, who will attempt to perform an exorcism on your machine.</p>
 
-<a href="/git_and_atom" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Git and Atom</a>
-<a href="/pycharm" class="btn btn-outline-primary float-right col-5 col-md-3">PyCharm &rarr;</a>
+<a href="/git" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Git</a>
+<a href="/node-and-npm" class="btn btn-outline-primary float-right col-5 col-md-3">Node &rarr;</a>
 
             </div>
         </main>

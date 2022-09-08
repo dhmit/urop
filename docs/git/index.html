@@ -30,15 +30,15 @@
             </li>
 
             <li class="nav-item">
-                <a href="/git"><span class="numeral">1</span> Git</a>
+                <a href="/vscode"><span class="numeral">1</span> VS Code</a>
             </li>
 
             <li class="nav-item">
-                <a href="/python"><span class="numeral">2</span> Python</a>
+                <a href="/git"><span class="numeral">2</span> Git</a>
             </li>
 
             <li class="nav-item">
-                <a href="/pycharm"><span class="numeral">3</span> PyCharm</a>
+                <a href="/python"><span class="numeral">3</span> Python</a>
             </li>
 
             <li class="nav-item">
@@ -70,18 +70,7 @@
 
 <p>GitHub is a popular code repository hosting service. We will use GitHub to host our code, make pull requests, and track issues.</p>
 
-<p>We'll use GitHub Desktop, an app that provides a GUI to the most common Git operations, for most of our source control needs in this lab. We'll also make sure you have a command line version of Git installed, as well as Atom, a text editor that we'll be using to resolve merge conflicts.</p>
-
 <p>If you are unfamiliar with Git or GitHub, please take a moment to read <a href="https://guides.github.com/introduction/flow/">Understanding the GitHub flow</a>.</p>
-
-
-<h2>Install GitHub Desktop</h2>
-<p>Download and install <a href="https://desktop.github.com">GitHub Desktop</a>.</p>
-
-<p>Once installed, click "Sign in to GitHub.com", follow the directions to sign in, and then quit the application.</p>
-
-<h2>Install Atom</h2>
-<p>Download and install <a href="https://atom.io">Atom</a>.
 
 
 <h2>Install git command line tools</h2>
@@ -89,12 +78,19 @@
 <p>If you're on macOS, open the terminal and enter the following command to check whether Git is installed:</p>
 <p><kbd>git --version</kbd></p>
 
+<p>If you recieve output that says something like <code>git version 2.x.y</code>, (where we don't really mind what x or y are), that means git is installed, and you can skip ahead to <a href="/python">Python</a>.</p>
 
-<p>If you receive output that indicates that <code>git</code> is not a recognized command, it is most likely because Git is not installed. Download the current installer from the <a href="https://git-scm.com">Git website</a>, and continue to the instructions below.
-
-<p>If instead,  you recieve output that says something like <code>git version 2.x.y</code>, (where we don't really mind what x or y are), that means git is installed, and you can skip ahead to <a href="/python">Python</a>.</p>
+<p>If you receive output that indicates that <code>git</code> is not a recognized command, it is most likely because Git is not installed, so follow the instructions below.</p>
 
 <h2><a name="install_git">Install git</a></h2>
+<p>
+Download the current installer from the <a href="https://git-scm.com">Git website</a>, and continue to the instructions below.
+</p>
+
+<p>
+On Windows, make sure to pick the 64-bit version.
+</p>
+
 <p>If you're on macOS, run the installer and skip ahead to <a href="/python">Python</a>.</p>
 
 <p>If you're on Windows, follow the instructions below.</p>
@@ -115,12 +111,24 @@
 <hr class="d-lg-none">
 <div class="row">
     <div class="col-lg-4">
-        <p>Select Atom as your default editor for Git.</p>
+        <p>Select VS Code or Notepad as your default editor for Git.</p>
     </div>
     <div class="col-lg-8">
-        <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/atom.png" /></p>
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/editor.png" /></p>
     </div>
 </div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>Use the modern defaults for branch naming.</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/main.png" /></p>
+    </div>
+</div>
+
+
 
 <hr class="d-lg-none">
 <div class="row">
@@ -135,7 +143,17 @@
 <hr class="d-lg-none">
 <div class="row">
     <div class="col-lg-4">
-        <p>On the next screen, make sure that "Use the OpenSSL Library" option is checked, and move on to the next page.</p>
+        <p>Use the bundled OpenSSH (default).</p>
+    </div>
+    <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/openssh.png" /></p>
+    </div>
+</div>
+
+<hr class="d-lg-none">
+<div class="row">
+    <div class="col-lg-4">
+        <p>Use the OpenSSL Library (default).</p>
     </div>
     <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/openssl.png" /></p>
@@ -166,7 +184,7 @@
 <hr class="d-lg-none">
 <div class="row">
     <div class="col-lg-4">
-        <p>The following step should be left with default values.</p>
+        <p>Default (fast-forward or merge)</p>
     </div>
     <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/git_pull_default.png" /></p>
@@ -176,7 +194,7 @@
 <hr class="d-lg-none">
 <div class="row">
     <div class="col-lg-4">
-        <p>The following step should be left with default values.</p>
+        <p>Use Git Credential Manager (default).</p>
     </div>
     <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/git_credential_manager.png" /></p>
@@ -196,7 +214,7 @@
 <hr class="d-lg-none">
 <div class="row">
     <div class="col-lg-4">
-        <p>Nope.</p>
+        <p>Up to you. Here are Ryaan's settings.</p>
     </div>
     <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border" alt="" src="/assets/images/git/git_experimental_options.png" /></p>
@@ -209,6 +227,7 @@
 
 <a href="/intro" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Intro</a>
 <a href="/python" class="btn btn-outline-primary float-right col-5 col-md-3">Python &rarr;</a>
+
             </div>
         </main>
     </div>
