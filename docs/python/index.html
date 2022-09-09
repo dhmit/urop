@@ -190,7 +190,15 @@ whereas Windows users can simply type <kbd>python</kbd>. (This is for legacy rea
 <p>This tells you where on your hard drive your Python interpreter is installed. Please take note of this path; we'll
   use it later.</p>
 <p>If at an earlier stage you discovered that you had Python installed via Anaconda and this path <em>still</em>
-  references Anaconda, find a member of staff, who will attempt to perform an exorcism on your machine.</p>
+references Anaconda, try running this command:
+</p>
+
+<p>
+<code>conda config --set auto_activate_base false</code>
+</p>
+<p>
+Restart your terminal and try again. If it <em><strong>STILL</strong></em> references Anaconda, find a team lead or member of staff to help you exorcise your machine.
+</p>
 
 <a href="/git" class="btn btn-outline-primary float-left col-5 col-md-3">&larr; Git</a>
 <a href="/node-and-npm" class="btn btn-outline-primary float-right col-5 col-md-3">Node &rarr;</a>
