@@ -80,10 +80,55 @@
     <p>Onward to your first PR on this project. Do this tutorial in groups of three to five, so gather a few of your colleagues, open GitHub Desktop, and let's get started.</p>
 
     <p>Some of the steps that follow should be performed on only one machine, but please make sure that everyone follows along for everything.</p>
+
+    <p>Please note: we've used this tutorial for multiple projects, so the project name in a the screenshot might not be for the project you're working on right now. All the steps are the same, regardless.</p>
+
 </section>
 
+
 <section>
-    <h2>Fetching and pulling from main (everyone do this)</h2>
+<h2>Install GitHub Desktop (everyone)</h2>
+    <div class="row">
+        <div class="col-lg-4">
+<p>Download and install <a href="https://desktop.github.com">GitHub Desktop</a>.</p>
+
+<p>Once installed, click "Sign in to GitHub.com", follow the directions to sign in.</p>
+<p>Go to <code>File</code> > <code>Options</code> > <code>Integrations</code> and from the <code>External Editor</code> dropdown, select Visual Studio Code.
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+                                                                      src="/assets/images/session-2019-09-13/github-desktop-select-vscode.png" /></p>
+        </div>
+
+</section>
+
+
+<section>
+<h2>Open the Project in GitHub Desktop</h2>
+<p>In the menu bar, select <code>File</code> > <code>Add Local Repository</code>. Find the folder for the project, and select it. Click <code>Add Repository</code>.
+</p>
+</section>
+
+
+<section>
+    <h2>Go back to the main branch</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <p>
+            Depending on how far you got in our last session, you might not be on the main branch. Click the "Current branch" button in the middle of the top bar, and select "Main" (which should be under a "Default branch" subheading) to go back to the main branch. Now you're ready to start the exercise from scratch!
+            </p>
+        </div>
+        <div class="col-lg-8">
+            <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+                                                                      src="/assets/images/session-2019-09-13/github-desktop-select-main.png" /></p>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <h2>Fetching and pulling from main</h2>
     <p>When you sit down to work <em>always</em> start by pulling the latest changes from the main branch, so that your local copy of the codebase doesn't diverge too much from the current version.</p>
 
     <div class="row">
@@ -105,7 +150,10 @@
     <p>Instead of working directly on the main branch, we'll make a feature branch for your first commits and PR.</p>
     <div class="row">
         <div class="col-lg-4">
-            <p>Click the <code>Current branch</code> button and click <code>New branch</code>. Call your new branch <code>group_first_names_FIRST_PR</code> (e.g., <code>ryaan_erica_cole_first_PR</code>) and click <code>Create branch</code>. When this is complete, you should see the <code>Current branch</code> button show that you're on your newly created branch.</p>
+            <p>Click the <code>Current branch</code> button and click <code>New branch</code>. Call your new branch <code>group_first_names_FIRST_PR</code> or something like that and click <code>Create branch</code>. When this is complete, you should see the <code>Current branch</code> button show that you're on your newly created branch.</p>
+            <p>
+            If you managed to make a branch at the last hack session, please choose a different name, so the names don't conflict, and so you have a chance to practice making a new branch using this tool.
+            </p>
         </div>
         <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
@@ -131,7 +179,7 @@
     <h2>Check out the new branch (do this on the other computers)</h2>
     <div class="row">
         <div class="col-lg-4">
-            <p>Click <code>Fetch origin</code> again to grab all of the latest data from GitHub, including the information that your teammate created a new branch. Click <code>Current branch</code>, and you should now see the new branch appear in the dropdown list. Click it to check it out.</p>
+            <p>Click <code>Fetch origin</code> again to grab all of the latest data from GitHub, including the information that your teammate created a new branch. Click <code>Current branch</code>, and you should now see the new branch appear in the dropdown list. You might need to type into the box to filter branches if there are a lot already. Click on your branch name to check it out.</p>
         </div>
         <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
@@ -146,31 +194,15 @@
     <h2>Make a commit to share with everyone (do this on one computer only)</h2>
     <div class="row">
         <div class="col-lg-4">
-            <p>Open our project in PyCharm. Find the folder <code>docs/first_pr</code>, right click on it, and create a new file. Name this file again with the first names of everyone on your team, and give it the extension <code>.md</code> for <a href='https://en.wikipedia.org/wiki/Markdown'>Markdown</a>.
+            <p>Open our project in VS Code. Find the folder <code>frontend/pages/about.js</code> and open it. 
+            <p>You'll find a big JavaScript dictionary called <code>studentMembers</code>. Look for a line that says <code>const studentMembers = [</code> and then scroll down to the bottom of the dictionary, which should look like this picture.</p>
+            <p>
+            Add a new entry as shown in the picture. Make sure to pay attention to where the commas go. You do not need to add a new photo - just copy what's already there for the <code>photoSrc</code> field.
+            <p>
         </div>
         <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
                 src="/assets/images/session-2019-09-13/6.png" /></p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-4">
-            <p>When you create a new file in PyCharm, it asks if you want to add it to Git. It doesn't really matter what you choose here; we do want to add it to Git, but we'll be adding everything through GitHub Desktop anyway.</p>
-        </div>
-        <div class="col-lg-8">
-        <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
-                src="/assets/images/session-2019-09-13/7.png" /></p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-4">
-            <p>Add some content to this file - a heading (starting with <code>#</code>), and the name of the team member on whose computer you're doing this step.</p>
-        </div>
-        <div class="col-lg-8">
-        <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
-                src="/assets/images/session-2019-09-13/8.png" /></p>
         </div>
     </div>
 
@@ -184,7 +216,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-lg-4">
             <p>Now click <code>Push origin</code> to send your changes to GitHub, so the rest of your team can download them.</p>
         </div>
@@ -212,9 +244,9 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-lg-4">
-            <p>UH OH. Merge conflict time. Because we've made two changes to the same file in the same place, Git doesn't know how to merge them, so we'll have to do it manually. Click <code>Open in Atom</code>.</p>
+            <p>UH OH. Merge conflict time. Because we've made two changes to the same file in the same place, Git doesn't know how to merge them, so we'll have to do it manually. Click <code>Open in Visual Studio Code</code>.</p>
         </div>
         <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
@@ -222,19 +254,47 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-lg-4">
-            <p>Atom has a great merge conflict resolution tool, but it assumes that you want either one change or the other (which is the usual case!). If you click <code>Use me</code> on either of these, you'll accept one change into the file and clobber the other. In this case, however, we want to preserve both changes, so click the <code>...</code> next to <code>Use me</code> and choose <code>Resolve as Ours Then Theirs</code> to combine both changes into the file. Save the file and exit Atom.</p>
+            <p>Visual Studio Code has a great merge conflict resolution tool, which shows you the different changes: the <em>incoming change</em> from the commit that you're pulling, as well as the change that you made on this computer.</p>
+            <p>
+                Note the different options:<ul>
+                    <li>Accept current change: overwrite the code that you're pulling with your own commit</li>
+                    <li>Accept incoming change: overwrite the code that you wrote with the commit you're pulling</li>
+                    <li>Accept both changes: don't overwrite anything -- merge both!</li>
+                </ul>
+            </p>
         </div>
         <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
                 src="/assets/images/session-2019-09-13/13.png" /></p>
         </div>
     </div>
-
     <div class="row">
         <div class="col-lg-4">
-            <p>Back in GitHub Desktop, you should see this status, and click <code>Commit merge</code>. You can now click <code>Push origin</code>, and repeat this process with everyone else in the group.</p>
+            <p>Pick "Accept both changes" and then notice what's happened...</p>
+            <p>
+            The second dictionary here is missing an opening curly brace! VS Code saw that both coders had started their commits with a curly brace, so it assumed that was the same change for both, and only merged the code that was <em>different</em>. 
+            </p>
+            <p>
+            Merge conflicts in code will often require this kind of manual intervention because the tools aren't quite smart enough to figure out the intention of the coders. So when you fix a merge conflict, make sure you're paying attention and know what the final result should look like.
+            </p>
+            <p>
+            Add the missing curly brace, so it looks like this second screenshot.
+            </p>
+        </div>
+        <div class="col-lg-8">
+        <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+                src="/assets/images/session-2019-09-13/missing-curly-brace.png" /></p>
+        <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
+                src="/assets/images/session-2019-09-13/fixed-curly-brace.png" /></p>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-lg-4">
+            <p>Back in GitHub Desktop, you should see this status, and click <code>Continue merge</code>. You can now click <code>Push origin</code>, and repeat this process with everyone else in the group. You might have to fix multiple conflicts. This is good practice for real life.</p>
         </div>
         <div class="col-lg-8">
         <p><img class="img-fluid mx-2 mx-lg-0 border float-right" alt=""
@@ -257,7 +317,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-lg-4">
             <p>Take some time to examine the page that launches. You should see a list of the commits that you've all made (make sure they're all there!), as well as a list of changes you've made to the project. Give the PR a descritive name, and in the <code>Leave a comment</code> box, describe the contribution that this PR makes to the project. We recommend writing a bulleted list of anything the reviewer should know about the PR. If your PR contains a design change or a piece of user interface, it's often helpful to drop in a screenshot (you can just drag one into the comment box).
 
